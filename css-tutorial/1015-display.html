@@ -1,0 +1,88 @@
+<!-- CSS display Property -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS display Property</title>
+        <style>
+            .myDivStyleOne
+            {
+                font-size: 20px;
+
+                display: inline;
+                border: 1px solid red;
+                width: 300px;
+                height: 300px;
+            }
+
+            .myDivStyleTwo
+            {
+                font-size: 20px;
+
+                display: inline-block;
+                border: 1px solid red;
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS display Property</h1>
+        <p>The display property specifies the display behavior (the type of rendering box) of an element.</p>
+        
+        <h2>Syntax</h2>
+        <p>display: value;</p>
+
+        <p><strong>block: </strong> Displays an element as a block element (like &lt;p&gt;). It starts on a new line, and takes up the whole width.</p>
+        <p><strong>inline: </strong> Displays an element as an inline element (like &lt;span&gt;). Any height and width properties will have no effect</p>
+        <p><strong>inline-block: </strong> Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.</p>
+        <p><strong>none: </strong> The element is completely removed.</p>
+
+        <div>
+            <h3>Example 1:</h3>
+
+            <p>
+                .myDivStyleOne
+                {
+                    <strong>display: inline;</strong>
+
+                    font-size: 20px;                    
+                    border: 1px solid red;
+                    width: 300px;
+                    height: 300px;
+                }
+            </p>
+
+            <div class="myDivStyleOne">
+                This is Block Element 1
+            </div>
+
+            <div class="myDivStyleOne">
+                This is Block Element 2
+            </div>
+        </div>
+
+        <div>
+            <h3>Example 2:</h3>
+
+            <p>
+                .myDivStyleTwo
+                {
+                    <strong>display: inline-block;</strong>
+
+                    font-size: 20px;                    
+                    border: 1px solid red;
+                    width: 300px;
+                    height: 300px;
+                }
+            </p>
+
+            <div class="myDivStyleTwo">
+                This is Block Element 1
+            </div>
+
+            <div class="myDivStyleTwo">
+                This is Block Element 2
+            </div>
+        </div>
+    </body>
+</html>

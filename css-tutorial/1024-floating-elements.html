@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+       <title>CSS Floating Elements</title>
+       <link rel="stylesheet" href="css/1024-floating-elements.css">
+    </head>
+    <body>
+        <p>
+            <h1>CSS float Property</h1>
+            <p>The float property specifies whether an element should float to the left, right, or not at all.</p>
+            <p>Absolutely positioned elements ignore the float property!</p>
+            <h2>Syntax</h2>
+            <p>float: none | left | right | initial | inherit;</p>
+            <ul>
+                <li> <p><strong>none: </strong> The element does not float, (will be displayed just where it occurs in the text). This is default</p> </li>
+                <li> <p><strong>left: </strong> The element floats to the left of its container.</p> </li>
+                <li> <p><strong>right: </strong> The element floats the right of its container.</p> </li>
+                <li> <p> <strong>initial: </strong> Sets this property to its default value.</p> </li>
+                <li> <p><strong>inherit: </strong>Inherits this property from its parent element.</p> </li>
+            </ul>
+        </p>
+
+        <h2>Example:</h2>
+        <p>
+            .floating-image
+            {
+                float: left;
+                
+                width: 300px;
+                margin: 10px;
+                border: 1px solid black;
+                box-shadow: 0 0 5px black;
+            } <br><br>
+
+            p, div
+            {
+                font-size: 25px;
+                text-align: justify;
+            } <br><br>
+
+            .floatDiv
+            {
+                display: inline-block;
+                width: 431px;
+                height: 200px;
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid black;
+                box-shadow: 0 0 5px black;
+            }
+        </p>
+        <br><br>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae provident quis excepturi assumenda, velit possimus numquam vero minus fugiat repellendus culpa nihil doloremque debitis dolore obcaecati laudantium error iusto fuga.
+            <br>
+            
+            <img class="floating-image" src="images/barros-and-sky.jpg">
+
+            <img class="floating-image" src="images/barros-and-sky.jpg" style="float:right;">
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae provident quis excepturi assumenda, velit possimus numquam vero minus fugiat repellendus culpa nihil doloremque debitis dolore obcaecati laudantium error iusto fuga.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae provident quis excepturi assumenda, velit possimus numquam vero minus fugiat repellendus culpa nihil doloremque debitis dolore obcaecati laudantium error iusto fuga.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae provident quis excepturi assumenda, velit possimus numquam vero minus fugiat repellendus culpa nihil doloremque debitis dolore obcaecati laudantium error iusto fuga.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae provident quis excepturi assumenda, velit possimus numquam vero minus fugiat repellendus culpa nihil doloremque debitis dolore obcaecati laudantium error iusto fuga.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae provident quis excepturi assumenda, velit possimus numquam vero minus fugiat repellendus culpa nihil doloremque debitis dolore obcaecati laudantium error iusto fuga.
+            <br>
+        </p>
+
+        <div class="floatDiv">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi placeat natus eveniet atque ut quas mollitia quis culpa enim. Illo corrupti facilis laborum dicta, sequi sunt ad deleniti mollitia possimus.
+        </div>
+
+        <div class="floatDiv">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi placeat natus eveniet atque ut quas mollitia quis culpa enim. Illo corrupti facilis laborum dicta, sequi sunt ad deleniti mollitia possimus.
+        </div>
+
+        <div class="floatDiv">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi placeat natus eveniet atque ut quas mollitia quis culpa enim. Illo corrupti facilis laborum dicta, sequi sunt ad deleniti mollitia possimus.
+        </div>
+
+        <div class="floatDiv">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi placeat natus eveniet atque ut quas mollitia quis culpa enim. Illo corrupti facilis laborum dicta, sequi sunt ad deleniti mollitia possimus.
+        </div>
+        
+    </body>
+</html>

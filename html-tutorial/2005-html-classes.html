@@ -1,0 +1,73 @@
+<!-- HTML Classes-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Classes</title>
+        <style>
+            .myDivStyle
+            {
+                padding: 40px;
+                color: white;
+                background-color: black;
+                font-size: 26px;
+                font-family: Courier;
+            }
+            .upperCase
+            {
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>HTML Classes</h1>
+
+        <p>The HTML class attribute is used to specify a class for an HTML element.</p>
+
+        <p>Multiple HTML elements can share the same class.</p>
+
+        <p>To create a class: write a period (.) character, followed by a class name. Then, define the CSS properties within curly braces {}.</p>
+
+        <p>
+            <b>
+                &emsp; &emsp;&emsp; .className <br>
+                &emsp; &emsp;&emsp; { <br>
+                &emsp; &emsp; &emsp;&emsp; property : value; <br>
+                &emsp; &emsp;&emsp; } <br> <br>
+                &emsp; &emsp;&emsp; &lt;elementName class="--your-class-name--"&gt; - - - Your Content - - - &lt;/elementName&gt;
+            </b>
+        </p>
+        
+        <p>
+            <b>Example:</b><br><br>
+            .myDivStyle<br>
+            {<br>
+                &emsp;padding: 40px;<br>
+                &emsp;color: white;<br>
+                &emsp;background-color: black;<br>
+                &emsp;font-size: 26px;<br>
+                &emsp;font-family: Courier;<br>
+            }<br><br>
+            .upperCase<br>
+            {<br>
+                &emsp;text-transform: uppercase;<br>
+            }<br>
+        </p>
+        <br>
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam minus cum alias aut mollitia velit laboriosam? Odit minus eligendi reprehenderit commodi. Minus placeat hic, eligendi maxime magnam sunt id!
+        </div>
+        <div class="myDivStyle">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam minus cum alias aut mollitia velit laboriosam? Odit minus eligendi reprehenderit commodi. Minus placeat hic, eligendi maxime magnam sunt id!
+        </div>
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam minus cum alias aut mollitia velit laboriosam? Odit minus eligendi reprehenderit commodi. Minus placeat hic, eligendi maxime magnam sunt id!
+        </div>
+        <div class="myDivStyle upperCase">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam minus cum alias aut mollitia velit laboriosam? Odit minus eligendi reprehenderit commodi. Minus placeat hic, eligendi maxime magnam sunt id!
+        </div>
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quibusdam minus cum alias aut mollitia velit laboriosam? Odit minus eligendi reprehenderit commodi. Minus placeat hic, eligendi maxime magnam sunt id!
+        </div>
+    </body>
+</html>

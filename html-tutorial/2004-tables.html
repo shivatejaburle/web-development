@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Tables</title>
+    </head>
+    <body>
+        <h1>HTML Tables</h1>
+        <p>The &lt;table&gt; tag defines an HTML table.</p>
+        <p>Each table row is defined with a &lt;tr&gt; tag. Each table header is defined with a &lt;th&gt; tag. Each table data/cell is defined with a &lt;td&gt; tag.</p>
+        <p>By default, the text in &lt;th&gt; elements are bold and centered.</p>            
+        <p>By default, the text in &lt;td&gt; elements are regular and left-aligned.</p>
+        <p>To add border use the "border" attribute.</p>
+        <table border="1" width="25%">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h1>Merging Table Cells and Rows</h1>
+        <p>To make a cell span more than one column, use the "colspan" attribute</p>
+        <p>To make a cell span more than one row, use the "rowspan" attribute.</p>
+        <table border="1" width="25%">
+            <tbody>
+                <tr>
+                    <td colspan="3">1 - Colspan as 3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td colspan="2">2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="3">2 - Rowspan as 3</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Table and Cell Widths</h1>
+        <p>To change the width of Table and Cells use the "width" attribute.</p>
+        <table border="1" width="100%">
+            <tbody>
+                <tr>
+                    <td colspan="2">1 - Colspan as 2</td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        Cell 1 - with width of 20%
+                    </td>
+                    <td>
+                        Cell 2
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Table Caption</h1>
+        <p>The &lt;caption&gt; tag defines a table caption.</p>
+        <p>The &lt;caption&gt; tag must be inserted immediately after the &lt;table&gt; tag.</p>
+        <p>By default, a table caption will be center-aligned above a table. However, the CSS properties <b>text-align</b> and <b>caption-side</b> can be used to align and place the caption.</p>
+        <table border="1" width="100%">
+            <caption><h3>Caption for the table</h3></caption>
+            <tbody>
+                <tr>
+                    <td colspan="2">1 - Colspan as 2</td>
+                </tr>
+                <tr>
+                    <td width="20%">
+                        Cell 1 - with width of 20
+                    </td>
+                    <td>
+                        Cell 2
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

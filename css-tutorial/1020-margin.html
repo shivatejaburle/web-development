@@ -1,0 +1,140 @@
+<!-- CSS Margin Property -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Margin</title>
+        <style>
+            #box
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+
+                /* margin: top right bottom left; */
+                /* margin: 20px 20px 20px 20px; */
+                margin: 20px;
+                /* Margin is inside of the border */
+            }
+
+            #box1
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+                padding: 20px;
+
+                 /* margin: top right bottom left; */
+                /* margin: 20px 20px 20px 20px; */
+                margin: 30px;
+                /* Margin is outside of the border */
+                display: inline-block; /* As div was block element we are using inline-block to get margin properly */
+            }
+
+            #box2
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+                padding: 20px;
+
+                /* Centered Block Element */
+                margin: auto;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Margin</h1>
+        <p>The External Element Spacing</p>
+                
+        <h2>Syntax</h2>
+        <p>&emsp;margin: top right bottom left;</p>
+        <p>You can use margin-top, margin-right, margin-bottom and margin-left separately to get individual borders.</p>
+        
+        <h3>This property can have from one to four values.</h3>
+
+        <strong>If the margin property has four values:</strong>
+        <ul>
+            <li>margin:10px 5px 15px 20px;</li>
+            <ul>
+                <li>top margin is 10px</li>
+                <li>right margin is 5px</li>
+                <li>bottom margin is 15px</li>
+                <li>left margin is 20px</li>
+            </ul>
+        </ul>
+
+        <strong>If the margin property has three values:</strong>
+        <ul>
+            <li>margin:10px 5px 15px;</li>
+            <ul>
+                <li>top margin is 10px</li>
+                <li>right and left margin are 5px</li>
+                <li>bottom margin is 15px</li>
+            </ul>
+        </ul>
+
+        <strong>If the margin property has two values:</strong>
+        <ul>
+            <li>margin:10px 5px;</li>
+            <ul>
+                <li>top  and bottom margin are 10px</li>
+                <li>right and left margin are 5px</li>
+            </ul>
+        </ul>
+
+        <strong>If the margin property has one value:</strong>
+        <ul>
+            <li>margin:10px;</li>
+            <ul>
+                <li>all four margins are 10px</li>
+            </ul>
+        </ul>
+        
+        <h3>Examples:</h3>
+        <p>
+            #box
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+                margin: 20px;
+            }
+        </p>
+        <div id="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea quis quisquam. Illum blanditiis, incidunt odit aspernatur cupiditate dolore, minima tenetur eum consectetur soluta obcaecati laudantium nostrum nisi eveniet omnis.
+        </div>
+
+        <p>
+            #box1
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+                padding: 20px;
+                margin: 30px;
+                display: inline-block; 
+            }
+        </p>
+        <div id="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea quis quisquam. Illum blanditiis, incidunt odit aspernatur cupiditate dolore, minima tenetur eum consectetur soluta obcaecati laudantium nostrum nisi eveniet omnis.
+        </div>
+
+        <p>
+            <strong>Centered Block Element: </strong>
+            #box2
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+                padding: 20px;
+                margin: auto;
+                display: block;
+            }         
+        </p>
+        <div id="box2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea quis quisquam. Illum blanditiis, incidunt odit aspernatur cupiditate dolore, minima tenetur eum consectetur soluta obcaecati laudantium nostrum nisi eveniet omnis.
+        </div>
+
+    </body>
+</html>

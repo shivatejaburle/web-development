@@ -1,0 +1,109 @@
+<!-- CSS opacity Property-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Opacity</title>
+        <style>
+            .imgBg
+            {
+                background-image: url("images/barros-and-sky.jpg");
+                background-size: cover;
+            }
+
+            #box
+            {
+                display: block;
+                width: 200px;
+                height: 200px;
+                margin: 50px auto;
+                padding: 25px;
+                text-align: center;
+
+                background-color: black;
+                color: white;
+
+                /* Making entire block element with Opacity */
+                opacity: 0.5;
+
+                /* For opacity we use a decimal not a percentage
+                0 = 0
+                50 = 0.5
+                100 = 1 */
+                
+            }
+
+            #box1
+            {
+                display: block;
+                width: 200px;
+                height: 200px;
+                margin: 50px auto;
+                padding: 25px;
+                text-align: center;
+                
+                /* background-color: rgb(red, green, blue, Opacity); */
+                /* With background-color we make only background with opacity */
+                background-color:rgba(0, 0, 0, 0.5);
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>How to make elements see-through?</h1>
+        <p>Opacity - Make Element See Through</p>
+        
+        <h1>CSS opacity Property</h1>
+        <p>The opacity property sets the opacity level for an element.</p>
+        <p>The opacity-level describes the transparency-level, where 1 is not transparent at all, 0.5 is 50% see-through, and 0 is completely transparent.</p>
+        
+        <h3>Examples:</h3>
+        <div class="imgBg">
+            <h2>Making entire block element with Opacity</h2>
+            <p>
+                #box
+            {
+                display: block;
+                width: 200px;
+                height: 200px;
+                margin: 50px auto;
+                padding: 25px;
+                text-align: center;
+
+                background-color: black;
+                color: white;
+
+                
+                <strong>opacity: 0.5;</strong>
+
+                
+            }
+            </p>
+
+            <h2>User RGBA Values to  make only background with Opacity</h2>
+            <p>
+                #box1
+                {
+                    display: block;
+                    width: 200px;
+                    height: 200px;
+                    margin: 50px auto;
+                    padding: 25px;
+                    text-align: center;
+                    <strong>background-color:rgba(0, 0, 0, 0.5);</strong>
+                    color: white;
+                }
+            </p>
+
+            <div id="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea quis quisquam. Illum blanditiis, incidunt odit aspernatur cupiditate dolore, minima tenetur eum consectetur soluta obcaecati laudantium nostrum nisi eveniet omnis.
+            </div>
+            
+            
+            <div id="box1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea quis quisquam. Illum blanditiis, incidunt odit aspernatur cupiditate dolore, minima tenetur eum consectetur soluta obcaecati laudantium nostrum nisi eveniet omnis.
+            </div>
+        </div>
+        
+    </body>
+</html>

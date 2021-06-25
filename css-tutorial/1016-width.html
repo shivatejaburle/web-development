@@ -1,0 +1,105 @@
+<!-- Changing the default Width of the element -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Width</title>
+        <style>
+            div.half-width
+            {
+                font-size: 20px;
+                border: 8px solid red;
+                padding: 10px;
+
+                width: 48%;
+                display: inline-block;
+            }
+
+            span
+            {
+                font-size: 20px;
+                border: 8px solid red;
+                padding: 10px;
+            }
+            
+            span.blockElement
+            {
+                font-size: 20px;
+                border: 8px solid red;
+                padding: 10px;
+
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Changing the default Width of the element</h1>
+        <h1>CSS width Property</h1>
+        <p>The width property sets the width of an element.</p>
+        <p>The width of an element does not include padding, borders, or margins!</p>
+        
+        <h3>Examples 1:</h3>
+        <p>
+            div.half-width
+            {
+                font-size: 20px;
+                border: 8px solid red;
+                padding: 10px;
+
+                width: 48%;
+                display: inline-block;
+            } <br><br>
+            &lt;div class="blockElement"&gt; <br>
+                &emsp;This is Block Element 1 <br>
+            &lt;/div&gt; <br><br>
+
+            &lt;div class="blockElement"&gt; <br>
+                &emsp;This is Block Element 2<br>
+            &lt;/div&gt;
+        </p>
+        <div class="half-width">
+            This is Block Element 1<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum provident, quibusdam nam natus temporibus ipsum debitis numquam quod placeat tempora modi, blanditiis, delectus architecto exercitationem recusandae ducimus ab possimus doloribus?
+        </div>
+        
+        <br><br>
+
+        <div class="half-width">
+            This is Block Element 2<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum provident, quibusdam nam natus temporibus ipsum debitis numquam quod placeat tempora modi, blanditiis, delectus architecto exercitationem recusandae ducimus ab possimus doloribus?
+        </div>
+
+        <h3>Examples 2:</h3>
+        <p>
+            span
+            {
+                font-size: 20px;
+                border: 8px solid red;
+                padding: 10px;
+            }
+            <br>
+            span.blockElement
+            {
+                font-size: 20px;
+                border: 8px solid red;
+                padding: 10px;
+
+                display: block;
+            } <br><br>
+            &lt;span&gt; <br>
+                &emsp;This is Inline Element <br>
+            &lt;/span&gt; <br><br>
+
+            &lt;span class="blockElement"&gt; <br>
+                &emsp;This is Inline Element&lt;br&gt;Making it as Block Element using CSS <br>
+            &lt;/span&gt;
+        </p>
+        <br>
+        <span>
+            This is Inline Element
+        </span>
+
+        <br><br><br>
+
+        <span class="blockElement">
+            This is Inline Element<br>Making it as Block Element using CSS
+        </span>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!-- CSS max-width Property -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Max Width</title>
+        <style>
+            #inlineElement
+            {
+                display: inline-block;
+                border: 1px solid red;
+                padding: 10px;
+
+                /* generally max-width applied for Inline Elements */
+                max-width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Set Maximum Width of an Element</h1>
+        <h2>CSS max-width Property</h2>
+        <p>The max-width property defines the maximum width of an element.</p>
+        <p></p>
+        <p>If the content is larger than the maximum width, it will automatically change the height of the element.</p>
+        <p>If the content is smaller than the maximum width, the max-width property has no effect.</p>
+        <p>This prevents the value of the width property from becoming larger than max-width. The value of the max-width property overrides the width property.</p>
+        
+        <h3>Example:</h3>
+        <p>
+            #inlineElement
+            {
+                display: inline-block;
+                border: 1px solid red;
+                padding: 10px;
+                <strong>max-width: 500px;</strong>
+            }
+        </p>
+        <div id="inlineElement">
+            <strong>Generally max-width applied for Inline Elements.</strong> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident repudiandae veritatis explicabo quos minima quo consequuntur illo et odio fuga, necessitatibus cumque obcaecati tempore voluptatum quibusdam temporibus ut? Quis, deserunt!
+        </div>
+    </body>
+</html>

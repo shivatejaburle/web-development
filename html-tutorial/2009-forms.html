@@ -1,0 +1,100 @@
+<!-- Introduction to Forms -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Forms</title>
+    </head>
+    <body>
+        <h1>Introduction to Forms</h1>
+        <p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+        <p>The HTML <form> element is used to create an HTML form for user input.</p>
+        <p>The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+        <p>
+            &lt;form&gt; <br>
+                &emsp; | <br>
+                your form elements <br>
+                &emsp; | <br>
+            &lt;/form&gt;
+        </p>
+        <p>The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+        <h2>Type of <b>input</b> Elements</h2>
+        <dl>
+            <dt>&lt;input type="text"&gt;</dt>
+            <dd> - Displays a single-line text input field</dd>
+            <dt>&lt;input type="password"&gt;</dt>
+            <dd> - defines a password field</dd>
+            <dt>&lt;input type="radio"&gt;</dt>
+            <dd>- Displays a radio button (for selecting one of many choices)</dd>
+            <dt>&lt;input type="checkbox"&gt;</dt>
+            <dd>- Displays a checkbox (for selecting zero or more of many choices)</dd>
+            <dt>&lt;input type="button"&gt;</dt>
+            <dd>- Displays a clickable button</dd>
+            <dt>&lt;input type="submit"&gt;</dt>
+            <dd>- Displays a submit button (for submitting the form)</dd>            
+            <dt>&lt;input type="reset"&gt;</dt>
+            <dd>- Reset all form values to their default values</dd>
+        </dl>
+        <h2>The &lt;select&gt; Tag</h2>
+        <p>The &lt;select&gt; element is used to create a drop-down list.</p>
+        <p>The &lt;option&gt; tags inside the &lt;select&gt; element define the available options in the drop-down list.</p>
+        <h2>Form Attributes</h2>
+        <p><b>action: </b>The action attribute defines the action to be performed when the form is submitted.</p>
+        <p><b>target: </b>The target attribute specifies where to display the response that is received after submitting the form.</p>
+        <p><b>method: </b>The method attribute specifies the HTTP method to be used when submitting the form data. The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").</p>
+        <hr/>
+        <h2>Example Form</h2>
+        <form method="GET" action="some-action.php">
+
+            <div>
+                <label for="userName">Textbox: </label>
+                <input required name="userName" type="text" value="Hello Shiva!" placeholder="Enter your name"><br><br>
+            </div>
+
+            <div>
+                <label for="userPassword">Password: </label>
+                <input required name="userPassword" type="password" value="Hello World" placeholder="Enter your password"><br><br>
+            </div>
+
+            <div>
+                <label for="userMessage">Textarea: </label>
+                <textarea name="userMessage" cols="30" rows="10" placeholder="Write your text here...">You need to write your text here...
+                    it gives all   white   spaces in   
+                    textarea
+                </textarea><br><br>
+            </div>
+            
+            <div>
+                <label for="radioButttons">Radio Button: </label>
+                <input type="radio" id="c1" name="fav_language" value="Choice1">
+                <label for="c1">Choice 1</label>
+                <input type="radio" id="c2" name="fav_language" value="Choice2">
+                <label for="c2">Choice 2</label>
+            </div>
+            <br>
+            <div>
+                <label for="dropDownList">Dropdown list: </label>
+                <select name="dropDownList">
+                    <option value="Value1">Option 1</option>
+                    <option value="Value2">Option 2</option>
+                    <option value="Disabled" disabled="disabled">Option Disabled</option>
+                    <option value="DefaultValue" selected="selected">Option Selected by Default</option>
+                </select><br><br>
+            </div>
+            
+            <div>
+                <label for="checkboxes">Checkbox: </label>
+                <input type="checkbox" id="i1" name="item1" value="Item1">
+                <label for="vehicle1"> Item 1</label>
+                <input type="checkbox" id="i2" name="item2" value="Item2">
+                <label for="vehicle2"> Item 2</label>
+            </div>
+            <br>
+
+            <button type="button">Button</button>
+
+            <button type="reset">Reset</button>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

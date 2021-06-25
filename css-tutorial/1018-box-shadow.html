@@ -1,0 +1,221 @@
+<!-- CSS box-shadow Property-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Box Shadows</title>
+        <style>
+            #box
+            {
+                width: 400px;
+                height: 600px;
+                border: 5px solid yellowgreen;
+                background-image: url('images/garden-walkway.jpg');
+                background-position: center center;
+                background-size: cover;
+
+                /* box-shadow: x-axis y-axis blur-value color; */
+                
+                /* box-shadow: 10px 10px red; */
+                
+                /* box-shadow: 10px 10px 15px red; */
+
+                /* box-shadow: 2px 2px 15px red; */
+
+                /* box-shadow: 2px 2px red; */
+
+                /* inset - for inner shadow */
+                /* box-shadow: 2px 2px inset red; */
+
+                box-shadow: 6px 6px 15px inset red;
+            }
+
+            #leaf
+            {
+                width: 400px;
+                height: 600px;
+                border: 5px solid yellowgreen;
+                background-image: url('images/garden-walkway.jpg');
+                background-position: center center;
+                background-size: cover;
+                border-radius: 0 50% 0 50%;
+                
+                box-shadow: 6px 6px 15px inset red;
+            }
+
+            #rectangle
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                box-shadow: 10px 10px;
+            }
+
+            #shadowColor
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                box-shadow: 10px 10px red;
+            }
+
+            #innerShadow
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                border-radius: 10%;
+                box-shadow: 10px 10px inset red;
+            }
+
+            #blurShadow
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                border-radius: 0 10% 10% 0;
+                box-shadow: 10px 10px 20px inset red;
+            }
+
+            #profilePicture
+            {
+                
+                border: 10px solid orange;
+                border-radius: 50%;
+                height: 200px;
+                width: 200px;
+                
+                background-image: url('images/profile-pic.png');
+                background-size: cover;
+                box-shadow: -10px -10px 20px grey;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Adding Box Shadows for eye-popping element</h1>
+        <h2>CSS box-shadow Property</h2>
+        <p>The box-shadow property attaches one or more shadows to an element.</p>
+        <h2>Syntax</h2>
+        <p>box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;</p>
+        <ul>
+            <li><strong>none: </strong>	Default value. No shadow is displayed</li>
+            <li><strong>h-offset: </strong> Required. The horizontal offset of the shadow. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box</li>
+            <li><strong>v-offset: </strong>Required. The vertical offset of the shadow. A positive value puts the shadow below the box, a negative value puts the shadow above the box</li>
+            <li><strong>blur: </strong>Optional. The blur radius. The higher the number, the more blurred the shadow will be</li>
+            <li><strong>spread: </strong>Optional. The spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow</li>
+            <li><strong>blur: </strong>Optional. The color of the shadow. The default value is the text color. Look at CSS Color Values for a complete list of possible color values.</li>
+            <li><strong>inset: </strong>Optional. Changes the shadow from an outer shadow (outset) to an inner shadow</li>
+            <li><strong>initial: </strong>Sets this property to its default value.</li>
+            <li><strong>inherit: </strong>Inherits this property from its parent element.</li>
+            
+        </ul>
+
+        <h3>Examples:</h3>
+        <p>
+            #rectangle
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                <strong>box-shadow: 10px 10px;</strong>
+            }
+        </p>
+        <div id="rectangle"></div>
+
+        <p>
+            #shadowColor
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                border-radius: 10%;
+                <strong>box-shadow: 10px 10px red;</strong>
+            }
+        </p>
+        <div id="shadowColor"></div>
+        
+        <p>
+            #innerShadow
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                border-radius: 10%;
+                <strong>box-shadow: 10px 10px inset red;</strong>
+            }
+        </p>
+        <div id="innerShadow"></div>
+
+        <p>
+            #blurShadow
+            {
+                border: 1px solid;
+                padding: 10px;
+                width: 300px;
+                height: 200px;
+                border-radius: 0 10% 10% 0;
+                <strong>box-shadow: 10px 10px 20px inset red;</strong>
+            }
+        </p>
+        <div id="blurShadow"></div>
+
+        <p>
+            #profilePicture
+            {
+                
+                border: 10px solid orange;
+                border-radius: 50%;
+                height: 200px;
+                width: 200px;
+                
+                background-image: url('images/profile-pic.png');
+                background-size: cover;
+                box-shadow: -10px -10px 20px grey;
+                
+            }
+        </p>
+        <div id="profilePicture"></div>
+        
+        <p>
+            #box
+            {
+                width: 400px;
+                height: 600px;
+                border: 5px solid yellowgreen;
+                background-image: url('images/garden-walkway.jpg');
+                background-position: center center;
+                background-size: cover;
+
+                <strong>box-shadow: 6px 6px 15px inset red;</strong>
+            }
+        </p>
+        <div id="box"></div>
+
+        <br><br>
+
+        <p>
+            #leaf
+            {
+                width: 400px;
+                height: 600px;
+                border: 5px solid yellowgreen;
+                background-image: url('images/garden-walkway.jpg');
+                background-position: center center;
+                background-size: cover;
+                border-radius: 0 50% 0 50%;
+                
+                <strong>box-shadow: 6px 6px 15px inset red;</strong>
+            }
+        </p>
+        <div id="leaf"></div>
+
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!-- CSS Padding Property -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Padding</title>
+        <style>
+            #box
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+
+                /* padding: top right bottom left; */
+                /* padding: 20px 20px 20px 20px; */
+                padding: 20px;
+                /* Padding is inside of the border */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Padding</h1>
+        <p>The Internal Element Spacing i.e., Padding creates extra space within an element.</p>
+        <p>An element's padding is the space between its content and its border.</p>
+        
+        <h2>Syntax</h2>
+        <p>&emsp;padding: top right bottom left;</p>
+        <p>You can use padding-top, padding-right, padding-bottom and padding-left separately to get individual borders.</p>
+        
+        <h3>This property can have from one to four values.</h3>
+
+        <strong>If the padding property has four values:</strong>
+        <ul>
+            <li>padding:10px 5px 15px 20px;</li>
+            <ul>
+                <li>top padding is 10px</li>
+                <li>right padding is 5px</li>
+                <li>bottom padding is 15px</li>
+                <li>left padding is 20px</li>
+            </ul>
+        </ul>
+
+        <strong>If the padding property has three values:</strong>
+        <ul>
+            <li>padding:10px 5px 15px;</li>
+            <ul>
+                <li>top padding is 10px</li>
+                <li>right and left padding are 5px</li>
+                <li>bottom padding is 15px</li>
+            </ul>
+        </ul>
+
+        <strong>If the padding property has two values:</strong>
+        <ul>
+            <li>padding:10px 5px;</li>
+            <ul>
+                <li>top  and bottom padding are 10px</li>
+                <li>right and left padding are 5px</li>
+            </ul>
+        </ul>
+
+        <strong>If the padding property has one value:</strong>
+        <ul>
+            <li>padding:10px;</li>
+            <ul>
+                <li>all four paddings are 10px</li>
+            </ul>
+        </ul>
+        
+        <h3>Example:</h3>
+        <p>
+            #box
+            {
+                width: 200px;
+                height: 200px;
+                border: 1px dashed red;
+                padding: 20px;
+            }
+        </p>
+        
+        <div id="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea quis quisquam. Illum blanditiis, incidunt odit aspernatur cupiditate dolore, minima tenetur eum consectetur soluta obcaecati laudantium nostrum nisi eveniet omnis.
+        </div>
+    </body>
+</html>

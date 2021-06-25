@@ -1,0 +1,26 @@
+.floating-image
+{
+    float: left;
+    
+    width: 300px;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 5px black;
+}
+
+p, div
+{
+    font-size: 25px;
+    text-align: justify;
+}
+
+.floatDiv
+{
+    display: inline-block;
+    width: 431px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 5px black;
+}

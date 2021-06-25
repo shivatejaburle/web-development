@@ -1,0 +1,149 @@
+<!-- CSS Borders -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Borders</title>
+        <style>
+            p.red-border
+            {
+                font-size: 20px;
+
+                border-width: 5px;
+                border-style: dashed;
+                border-color: orangered;
+                /* Border Style in 1 Line */
+                /* border: 5px dashed orangered; */
+            }
+
+            div.blue-border
+            {
+                font-size: 20px;
+                
+                border: 50px solid blue;
+                border-radius: 50px;
+            }
+
+            div.orange-border
+            {
+                font-size: 20px;
+                
+                border: 20px solid orange;
+                border-radius: 50%;
+                height: 500px;
+                width: 500px;
+            }
+
+            div.leaf-border
+            {
+                font-size: 20px;
+                
+                border: 20px solid green;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 50%;
+                /* Border Radius Style in 1 Line */
+                /* border-radius: 5px 50% 5px 50%; */
+                height: 300px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Border</h1>
+        <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+        
+        <h2>CSS Border Style</h2>
+        <p>The border-style property specifies what kind of border to display.</p>
+        <ul>
+            <li>dotted - Defines a dotted border</li>
+            <li>dashed - Defines a dashed border</li>
+            <li>solid - Defines a solid border</li>
+            <li>double - Defines a double border</li>
+            <li>none - Defines no border</li>
+            <li>hidden - Defines a hidden border</li>
+        </ul>
+
+        <h2>CSS Border Width</h2>
+        <p>The border-width property specifies the width of the four borders.</p>
+        <p>The width can be set as a specific size or by using one of the three pre-defined values: thin, medium, or thick:</p>
+        
+        <h2>CSS Border Color</h2>
+        <p>The border-color property is used to set the color of the four borders.</p>
+        
+        <h2>CSS Rounded Borders</h2>
+        <p>The border-radius property is used to add rounded borders to an element.</p>
+
+        <h2>All CSS Border Properties</h2>
+        <p><img src="images/css-border-properties.png" alt="css-border-properties"></p>
+
+        <h3>Example 1:</h3>
+        <p>
+            p.red-border <br>
+            {<br>
+                &emsp;font-size: 20px;<br>
+
+                &emsp;border-width: 5px;<br>
+                &emsp;border-style: dashed;<br>
+                &emsp;border-color: orangered;<br>
+                &emsp;/* Border Style in 1 Line */<br>
+                &emsp;/* border: 5px dashed orangered; */<br>
+            }
+        </p>
+        <p class="red-border">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quam earum ullam reprehenderit delectus labore, facere nulla. Commodi earum voluptatem similique expedita deserunt cum laudantium fuga sed beatae, unde corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus iste nam incidunt quos facilis, eum nulla eius id ut, quasi in. Tempore doloribus magni totam provident aut iure pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam esse tempore non rerum consequatur id minima ipsum tempora iusto. Corporis, ea inventore nihil excepturi harum quo perferendis minima iure quae?
+        </p>
+
+        <h3>Example 2:</h3>
+        <p>
+            div.blue-border<br>
+            {<br>
+                &emsp;font-size: 20px;<br><br>
+                
+                &emsp;border: 50px solid blue;<br>
+                &emsp;border-radius: 50px;<br>
+            }
+        </p>
+        <div class="blue-border">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quam earum ullam reprehenderit delectus labore, facere nulla. Commodi earum voluptatem similique expedita deserunt cum laudantium fuga sed beatae, unde corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus iste nam incidunt quos facilis, eum nulla eius id ut, quasi in. Tempore doloribus magni totam provident aut iure pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam esse tempore non rerum consequatur id minima ipsum tempora iusto. Corporis, ea inventore nihil excepturi harum quo perferendis minima iure quae?
+        </div>
+
+        <h3>Example 3:</h3>
+        <p>
+            div.orange-border<br>
+            {<br>
+                &emsp;font-size: 20px;<br><br>
+                
+                &emsp;border: 20px solid orange;<br>
+                &emsp;border-radius: 50%;<br>
+                &emsp;height: 500px;<br>
+                &emsp;width: 500px;<br>
+            }
+        </p>
+        <div class="orange-border">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quam earum ullam reprehenderit delectus labore, facere nulla. Commodi earum voluptatem similique expedita deserunt cum laudantium fuga sed beatae, unde corporis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus iste nam incidunt quos facilis, eum nulla eius id ut, quasi in. Tempore doloribus magni totam provident aut iure pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam esse tempore non rerum consequatur id minima ipsum tempora iusto. Corporis, ea inventore nihil excepturi harum quo perferendis minima iure quae?
+        </div>
+
+        <h3>Example 4:</h3>
+        <p>
+            div.leaf-border<br>
+            {<br>
+                &emsp;font-size: 20px;<br><br>
+                
+                &emsp;border: 20px solid green;<br>
+                &emsp;border-top-left-radius: 5px;<br>
+                &emsp;border-top-right-radius: 50%;<br>
+                &emsp;border-bottom-right-radius: 5px;<br>
+                &emsp;border-bottom-left-radius: 50%;<br>
+                &emsp;/* Border Radius Style in 1 Line */<br>
+                &emsp;/* border-radius: 5px 50% 5px 50%; */<br>
+                &emsp;height: 300px;<br>
+                &emsp;width: 300px;<br>
+            }
+        </p>
+        <div class="leaf-border">
+            Leaf Border using CSS
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!-- CSS Introduction -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Types of CSS</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div>
+            <h1>Using CSS</h1>
+            <p>CSS can be added to HTML documents in 3 ways:</p>
+            <p>
+                <ul>
+                    <li><strong>Inline</strong> - by using the style attribute inside HTML elements</li>
+                    <li><strong>Internal</strong> - by using a &lt;style&gt; element in the &lt;head&gt; section</li>
+                    <li><strong>External</strong> - by using a &lt;link&gt; element to link to an external CSS file</li>
+                </ul>
+            </p>
+            <p>The most common way to add CSS, is to keep the styles in external CSS files. However, in this tutorial we will use inline and internal styles, because this is easier to demonstrate, and easier for you to try it yourself.</p>
+        </div>
+        <hr>
+        <div>
+            <h1>Inline CSS</h1>
+            <p>An inline CSS is used to apply a unique style to a single HTML element.</p>
+            <p>An inline CSS uses the style attribute of an HTML element.</p>
+            <h2>Syntax:</h2>
+            <p>&lt;element-start-tag <strong>style=<q>property : value;</q></strong>&gt; - - content - - &lt;/element-end-tag&gt;</p>
+            <h3>Example:</h3>
+            <p>&lt;h1 <strong>style=<q>color:red;</q></strong>&gt;This is Inline CSS&lt;/h1&gt;</p>
+            <h1 style="color:red;">This is Inline CSS</h1>
+        </div>
+        <hr>
+        <div>
+            <h1>Internal CSS</h1>
+            <p>An internal CSS is used to define a style for a single HTML page.</p>
+            <p>An internal CSS is defined in the &lt;head&gt; section of an HTML page, within a &lt;style&gt; element.</p>
+            <h2>Syntax:</h2>
+            <p>element-Selector { property : value; }</p>
+            <h3>Example:</h3>
+            <p>
+                &lt;style&gt;<br>
+                &emsp;h4 { background-color: black; color: yellow; width: 25%;} <br>
+                &lt;/style&gt;
+            </p>
+            <style>
+                h4
+                {
+                    background-color: black;
+                    color: yellow;
+                    width: 25%;
+                }
+            </style>
+            <h4>This is Internal CSS</h4>
+        </div>
+        <hr>
+        <div>
+            <h1>External CSS</h1>
+            <p>An external style sheet is used to define the style for many HTML pages.</p>
+            <p>To use an external style sheet, add a link to it in the <head> section of each HTML page.</p>
+            <h2>Syntax:</h2>
+            <p>&lt;link rel=<q>stylesheet</q> href=<q><strong>--path-of-css-file--</strong></q>&gt;</p>
+            <h3>Example:</h3>
+            <p>&lt;link rel=<q>stylesheet</q> href=<q><strong>styles.css</strong></q>&gt; </p>
+            
+            <div class="divBg">
+                This is External CSS. Loads style from style.css file.
+            </div>
+        </div>
+    </body>
+</html>

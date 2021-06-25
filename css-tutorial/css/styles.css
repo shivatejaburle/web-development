@@ -1,0 +1,12 @@
+.divBg
+{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New';
+    padding: 20px;
+    margin: 20px;
+}

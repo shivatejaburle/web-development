@@ -1,0 +1,40 @@
+<!-- Selecting nested elements using CSS -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Combinators</title>
+        <style>
+            p strong
+            {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Combinators</h1>
+        <p>A combinator is something that explains the relationship between the selectors.</p>
+        <h2>Descendant Selector (space)</h2>
+        <p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+        <p>
+            <b>Example:</b><br><br>
+            p strong
+            {
+                color: red;
+            }<br><br>
+            &lt;div&gt; <br>
+            &emsp;&lt;p&gt; <br>
+                &emsp;&emsp;&lt;strong&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/strong&gt; Tempore recusandae, officiis enim assumenda porro exercitationem nihil nemo voluptatibus aut, voluptatem inventore beatae cumque debitis ut officia illo et impedit rerum. <br>
+            &emsp;&lt;/p&gt; <br>
+            &emsp;&lt;strong&gt;This is bolded text&lt;/strong&gt; <br>
+            &lt;/div&gt;
+        </p>
+
+        <div>
+            <p>
+                <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Tempore recusandae, officiis enim assumenda porro exercitationem nihil nemo voluptatibus aut, voluptatem inventore beatae cumque debitis ut officia illo et impedit rerum.
+            </p>
+            <strong>This is bolded text</strong>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!-- CSS ID Selectors-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS ID Selectors</title>
+        <style>
+            /* Class Selectors - Dot(.) is equal to Class*/
+            .orange
+            {
+                color: orange;
+            }
+            .upperCase
+            {
+                text-transform: uppercase;
+            }
+            /* ID Selectors - # is equal to ID*/
+            #the-title
+            {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS ID Selectors</h1>
+        <p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+        <p>The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
+        <p>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
+        <p>An id name cannot start with a number!</p>
+
+        <p><b>Example: </b></p>
+        <p>
+            #the-title
+            {
+                text-decoration: underline;
+            } <br><br>
+            &lt;h1 id="the-title" class="orange upperCase"&gt;Shivateja Burle&lt;/h1&gt;<br><br>
+            &lt;div class="orange"&gt;This is a div&lt;/div&gt; <br>
+            &lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+            &lt;h1 class="upperCase"&gt;This is CSS Class Selectors Example&lt;/h1&gt;<br>
+            &lt;strong&gt;This is bolded text&lt;/strong&gt;&lt;br&gt;<br>
+            This is normal text
+        </p>
+
+        <!-- ID must be Unique-->
+        <h1 id="the-title" class="orange upperCase">Shivateja Burle</h1>
+        <div class="orange">This is a div</div>
+        <p>This is a paragraph</p>
+        <h1 class="upperCase">This is CSS Class Selectors Example</h1>
+        <strong>This is bolded text</strong><br>
+        This is normal text
+    </body>
+</html>
