@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms</title>
+        <script src="js/form.js"></script>
+    </head>
+    <body>
+        <form method="GET">
+            <div>
+                <label for="Firstname">First Name</label>
+                <input type="text" id="firstname">
+            </div>
+            <br>
+            <div>
+                <label for="Lastname">Last Name</label>
+                <input type="text" id="lastname">
+            </div>
+            <br>
+            <div>
+                <label for="Gender">Gender</label>
+                <input type="radio" id="Male" name="Gender">
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="Gender">
+                <label for="Female">Female</label>
+            </div>
+            <br>
+            <div>
+                <label for="Preferredcontactmethod">Preferred Contact Method</label>
+                <input type="checkbox" id="Email">
+                <label for="Email">Email</label>
+                <input type="checkbox" id="Phone">
+                <label for="Phone">Phone</label>
+            </div>
+            <div>
+                <label for="Country">Country</label>
+                <select name="Country" id="Country">
+                    <option value="Australia">Australia</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="Address">Address:</label>
+                <textarea name="Address" id="Address" cols="30" rows="10"></textarea>
+            </div>
+            <br>
+             <div>
+                 <input type="button" name="submit" id="submit" value="Submit Form" onclick="myfun()">
+             </div>
+        </form>
+        <h1>Embed video</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Fz5s1ZSZusY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>&copy; Singapore</p>
+    </body>
+</html>
