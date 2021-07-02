@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Link States</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            a
+            {
+                font-size: 30px;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium';
+                /* text-decoration: none; */
+            }
+
+            a:link
+            {
+                color: black;
+            }
+
+            a:visited
+            {
+                color: olivedrab;
+            }
+
+            a:hover
+            {
+                color: red;
+            }
+
+            a:active
+            {
+                color: blue;
+            }
+            
+            /* elementSelector.classSelector */
+            div.bigText
+            {
+                font-size: 30px;
+                color: red;
+            }
+
+            .bigText
+            {
+                color: blue;
+            }
+
+            img
+            {
+                width: 60%
+            }
+            body
+            {
+                background-image: url('images/www-icon.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: right;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <a href="https://www.idizital.com">i-Dizital Software Solutions</a>
+        </p>
+        <p>
+            <a href="https://www.google.com">Google</a>
+        </p>
+        <p>
+            This is a paragraph
+        </p>
+        <p class="bigText">
+            This is a styled paragraph
+        </p>
+        <p>
+            This is another paragraph
+        </p>
+        <div class="bigText">
+            This is a div
+        </div>
+
+    </body>
+</html>
