@@ -1,0 +1,324 @@
+<!-- CSS transition Property -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - Adding Smooth Transitions</title>
+        <style>
+           a
+           {
+               background-color: #fff;
+               color: #000;
+               display: inline-block;
+               padding: 5px 15px;
+               text-decoration: none;
+               border: 1px solid black;
+
+               /* Generally, the transition seconds are very less.
+               We used higher value to understand the transition effect. */
+
+               /* transition: all 2s; */
+               /* transition: all 2s, color 5s; */
+               transition: all 2s, color 5s, padding 1s;
+           }
+
+           a:hover
+           {
+               background-color: green;
+               color: #fff;
+               padding: 10px 30px;
+           }
+
+           /* Transition effect for the width property, with a duration of 2 seconds */
+            .div1
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 2s;
+            }
+
+            .div1:hover
+            {
+                width: 300px;
+                content: "Width Changed to 300px";
+            }
+
+            /* Transition effect for both the width and height property, 
+                with a duration of 2 seconds for the width and 4 seconds for the height */
+            .div2
+            {
+            width: 100px;
+            height: 100px;
+            background: green;
+            transition: width 2s, height 4s;
+            } 
+
+            .div2:hover
+            {
+            width: 300px;
+            height: 300px;
+            }
+
+            /* The transition-timing-function Property */
+            .div3
+            {
+                width: 200px;
+                height: 100px;
+                padding: 5px;
+                background: green;
+                text-align: center;
+                font-size: large;
+                color: white;
+                transition: width 2s;
+            }
+
+            .div3:hover
+            {
+                width: 500px;
+            }
+
+            #div1 {transition-timing-function: ease;} 
+            #div2 {transition-timing-function: linear;} 
+            #div3 {transition-timing-function: ease-in;} 
+            #div4 {transition-timing-function: ease-out;} 
+            #div5 {transition-timing-function: ease-in-out;}
+
+            /* Delay the Transition Effect */
+            .div4
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 3s;
+                transition-delay: 1s;
+            }
+              
+            .div4:hover
+            {
+                width: 300px;
+            }
+
+            /* cubic-bezier()  */
+            .div5
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 2s;
+                transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+            }
+
+            .div5:hover
+            {
+                width:300px;
+            }
+
+            /* Transition Individual Properties */
+            .div6
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition-property: width;
+                transition-duration: 2s;
+                transition-timing-function: linear;
+                transition-delay: 1s;
+            } 
+
+            .div6:hover
+            {
+                width:300px;
+            }
+
+            /* Transition Properties Combined */
+            .div7
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 2s linear 1s;
+            } 
+
+            .div7:hover
+            {
+                width:300px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Adding Smooth Transitions</h1>
+        <h2>CSS Transitions</h2>
+        <p>CSS transitions allows you to change property values smoothly, over a given duration.</p>
+        <a href="#" class="button">Mouse hover on me to see a CSS transition effect</a>
+        <p>To create a transition effect, you must specify two things:</p>
+        <ul>
+            <li>the CSS property you want to add an effect to</li>
+            <li>the duration of the effect</li>
+        </ul>
+        <p><strong>Note: </strong>If the duration part is not specified, the transition will have no effect, because the default value is 0.</p>
+
+        <h2>Syntax</h2>
+        <p>transition: property duration timing-function delay | initial | inherit;</p>
+        <p><img src="images/css-transitions.png" alt="css-transitions"></p>
+        <h3>Transition effect for the width property, with a duration of 2 seconds</h3>
+        <p>
+            .div1
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                <strong>transition: width 2s;</strong>
+            } <br>
+            .div1:hover
+            {
+                width: 300px;
+            }
+        </p>
+        <div class="div1"></div>
+
+        <h3>Transition effect for both the width and height property, with a duration of 2 seconds for the width and 4 seconds for the height</h3>
+        <p>
+            .div2
+            {
+            width: 100px;
+            height: 100px;
+            background: green;
+            <strong>transition: width 2s, height 4s;</strong>
+            } <br>
+
+            .div2:hover
+            {
+            width: 300px;
+            height: 300px;
+            }
+        </p>
+        <div class="div2"></div>
+
+        <h2>Specify the Speed Curve of the Transition</h2>
+        <p>The transition-timing-function property specifies the speed curve of the transition effect.</p>
+        <p>The transition-timing-function property can have the following values:</p>
+        <ul>
+            <li><code>ease</code> - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+            <li><code>linear</code> - specifies a transition effect with the same speed from start to end</li>
+            <li><code>ease-in</code> - specifies a transition effect with a slow start</li>
+            <li><code>ease-out</code> - specifies a transition effect with a slow end</li>
+            <li><code>ease-in-out</code> - specifies a transition effect with a slow start and end</li>
+            <li><code>cubic-bezier(n,n,n,n)</code> - lets you define your own values in a cubic-bezier function</li>
+        </ul>
+        <h3>Example</h3>
+        <p>
+            .div3
+            {
+            width: 200px;
+            height: 100px;
+            background: green;
+            <strong>transition: width 2s;</strong>
+            } <br>
+
+            .div3:hover
+            {
+            width: 500px;
+            } <br> <br>
+
+            #div1 { <strong>transition-timing-function: ease;</strong> } <br>
+            <div class="div3"  id="div1">ease (default)<br>specifies a transition effect with a slow start, then fast, then end slowly</div><br>
+            #div2 { <strong>transition-timing-function: linear;</strong> } <br><br>
+            <div class="div3"  id="div2">linear<br>specifies a transition effect with the same speed from start to end</div><br>
+            #div3 { <strong>transition-timing-function: ease-in;</strong> } <br><br>
+            <div class="div3"  id="div3">ease-in<br>specifies a transition effect with a slow start</div><br>
+            #div4 { <strong>transition-timing-function: ease-out;</strong> } <br><br>
+            <div class="div3"  id="div4">ease-out<br>specifies a transition effect with a slow end</div><br>
+            #div5 { <strong>transition-timing-function: ease-in-out;</strong> }<br><br>
+            <div class="div3"  id="div5">ease-in-out<br>specifies a transition effect with a slow start and end</div><br>
+        </p>
+
+        <h3>Delay the Transition Effect</h3>
+        <p>The transition-delay property specifies a delay (in seconds) for the transition effect.</p>
+        <h3>Example</h3>
+        <p>
+            .div4
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 3s;
+                <strong>transition-delay: 1s;</strong>
+            } <br>
+              
+            .div4:hover
+            {
+                width: 300px;
+            }
+        </p>
+        <div class="div4"></div>
+
+        <h3>cubic-bezier()</h3>
+        <p>The cubic-bezier() function defines a Cubic Bezier curve.</p>
+        <p>A Cubic Bezier curve is defined by four points P0, P1, P2, and P3.</p>
+        <p>P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios.</p>
+        <p>P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.</p>
+        <p>The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property. </p>
+        <h3>Syntax</h3>
+        <p>cubic-bezier(x1,y1,x2,y2)</p>
+        <p>x1,y1,x2,y2 are Requigreen Numeric values. x1 and x2 must be a number from 0 to 1</p>
+        <h3>Example</h3>
+        <p>
+            .div5
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 2s;
+               <strong> transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);</strong>
+            } <br>
+            .div5:hover
+            {
+                width:300px;
+            }
+        </p>
+        <div class="div5"></div>
+
+        <h2>Transition Individual Properties</h2>
+        <p>The CSS transition properties can be specified one by one, like this:</p>
+        <p>
+            .div6
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                <strong>
+                    transition-property: width;
+                transition-duration: 2s;
+                transition-timing-function: linear;
+                transition-delay: 1s;
+                </strong>
+            } <br>
+
+            .div6:hover
+            {
+                width:300px;
+            } <br>
+        </p>
+        <div class="div6"></div>
+
+        <h3>Using The transition Shorthand Property</h3>
+        <p>
+            .div7
+            {
+                width: 100px;
+                height: 100px;
+                background: green;
+                <strong>transition: width 2s linear 1s;</strong>
+            } <br>
+            .div7:hover
+            {
+                width:300px;
+            } 
+        </p>
+        <div class="div7"></div><br>
+        <strong>Both .div6 and .div7 are equal. All the above examples we used the transition Shorthand Property.</strong>
+    </body>
+</html>

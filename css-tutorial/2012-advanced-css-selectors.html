@@ -1,0 +1,165 @@
+<!-- Advanced CSS Selectors -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - Advanced CSS Selectors</title>
+        <style>
+            /* Child Selector (>) */
+            div > p
+            {
+                background-color: greenyellow;
+                padding: 1%;
+            }
+
+            /* Adjacent Sibling Selector (+) */
+            div + p
+            {
+                background-color: orange;
+                padding: 1%;
+            }
+
+            /* General Sibling Selector (~) */
+            /* div ~ p
+            {
+                background-color: yellow;
+                padding: 1%;
+            } */
+           
+
+            /* For Child Elements */
+            #parent > .box
+            {
+                height: 30px;
+                border: 1px solid blue;
+            }
+            
+            #parent .box + .box  /* (or) #parent .box ~ .box */
+            {
+                background-color: red;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Advanced CSS Selectors - CSS Combinators</h1>
+        <h2>Child Selector (>)</h2>
+        <p>The child selector selects all elements that are the children of a specified element.</p>
+        <h3>Example</h3>
+        <p>
+            div > p
+            {
+                background-color: greenyellow;
+                padding: 1%;
+            }
+        </p>
+        <p>
+            &lt;div&gt; <br>
+                &emsp;&lt;p&gt;This style done for paragraph using Child Selector&lt;/p&gt; <br>
+                &emsp;&lt;section&gt;<br>
+                    &emsp;&emsp;&lt;p&gt;This is a paragraph which is child of section inside another div.&lt;/p&gt;<br>
+                &emsp;&lt;/section&gt;<br>
+                &emsp;&lt;p&gt;This style done for another paragraph using Child Selector&lt;/p&gt;<br>
+            &lt;/div&gt;
+        </p>
+
+        <div>
+            <p>This style done for paragraph using Child Selector</p>
+            <section>
+                <p>This is a paragraph which is child of section inside another div.</p>
+            </section>
+            <p>This style done for another paragraph using Child Selector</p>
+        </div>
+
+        <h2>Adjacent Sibling Selector (+)</h2>
+        <p>The general sibling selector selects all elements that are next siblings of a specified element.</p>
+        <h3>Example</h3>
+        <p>
+            div + p
+            {
+                background-color: orange;
+                padding: 1%;
+            }
+        </p>
+        <p>
+            &lt;div&gt; <br>
+                &emsp;&lt;p&gt;This paragraph is in div&lt;/p&gt; <br>
+                &emsp;&lt;p&gt;This paragraph is in div&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;p&gt;This style done for paragraph using Adjacent Sibling Selector&lt;/p&gt; <br>
+            &lt;p&gt;This is another paragraph&lt;/p&gt;<br>
+            &lt;div&gt; <br>
+                &emsp;&lt;p&gt;This paragraph is in div&lt;/p&gt; <br>
+                &emsp;&lt;p&gt;This paragraph is in div&lt;/p&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;p&gt;This style done for paragraph using Adjacent Sibling Selector&lt;/p&gt; <br>
+            &lt;p&gt;This is another paragraph&lt;/p&gt;<br>
+        </p>
+        <div>
+            <p>This paragraph is in div</p>
+            <p>This paragraph is in div</p>
+        </div>
+        <p>This style done for paragraph using Adjacent Sibling Selector</p>
+        <p>This is another paragraph</p>
+        <div>
+            <p>This paragraph is in div</p>
+            <p>This paragraph is in div</p>
+        </div>
+        <p>This style done for paragraph using Adjacent Sibling Selector</p>
+        <p>This is another paragraph</p>
+
+        <h2>General Sibling Selector (~)</h2>
+        <p>The general sibling selector selects all elements that are next siblings of a specified element.</p>
+        <h3>Example</h3>
+        <p>
+            div ~ p
+            {
+                background-color: yellow;
+            }
+        </p>
+
+        <h2>Advanced CSS Selector Example:</h2>
+        <p>
+            #parent > .box
+            {
+                height: 30px;
+                border: 1px solid blue;
+            }
+            <br>
+            #parent .box + .box
+            {
+                background-color: red;
+            }   
+        </p>
+        <p>
+            &lt;div id="parent"&gt; <br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+            &lt;div class="box"&gt;This ia another div element&lt;/div&gt;
+        </p>
+
+        <div id="parent">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="box">This ia another div element</div>
+    </body>
+</html>

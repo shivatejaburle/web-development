@@ -1,0 +1,359 @@
+<!-- CSS - Pseudo Elements -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pseudo Elements</title>
+        <style>
+            /* Example for ::before */
+            div > h1::before
+            {
+                content: "\"";
+                color: green;
+            }
+
+            /* Example for ::after */
+            div > h1::after
+            {
+                content: "\"";
+                color: red;
+            }
+
+            /* Example for pseudo elements with shapes */
+            .box
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid black;
+                margin: 50px auto;
+                position: relative;
+                background-color: yellow;
+            }
+
+            .box::before
+            {
+                content: '';
+                display: block;
+                border: 10px solid red;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                /* z-index is used to move forward or backward */
+                z-index: -1;
+            }
+
+            .box::after
+            {
+                content: ' ';
+                display: block;
+                border: 10px solid blue;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: -30px;
+                right: -30px;
+                /* z-index is used to move forward or backward */
+                z-index: 1;
+            }
+
+            /* Example for pseudo elements with text */
+            a
+            {
+                text-decoration: none;
+                color: black;
+                position: relative;
+            }
+
+            a::before
+            {
+                content: ' ';
+                width: 100%;
+                height: 4px;
+                background-color: yellowgreen;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            a:hover::before
+            {
+                height: 14px;
+            }
+
+            /* Changing the size of first letter using Pseudo Elements */
+            div > p::first-letter
+           {
+               font-size: 50px;
+               float: left;
+               margin: 5px;
+           }
+
+           /* Changing the size of first line using Pseudo Elements */
+           div > p::first-line
+           {
+               font-weight: bold;
+           }
+           
+           /* Example for ::marker */
+           div ::marker
+            {
+                color: green;
+                font-size: 25px;
+            }
+
+            /* Example for ::selection */
+            div > p::selection
+            {
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pseudo Elements</h1>
+        <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+        <p>Pseudo Elements can be used to: </p>
+        <ul>
+            <li>Insert content before, or after, the content of an element.</li>
+            <li>Style the first letter, or line, of an element.</li>
+        </ul>
+        
+        <h2>Syntax</h2>
+        <p>
+            selector::pseudo-element <br>
+            {<br>
+                &emsp;property: value;<br>
+            }
+        </p>
+
+        <p>
+            <img src="images/CSS-Pseudo-elements.jpg" alt="CSS-Pseudo-elements">
+        </p>
+
+        <hr>
+        <h1>Before and After pseudo elements</h1>
+        <hr>
+        <h2>The ::before Pseudo-element</h2>
+        <p>The ::before pseudo-element can be used to insert some content before the content of an element.</p>
+
+        <h2>The ::after Pseudo-element</h2>
+        <p>The ::after pseudo-element can be used to insert some content after the content of an element.</p>
+
+        <h3>Example</h3>
+        <p>
+            div > h1::before
+            {
+                content: "\"";
+                color: green;
+            } <br>
+            div > h1::after
+            {
+                content: "\"";
+                color: red;
+            }
+        </p>
+        <p>
+            &lt;div&gt;<br>
+                &emsp;&lt;h1&gt;Shivateja Burle&lt;/h1&gt;<br>
+            &lt;/div&gt;
+        </p>
+        <div>
+            <h1>Shivateja Burle</h1>
+        </div>
+
+        <h3>Example with text:</h3>
+        <p>
+            a
+            {
+                text-decoration: none;
+                color: black;
+                position: relative;
+            } <br>
+
+            a::before
+            {
+                content: ' ';
+                width: 100%;
+                height: 4px;
+                background-color: yellowgreen;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            } <br>
+
+            a:hover::before
+            {
+                height: 14px;
+            }
+        </p>
+        <p>&lt;p&gt; ---content--- &lt;a href="#"&gt; ---content--- &lt;/a&gt; ---content--- &lt;/p&gt;</p>
+        <p>This is a link with <a href="#">before pseudo element</a> which gets Underline of green color and gets green background-color when we hover on it.</p>
+
+        <h3>Example with shapes:</h3>
+        <p>
+            .box
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid black;
+                margin: 50px auto;
+                position: relative;
+                background-color: yellow;
+            } <br>
+
+            .box::before
+            {
+                content: '';
+                display: block;
+                border: 10px solid red;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                z-index: -1;
+            } <br>
+
+            .box::after
+            {
+                content: ' ';
+                display: block;
+                border: 10px solid blue;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: -30px;
+                right: -30px;
+                z-index: 1;
+            }
+        </p>
+        <p>&lt;div class="box"&gt;&lt;/div&gt;</p>
+        <div class="box"></div>
+
+        <hr>
+        <h1>Changing the first letter and first line using pseudo elements</h1>
+        <hr>
+        <h2>The ::first-letter Pseudo-element</h2>
+        <p>The ::first-letter pseudo-element is used to add a special style to the first letter of a text.</p>
+        <p>The ::first-letter pseudo-element can only be applied to block-level elements.</p>
+        <p>The following properties apply to the ::first-letter pseudo- element: </p>
+        <p>
+            <ul>
+                <li>font properties</li>
+                <li>color properties </li>
+                <li>background properties</li>
+                <li>margin properties</li>
+                <li>padding properties</li>
+                <li>border properties</li>
+                <li>text-decoration</li>
+                <li>vertical-align (only if "float" is "none")</li>
+                <li>text-transform</li>
+                <li>line-height</li>
+                <li>float</li>
+                <li>clear</li>
+            </ul>
+        </p>
+
+        <h2>The ::first-line Pseudo-element</h2>
+        <p>The ::first-line pseudo-element is used to add a special style to the first line of a text.</p>
+        <p>The ::first-line pseudo-element can only be applied to block-level elements.</p>
+        <p>The following properties apply to the ::first-line pseudo-element:</p>
+        <p>
+            <ul>
+                <li>font properties</li>
+                <li>color properties </li>
+                <li>background properties</li>
+                <li>word-spacing</li>
+                <li>letter-spacing</li>
+                <li>text-decoration</li>
+                <li>vertical-align</li>
+                <li>text-transform</li>
+                <li>line-height</li>
+                <li>clear</li>
+            </ul>
+        </p>
+
+        <p><strong>Note:</strong></p>
+        <ul>
+            <li>Notice the double colon notation - ::first-line versus :first-line .</li>
+            <li>The double colon replaced the single-colon notation for pseudo-elements in CSS3.</li>
+            <li>This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <p>
+            div > p::first-letter
+            {
+                font-size: 50px;
+                float: left;
+                margin: 5px;
+            } <br>
+            div > p::first-line
+            {
+                font-weight: bold;
+            }
+        </p>
+        <div>
+            <p>
+                BShivateja Burle - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium earum inventore qui cupiditate iure quae, accusantium assumenda itaque? Tempora inventore possimus at repudiandae sed beatae facere repellat unde incidunt eveniet.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint in tempore omnis illum ipsa, aliquam sed iure eius officia, laboriosam quisquam amet aspernatur iusto rerum ipsam, vel vitae doloremque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In sint quaerat natus voluptates cupiditate, atque inventore, aperiam hic nulla delectus nostrum aspernatur quas debitis earum. Recusandae enim earum exercitationem perspiciatis?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis nisi laudantium, aliquid facere eos repudiandae iste, excepturi veniam nesciunt nulla fuga inventore ea delectus illum quod ipsa quaerat aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam libero accusantium consequuntur placeat deleniti dolorum facilis consectetur quibusdam laudantium. Voluptatem voluptas sapiente soluta veritatis, necessitatibus aliquam blanditiis labore aliquid aspernatur?
+            </p>
+        </div>
+        
+        <hr>
+        <h2>The ::marker Pseudo-element</h2>
+        <p>The ::marker pseudo-element selects the markers of list items.</p>
+        <h3>Example</h3>
+        <p>
+            div ::marker
+            {
+                color: red;
+                font-size: 23px;
+            }
+        </p>
+        <p>
+            <div>
+                <ol>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+            </div>
+        </p>
+
+        <hr>
+        <h1>Highlighting text with selection</h1>
+        <hr>
+        <h2>The ::selection Pseudo-element</h2>
+        <p>The ::selection pseudo-element matches the portion of an element that is selected by a user.</p>
+        <h3>Example</h3>
+        <p>
+            div ::selection
+            {
+                background-color: green;
+                color: white;
+            }
+        </p>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque quo ipsa numquam esse cumque temporibus, vel omnis, quis dolorem, consequatur nulla ex fugiat incidunt officia dolore amet dolores eaque!
+    
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quibusdam incidunt odio ratione deserunt assumenda? Voluptatum, nam officiis sit error assumenda id obcaecati maxime ut corporis culpa dolore voluptate excepturi.
+    
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem voluptate alias pariatur ad voluptatibus ex nesciunt eum, totam aperiam, unde, non atque deserunt omnis. Rem corrupti accusamus deleniti quasi?
+    
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur saepe deserunt rem quae illo quo. Voluptatum unde earum, est porro repudiandae veniam! Explicabo consequatur eos labore asperiores. Excepturi, nulla!
+    
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores sint cumque aspernatur, possimus labore minima nulla tempore ab expedita animi, voluptate quae beatae voluptatibus odio pariatur praesentium. Amet, illum.
+            </p>
+        </div>
+    </body>
+</html>

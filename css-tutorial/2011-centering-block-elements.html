@@ -1,0 +1,76 @@
+<!-- CSS - Centering Block Elements -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centering Block Elements</title>
+        <style>
+            .box1
+            {
+                width: 200px;
+                height: 200px;
+                border: 10px solid red;
+
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .box2
+            {
+                width: 200px;
+                height: 200px;
+                border: 10px solid green;
+
+                /* margin: top&bottom left&right */
+                margin: 50px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Centering Block Elements</h1>
+        <p>To horizontally center a block element (like &lt;div&gt;), use margin: auto;</p>
+        <p>Setting the width of the element will prevent it from stretching out to the edges of its container.</p>
+        <p>The element will then take up the specified width, and the remaining space will be split equally between the two margins.</p>
+        
+        <h3>Example</h3>
+        <p>
+            .box1
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid red;
+
+                <strong>margin-left: auto;</strong>
+                <strong>margin-right: auto;</strong>
+            }
+        </p>
+        <p>
+            &lt;div class="box1"&gt; <br>
+                &emsp;&lt;p&gt;-- Your Content --&lt;/p&gt; <br>
+            &lt;/div&gt; <br>
+        </p>
+        <div class="box1">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+        </div>
+        
+        <p>
+            .box2
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid green;
+                <strong>margin: 50px auto;</strong>
+            }
+        </p>
+        <p>
+            &lt;div class="box2"&gt; <br>
+                &emsp;&lt;p&gt;-- Your Content --&lt;/p&gt; <br>
+            &lt;/div&gt;
+        </p>
+        <div class="box2">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+        </div>
+        
+    </body>
+</html>

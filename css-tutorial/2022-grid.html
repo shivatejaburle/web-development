@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - Grid</title>
+        <style>
+
+            /* Everything in the page */
+            *
+            {
+                box-sizing: border-box;
+            }
+
+            /* grid items */
+            #gridStyle1
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: lightgrey;
+            }
+
+            .itemStyle1
+            {
+                border: 1px solid red;
+                padding: 10px;
+            }
+
+            /* Display Property as inline-grid */
+            .gridStyle2
+            {
+                display: inline-grid;
+                grid-template-columns: auto auto auto;
+                background-color: lightgreen;
+            }
+
+            .gridStyle2 > div
+            {
+                border: 1px solid red;
+                padding: 10px;
+            }
+
+            /* grid-column-gap */
+            #gridStyle3
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-column-gap: 20px;
+                background-color: aquamarine;
+            }
+
+            .itemStyle3
+            {
+                border: 1px solid white;
+                padding: 10px;
+                background-color: blue;
+                color: white;
+            }
+
+            /* grid-row-gap */
+            .gridStyle4
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-row-gap: 20px;
+                background-color: brown;
+            }
+
+            .gridStyle4 > div
+            {
+                border: 1px solid black;
+                padding: 10px;
+                background-color: yellowgreen;
+                
+            }
+
+            /* grid-gap */
+            #gridStyle5
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-gap: 20px;
+                background-color: coral;
+            }
+
+            .itemStyle5
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: gold;
+            }
+
+            /* grid-column */
+            #gridStyle6
+            {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 20px;
+                
+            }
+
+            .itemStyle6
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: gold;
+            }
+
+            .merge-cols-1
+            {
+                grid-column: 1 / 3;
+                background-color: lightgray;
+            }
+
+            .merge-cols-2
+            {
+                grid-column: 3 / span 2;
+                background-color: lightgray;
+            }
+
+            /* grid-row */
+            #gridStyle7
+            {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 20px;
+                
+            }
+
+            .itemStyle7
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: coral;
+            }
+
+            .merge-rows-1
+            {
+                grid-row: 1 / 3;
+                background-color: lightgray;
+            }
+
+            .merge-rows-2
+            {
+                grid-row: 1 / 3;
+                background-color: lightgray;
+            }
+
+            /* grid-area */
+            #gridStyle8
+            {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 20px;
+            }
+
+            .itemStyle8
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: aqua;
+            }
+
+            .merge-rows-cols-1
+            {
+                grid-area: 2 / 2 / 4 / 4;
+                background-color: lightgray;
+            }
+            .merge-rows-cols-2
+            {
+                grid-area: 4 / 2 / span 2 / span 2;
+                background-color: lightgray;
+            }
+
+            /* Naming Grid Items */
+            .myGridArea
+            {
+                grid-area: area1;
+            }
+
+            #gridStyle9
+            {
+                display: grid;
+                grid-template-areas: 'area1 . . .' 'area1 . . .';
+                grid-gap: 20px;
+            }
+
+            .itemStyle9
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: cornflowerblue;
+            }
+
+            /* order of items */
+            .gridStyle10
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-gap: 20px;
+                
+            }
+
+            .gridStyle10 > div
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: powderblue;
+            }
+
+            .order1 { grid-area: 1 / 3 / 2 / 4; }
+            .order2 { grid-area: 2 / 3 / 3 / 4; }
+            .order3 { grid-area: 1 / 1 / 2 / 2; }
+            .order4 { grid-area: 1 / 2 / 2 / 3; }
+            .order5 { grid-area: 2 / 1 / 3 / 2; }
+            .order6 { grid-area: 2 / 2 / 3 / 3; }
+            
+            @media only screen and (max-width: 800px)
+            {
+                .order1 { grid-area: 1 / span 3 / 2 / 4; }
+                .order2 { grid-area: 3 / 3 / 4 / 4; }
+                .order3 { grid-area: 2 / 1 / 3 / 2; }
+                .order4 { grid-area: 2 / 2 / span 2 / 3; }
+                .order5 { grid-area: 3 / 1 / 4 / 2; }
+                .order6 { grid-area: 2 / 3 / 3 / 4; }
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1>GRID</h1>
+        <h2>Grid Layout</h2>
+        <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+
+        <h2>Grid Container</h2>
+        <p>To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.</p>
+        <p>Grid containers consist of grid items, placed inside columns and rows.</p>
+
+        <h2>Grid Elements</h2>
+        <p>A grid layout consists of a parent element, with one or more child elements.</p>
+
+        <h2>Display Property</h2>
+        <p>An HTML element becomes a grid container when its display property is set to grid or inline-grid.</p>
+        <ul>
+            <li>Set the display property to grid to make a block-level grid container.</li>
+            <li>Set the display property to inline-grid to make an inline grid container.</li>
+        </ul>
+        <p>All direct children of the grid container automatically become grid items.</p>
+        
+        <h2>grid-template-columns Property</h2>
+        <p>The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.</p>
+        <p>The value is a space-separated-list, where each value defines the width of the respective column.</p>
+        <p><strong>Example: </strong>If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width.</p>
+        <p><strong>Note: </strong>If you have more than 4 items in a 4 columns grid, the grid will automatically add a new row to put the items in.</p>
+        <p>The grid-template-columns property can also be used to specify the size (width) of the columns.</p>
+        
+        <h3>Example for Grid with display property as grid:</h3>
+        <p>
+            #gridStyle1
+            {
+                <strong>
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                </strong>
+            } <br>
+            .itemStyle1
+            {
+                border: 1px solid red;
+            }
+        </p>
+        <p>
+            &lt;div id="gridStyle1"&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 1&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 2&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 3&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 4&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 5&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 6&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 7&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 8&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle1"&gt;Item 9&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+        </p>
+        <div id="gridStyle1">
+            <div class="itemStyle1">Item 1</div>
+            <div class="itemStyle1">Item 2</div>
+            <div class="itemStyle1">Item 3</div>
+            <div class="itemStyle1">Item 4</div>
+            <div class="itemStyle1">Item 5</div>
+            <div class="itemStyle1">Item 6</div>
+            <div class="itemStyle1">Item 7</div>
+            <div class="itemStyle1">Item 8</div>
+            <div class="itemStyle1">Item 9</div>
+        </div>
+
+        <h3>Example for Grid with display property as inline-grid:</h3>
+        <p>
+            .gridStyle2
+            {
+                <strong>display: inline-grid;</strong>
+                grid-template-columns: auto auto auto;
+                background-color: lightgreen;
+            }
+            <br>
+            .gridStyle2 > div
+            {
+                border: 1px solid red;
+                padding: 10px;
+            }
+        </p>
+        <p>
+            &lt;div class="gridStyle2"&gt;<br>
+                &emsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 2&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 4&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 5&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 6&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 7&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 8&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 9&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+        </p>
+        <div class="gridStyle2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+        </div>
+
+        <h2>Grid Columns</h2>
+        <p>The vertical lines of grid items are called columns.</p>
+        <p><img src="images/grid_columns.png" alt="grid-columns"></p>
+        <p>
+            #gridStyle3
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+               <strong> grid-column-gap: 20px;</strong>
+                background-color: aquamarine;
+            }
+            <br>
+            .itemStyle3
+            {
+                border: 1px solid white;
+                padding: 10px;
+                background-color: blue;
+                color: white;
+            }
+        </p>
+        <p>
+            &lt;div id="gridStyle3"&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 1&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 2&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 3&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 4&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 5&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 6&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 7&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 8&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle3"&gt;Item 9&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+        </p>
+        <div id="gridStyle3">
+            <div class="itemStyle3">Item 1</div>
+            <div class="itemStyle3">Item 2</div>
+            <div class="itemStyle3">Item 3</div>
+            <div class="itemStyle3">Item 4</div>
+            <div class="itemStyle3">Item 5</div>
+            <div class="itemStyle3">Item 6</div>
+            <div class="itemStyle3">Item 7</div>
+            <div class="itemStyle3">Item 8</div>
+            <div class="itemStyle3">Item 9</div>
+        </div>
+
+        <h2>Grid Rows</h2>
+        <p>The horizontal lines of grid items are called rows.</p>
+        <p><img src="images/grid_rows.png" alt="grid-rows"></p>
+        <p>
+            .gridStyle4
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                <strong>grid-row-gap: 20px;</strong>
+                background-color: brown;
+            } <br>
+
+            .gridStyle4 > div
+            {
+                border: 1px solid black;
+                padding: 10px;
+                background-color: yellowgreen;
+                
+            }
+        </p>
+        <p>
+            &lt;div class="gridStyle4"&gt;<br>
+                &emsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 2&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 4&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 5&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 6&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 7&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 8&lt;/div&gt;<br>
+                &emsp;&lt;div&gt;Item 9&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+        </p>
+        <div class="gridStyle4">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+        </div>
+
+        <h2>Grid Gaps</h2>
+        <p>The spaces between each column/row are called gaps.</p>
+        <p><img src="images/grid_gaps.png" alt="grid-gaps"></p>
+        <p>
+            #gridStyle5
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                <strong>grid-gap: 20px;</strong>
+                background-color: coral;
+            } <br>
+
+            .itemStyle5
+            {
+                border: 1px solid red;
+                padding: 10px;
+                background-color: gold;
+            }
+        </p>
+        <p>
+            &lt;div id="gridStyle5"&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 1&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 2&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 3&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 4&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 5&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 6&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 7&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 8&lt;/div&gt;<br>
+                &emsp;&lt;div class="itemStyle5"&gt;Item 9&lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+        </p>
+        <div id="gridStyle5">
+            <div class="itemStyle5">Item 1</div>
+            <div class="itemStyle5">Item 2</div>
+            <div class="itemStyle5">Item 3</div>
+            <div class="itemStyle5">Item 4</div>
+            <div class="itemStyle5">Item 5</div>
+            <div class="itemStyle5">Item 6</div>
+            <div class="itemStyle5">Item 7</div>
+            <div class="itemStyle5">Item 8</div>
+            <div class="itemStyle5">Item 9</div>
+        </div>
+
+        <h2>Grid Container Properties</h2>
+        <ul>
+            <li>
+                <strong>grid-template-columns</strong>
+                <ul>
+                    <li>The grid-template-columns property defines the width of each row.</li>
+                    <li>The value is a space-separated-list, where each value defines the width of the respective column.</li>
+                    <li>Values:</li>
+                    <ul>
+                        <li>auto</li>
+                        <li>specify required width</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <strong>grid-template-rows</strong>
+                <ul>
+                    <li>The grid-template-rows property defines the height of each row.</li>
+                    <li>The value is a space-separated-list, where each value defines the height of the respective row.</li>
+                    <li>Values:</li>
+                    <ul>
+                        <li>auto</li>
+                        <li>specify required width</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <strong>justify-content</strong>
+                <ul>
+                    <li>The justify-content property is used to align the whole grid inside the container.</li>
+                    <li><strong>Note: </strong>The grid's total width has to be less than the container's width for the justify-content property to have any effect.</li>
+                    <li>Values:</li>
+                    <ul>
+                        <li>space-evenly</li>
+                        <li>space-around</li>
+                        <li>space-between</li>
+                        <li>center</li>
+                        <li>start</li>
+                        <li>end</li>
+                    </ul>
+                </ul>
+            </li>
+            <li>
+                <strong>align-content</strong>
+                <ul>
+                    <li>The align-content property is used to vertically align the whole grid inside the container.</li>
+                    <li><strong>Note: </strong>he grid's total height has to be less than the container's height for the align-content property to have any effect.</li>
+                    <li>Values:</li>
+                    <ul>
+                        <li>space-evenly</li>
+                        <li>space-around</li>
+                        <li>space-between</li>
+                        <li>center</li>
+                        <li>start</li>
+                        <li>end</li>
+                    </ul>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Grid Item Properties</h2>
+        <ul>
+            <li>
+                <strong>grid-column</strong>
+                <ul>
+                    <li>The grid-column property defines on which column(s) to place an item.</li>
+                    <li>You define where the item will start, and where the item will end.</li>
+                    <li>The grid-column property is a shorthand property for the <strong>grid-column-start</strong> and the <strong>grid-column-end</strong> properties.</li>
+                    <li>To place an item, you can refer to line numbers, or use the keyword "span" to define how many columns the item will span.</li>
+                    <p><strong>Example: </strong></p>
+                    <p>
+                        #gridStyle6
+                        {
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                            grid-gap: 20px;
+                            
+                        } <br>
+
+                        .itemStyle6
+                        {
+                            border: 1px solid red;
+                            padding: 10px;
+                            background-color: gold;
+                        } <br><br>
+                        /* Make Grid Item start on column 1 & end before column 3 */ <br>
+                        <strong>
+                        .merge-cols-1
+                        {
+                            grid-column: 1 / 3;
+                        }</strong> <br><br>
+                        /* Make Grid Item start on column 3 and span 2 columns */ <br>
+                        <strong>
+                            .merge-cols-2
+                            {
+                                grid-column: 3 / 5;
+                            }</strong>
+                    </p>
+                    <p>
+                        &lt;div id="gridStyle6"&gt;<br>
+                            &emsp;&lt;div class="itemStyle6 <strong>merge-cols-1</strong>"&gt;Item 1&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle6"&gt;Item 2&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle6"&gt;Item 3&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle6"&gt;Item 4&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle6"&gt;Item 5&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle6 <strong>merge-cols-2</strong>"&gt;Item 6&lt;/div&gt;<br>
+                        &lt;/div&gt; <br>
+                    </p>
+                    <div id="gridStyle6">
+                        <div class="itemStyle6 merge-cols-1">Item 1</div>
+                        <div class="itemStyle6">Item 2</div>
+                        <div class="itemStyle6">Item 3</div>
+                        <div class="itemStyle6">Item 4</div>
+                        <div class="itemStyle6">Item 5</div>
+                        <div class="itemStyle6 merge-cols-2">Item 6</div>
+                    </div>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <strong>grid-row</strong>
+                <ul>
+                    <li>The grid-row property defines on which row to place an item.</li>
+                    <li>You define where the item will start, and where the item will end.</li>
+                    <li>The grid-row property is a shorthand property for the <strong>grid-row-start</strong> and the <strong>grid-row-end</strong> properties.</li>
+                    <li>To place an item, you can refer to line numbers, or use the keyword "span" to define how many rows the item will span.</li>
+                    <p><strong>Example: </strong></p>
+                    <p>
+                        #gridStyle7
+                        {
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                            grid-gap: 20px;
+                        } <br>
+
+                        .itemStyle7
+                        {
+                            border: 1px solid red;
+                            padding: 10px;
+                            background-color: coral;
+                        } <br><br>
+
+                        /* Make Grid Item start on row-line 1 and end on row-line 3 */ <br>
+                        <strong>
+                        .merge-rows-1
+                        {
+                            grid-row: 1 / 3;
+                            background-color: lightgray;
+                        }</strong> <br><br>
+
+                        /* Make Grid Item start on row 1 and span 2 rows: */ <br>
+                        <strong>
+                        .merge-rows-1
+                        {
+                            grid-row: 1 / 3;
+                            background-color: lightgray;
+                        }</strong>
+                    </p>
+                    <p>
+                        &lt;div id="gridStyle7"&gt;<br>
+                            &emsp;&lt;div class="itemStyle7 <strong>merge-rows-1</strong>"&gt;Item 1&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle7 <strong>merge-rows-2</strong>"&gt;Item 2&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle7"&gt;Item 3&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle7"&gt;Item 4&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle7"&gt;Item 5&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle7"&gt;Item 6&lt;/div&gt;<br>
+                        &lt;/div&gt; <br>
+                    </p>
+                    <div id="gridStyle7">
+                        <div class="itemStyle7 merge-rows-1">Item 1</div>
+                        <div class="itemStyle7 merge-rows-2">Item 2</div>
+                        <div class="itemStyle7">Item 3</div>
+                        <div class="itemStyle7">Item 4</div>
+                        <div class="itemStyle7">Item 5</div>
+                        <div class="itemStyle7">Item 6</div>
+                    </div>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <strong>grid-area</strong>
+                <ul>
+                    <li>The grid-area property can be used as a shorthand property for the <strong>grid-row-start, grid-column-start, grid-row-end</strong> and the <strong>grid-column-end</strong> properties.</li>
+                    <p><strong>Example: </strong></p>
+                    <p>
+                        #gridStyle8
+                        {
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                            grid-gap: 20px;
+                            
+                        } <br>
+
+                        .itemStyle8
+                        {
+                            border: 1px solid red;
+                            padding: 10px;
+                            background-color: aqua;
+                        } <br><br>
+
+                        /* Make Grid Item start on row-line 2 and column-line 2, and end on row-line 4 and column line 4 */ <br>
+                        <strong>
+                            .merge-rows-cols-1
+                            {
+                                grid-area: 2 / 2 / 4 / 4;
+                                background-color: lightgray;
+                            }
+                        </strong> <br><br>
+
+                        /* Make Grid Item start on row-line 4 and column-line 2, and span 2 rows and 2 columns. */ <br>
+                        <strong>
+                            .merge-rows-cols-2
+                            {
+                                grid-area: 4 / 2 / span 2 / span 2;
+                                background-color: lightgray;
+                            }
+                        </strong>
+                    </p>
+                    <p>
+                        &lt;div id="gridStyle8"&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 1&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 2&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 3&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 4&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 5&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8 <strong>merge-rows-cols-1</strong>"&gt;Item 6&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 7&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 8&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 9&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 10&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8 <strong>merge-rows-cols-2</strong>"&gt;Item 11&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 12&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 13&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 14&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 15&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 16&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 17&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle8"&gt;Item 18&lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </p>
+                    <div id="gridStyle8">
+                        <div class="itemStyle8">Item 1</div>
+                        <div class="itemStyle8">Item 2</div>
+                        <div class="itemStyle8">Item 3</div>
+                        <div class="itemStyle8">Item 4</div>
+                        <div class="itemStyle8">Item 5</div>
+                        <div class="itemStyle8 merge-rows-cols-1">Item 6</div>
+                        <div class="itemStyle8">Item 7</div>
+                        <div class="itemStyle8">Item 8</div>
+                        <div class="itemStyle8">Item 9</div>
+                        <div class="itemStyle8">Item 10</div>
+                        <div class="itemStyle8 merge-rows-cols-2">Item 11</div>
+                        <div class="itemStyle8">Item 12</div>
+                        <div class="itemStyle8">Item 13</div>
+                        <div class="itemStyle8">Item 14</div>
+                        <div class="itemStyle8">Item 15</div>
+                        <div class="itemStyle8">Item 16</div>
+                        <div class="itemStyle8">Item 17</div>
+                        <div class="itemStyle8">Item 18</div>
+                    </div>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <strong>Naming Grid Items</strong>
+                <ul>
+                    <li>The grid-area property can also be used to assign names to grid items.</li>
+                    <li>Named grid items can be referred to by the <strong>grid-template-areas</strong> property of the grid container.</li>
+                    <li>Each row is defined by apostrophes (' ')</li>
+                    <li>The columns in each row is defined inside the apostrophes, separated by a space.</li>
+                    <li><strong>Note: </strong>A period sign represents a grid item with no name.</li>
+                    <p><strong>Example: </strong></p>
+                    <p>
+                        <strong>
+                            .myGridArea
+                            {
+                                grid-area: area1;
+                            }
+                        </strong> <br>
+
+                        #gridStyle9
+                        {
+                            display: grid;
+                            <strong>grid-template-areas: 'area1 . . .' 'area1 . . .';</strong>
+                            grid-gap: 20px;
+                        } <br>
+
+                        .itemStyle9
+                        {
+                            border: 1px solid red;
+                            padding: 10px;
+                            background-color: cornflowerblue;
+                        }
+                    </p>
+                    <p>
+                        &lt;div id="gridStyle9"&gt;<br>
+                            &emsp;&lt;div class="itemStyle9 <strong>myGridArea</strong>"&gt;Item 1&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle9"&gt;Item 2&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle9"&gt;Item 3&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle9"&gt;Item 4&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle9"&gt;Item 5&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle9"&gt;Item 6&lt;/div&gt;<br>
+                            &emsp;&lt;div class="itemStyle9"&gt;Item 7&lt;/div&gt;<br>
+                        &lt;/div&gt; <br>
+                    </p>
+                    <div id="gridStyle9">
+                        <div class="itemStyle9 myGridArea">Item 1</div>
+                        <div class="itemStyle9">Item 2</div>
+                        <div class="itemStyle9">Item 3</div>
+                        <div class="itemStyle9">Item 4</div>
+                        <div class="itemStyle9">Item 5</div>
+                        <div class="itemStyle9">Item 6</div>
+                        <div class="itemStyle9">Item 7</div>
+                    </div>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <strong>Order of the Items</strong>
+                <ul>
+                    <li>The Grid Layout allows us to position the items anywhere we like.</li>
+                    <li>The first item in the HTML code does not have to appear as the first item in the grid.</li>
+                    <li>You can re-arrange the order for certain screen sizes, by using media queries.</li>
+                    <p><strong>Example: </strong></p>
+                    <p>
+                        .gridStyle10
+                        {
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                            grid-gap: 20px;
+                            
+                        }
+                        <br>
+                        .gridStyle10 > div
+                        {
+                            border: 1px solid red;
+                            padding: 10px;
+                            background-color: powderblue;
+                        }
+                        <br><br>
+                        <strong>
+                            .order1 { grid-area: 1 / 3 / 2 / 4; } <br>
+                            .order2 { grid-area: 2 / 3 / 3 / 4; } <br>
+                            .order3 { grid-area: 1 / 1 / 2 / 2; } <br>
+                            .order4 { grid-area: 1 / 2 / 2 / 3; } <br>
+                            .order5 { grid-area: 2 / 1 / 3 / 2; } <br>
+                            .order6 { grid-area: 2 / 2 / 3 / 3; } <br> <br>
+                            @media only screen and (max-width: 800px) <br>
+                            { <br>
+                                &emsp;.order1 { grid-area: 1 / span 3 / 2 / 4; } <br>
+                                &emsp;.order2 { grid-area: 3 / 3 / 4 / 4; } <br>
+                                &emsp;.order3 { grid-area: 2 / 1 / 3 / 2; } <br>
+                                &emsp;.order4 { grid-area: 2 / 2 / span 2 / 3; } <br>
+                                &emsp;.order5 { grid-area: 3 / 1 / 4 / 2; } <br>
+                                &emsp;.order6 { grid-area: 2 / 3 / 3 / 4; } <br>
+                            }
+                        </strong>
+                    </p>
+                    <p>
+                        &lt;div id="gridStyle10"&gt;<br>
+                            &emsp;&lt;div class="order1"&gt;Item 1&lt;/div&gt;<br>
+                            &emsp;&lt;div class="order2"&gt;Item 2&lt;/div&gt;<br>
+                            &emsp;&lt;div class="order3"&gt;Item 3&lt;/div&gt;<br>
+                            &emsp;&lt;div class="order4"&gt;Item 4&lt;/div&gt;<br>
+                            &emsp;&lt;div class="order5"&gt;Item 5&lt;/div&gt;<br>
+                            &emsp;&lt;div class="order6"&gt;Item 6&lt;/div&gt;<br>
+                        &lt;/div&gt; <br>
+                    </p>
+                    <div class="gridStyle10">
+                        <div class="order1">Item 1</div>
+                        <div class="order2">Item 2</div>
+                        <div class="order3">Item 3</div>
+                        <div class="order4">Item 4</div>
+                        <div class="order5">Item 5</div>
+                        <div class="order6">Item 6</div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

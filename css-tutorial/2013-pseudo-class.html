@@ -1,0 +1,102 @@
+<!-- CSS Pseudo Classes -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pseudo Classes</title>
+        <style>
+            .box
+            {
+                height: 30px;
+                border: 1px solid blue;
+                color: white;
+            }
+
+            /* CSS executes form top to bottom, so order of classes is important */
+            .box:not(.doNotSelectMe)
+            {
+                background-color: red;
+            }
+
+            .box:hover /* .className:pseudoSelector */
+            {
+                background-color: grey;
+            }
+
+            /* Selecting Child Element */
+            .box:nth-child(6)
+            {
+                background-color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Pseudo Classes</h1>
+        <p>A pseudo-class is used to define a special state of an element.</p>
+        <p>Using pseudo-class we can:</p>
+        <ul>
+            <li>Style an element when a user mouses over it</li>
+            <li>Style visited and unvisited links differently</li>
+            <li>Style an element when it gets focus</li>
+        </ul>
+        <h2>Syntax</h2>
+        <p>
+            selector:pseudo-class <br>
+            {<br>
+                &emsp;property: value;<br>
+            }
+        </p>
+        <p>
+            <img src="images/CSS-Pseudo-classses.jpg" alt="CSS-Pseudo-classes">
+        </p>
+        
+        <h3>Example</h3>
+        <p>
+            .box
+            {
+                height: 30px;
+                border: 1px solid blue;
+                color: white;
+            } <br>
+
+            .box:not(.doNotSelectMe)
+            {
+                background-color: red;
+            } <br>
+
+            .box:hover 
+            {
+                background-color: grey;
+            } <br>
+
+            .box:nth-child(6)
+            {
+                background-color: black;
+            }
+        </p>
+        <p>
+            &lt;div id="parent"&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box doNotSelectMe"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;Select Me&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+                &emsp;&lt;div class="box"&gt;&lt;/div&gt;<br>
+            &lt;/div&gt;
+        </p>
+        <div id="parent">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box doNotSelectMe"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">Select Me</div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,236 @@
+<!-- CSS Outlines --> 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Outlines - Borders Around Borders</title>
+        <style>
+            .outline
+            {
+                border: 5px solid red;
+                width: 300px;
+                height: 100px;
+                padding: 30px;
+                text-align: center;
+                font-size: 25px;
+
+                outline: 5px solid green;
+                outline-offset: 10px;
+                margin: 30px;
+            }
+
+            p {outline-color:red;}
+            p.dotted {outline-style: dotted;}
+            p.dashed {outline-style: dashed;}
+            p.solid {outline-style: solid;}
+            p.double {outline-style: double;}
+            p.groove {outline-style: groove;}
+            p.ridge {outline-style: ridge;}
+            p.inset {outline-style: inset;}
+            p.outset {outline-style: outset;}
+            
+            .invertEx
+            {
+                border: 1px solid yellow;
+                width: 200px;
+                height: 100px;;
+                outline-style: solid;
+                outline-color: invert;
+                margin: 20px;
+            }
+
+            p.ow1
+            {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: thin;
+            }
+            p.ow2
+            {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: medium;
+            }
+            p.ow3
+            {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: thick;
+            }
+            p.ow4
+            {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: 4px;
+            }
+
+            .offsetEx
+            {
+                margin: 30px;
+                width: 50%;
+                background:greenyellow;
+                border: 1px solid black;
+                outline: 1px solid red;
+                outline-offset: 15px;
+            }
+
+            .outlineEx
+            {
+                width: 50%;
+                font-size: 30px;
+                border: 1px solid red;
+                outline: 5px dotted green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Outline</h1>
+        <p>An outline is a line drawn outside the element's border.</p>
+        <p><img src="images/css-outline.png" alt="css-outline"></p>
+        <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".</p>
+        <div class="outline">Green Color is the Outline. <br><br> Red Color is the Border. </div>
+
+        <p><strong>CSS has the following outline properties:</strong></p>
+        <ul>
+            <li>outline-style</li>
+            <li>outline-color</li>
+            <li>outline-width</li>
+            <li>outline-offset</li>
+            <li>outline</li>
+        </ul>
+        
+        <h2>Outline Style</h2>
+        <p>The outline-style property specifies the style of the outline, and can have one of the following values:</p>
+        <ul>
+            <li><strong>dotted</strong> - Defines a dotted outline</li>
+            <li><strong>dashed</strong> - Defines a dashed outline</li>
+            <li><strong>solid</strong> - Defines a solid outline</li>
+            <li><strong>double</strong> - Defines a double outline</li>
+            <li><strong>groove</strong> - Defines a 3D grooved outline</li>
+            <li><strong>ridge</strong> - Defines a 3D ridged outline</li>
+            <li><strong>inset</strong> - Defines a 3D inset outline</li>
+            <li><strong>outset</strong> - Defines a 3D outset outline</li>
+            <li><strong>none</strong> - Defines no outline</li>
+            <li><strong>hidden</strong> - Defines a hidden outline</li>
+        </ul>
+        <h3>Examples:</h3>
+        <div style="width: 50%;">
+            p.dotted {outline-style: dotted;}
+            <p class="dotted">A dotted outline</p>
+            p.dashed {outline-style: dashed;}
+            <p class="dashed">A dashed outline</p>
+            p.solid {outline-style: solid;}
+            <p class="solid">A solid outline</p>
+            p.double {outline-style: double;}
+            <p class="double">A double outline</p>
+            p.groove {outline-style: groove;}
+            <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+            p.ridge {outline-style: ridge;}
+            <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+            p.inset {outline-style: inset;} 
+            <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+            p.outset {outline-style: outset;}
+            <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+        </div>
+
+        <h2>Outline Color</h2>
+        <p>The outline-color property is used to set the color of the outline.</p>
+        <p>The color can be set by: name, RGB, HEX, HSL and invert.</p>
+        <h3>Example for "outline-color" as "invert":</h3>
+        <p>Performs a color inversion. This ensures that the outline is visible, regardless of color background.</p>
+        <p>
+            .invertEx
+            {
+                border: 1px solid yellow;
+                width: 200px;
+                height: 100px;;
+                outline-style: solid;
+                outline-color: invert;
+                margin: 30px;
+            }
+        </p>
+        <div class="invertEx"></div>
+        
+        <h2>Outline Width</h2>
+        <p>The outline-width property specifies the width of the outline, and can have one of the following values:</p>
+        <p>
+            <ul>
+                <li><strong>thin</strong> (typically 1px)</li>
+                <li><strong>medium</strong> (typically 3px)</li>
+                <li><strong>thick</strong> (typically 5px)</li>
+                <li>A specific <strong>size</strong> (in px, pt, cm, em, etc)</li>
+            </ul>
+        </p>
+        <h3>Examples:</h3>
+        <div style="width: 50%;">
+            p.ow1 {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: thin;
+              }
+              <p class="ow1">A thin outline.</p>
+              
+              p.ow2 {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: medium;
+              }
+              <p class="ow2">A medium outline.</p>
+              
+              p.ow3 {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: thick;
+              }
+              <p class="ow3">A thick outline.</p>
+              
+              p.ow4 {
+                border: 1px solid black;
+                outline-style: solid;
+                outline-color: red;
+                outline-width: 4px;
+              }
+              <p class="ow4">A 4px thick outline.</p>
+        </div>
+        <h2>Outline Offset</h2>
+        <p>The outline-offset property adds space between an outline and the edge/border of an element. The space between an element and its outline is transparent.</p>
+        <h3>Example:</h3>
+        <p>
+            .offsetEx
+            {
+                margin: 30px;
+                background:yellowgreen;
+                border: 1px solid black;
+                outline: 1px solid red;
+                outline-offset: 15px;
+            }
+        </p>
+        <div class="offsetEx">This is example for CSS Offset</div>
+
+        <h2>Outline</h2>
+        <p>A shorthand property for setting outline-width, outline-style, and outline-color in one declaration.</p>
+        <h3>Syntax</h3>
+        <p>outline: outline-width outline-style outline-color | initial | inherit;</p>
+        <p>If outline-color is omitted, the color applied will be the color of the text.</p>
+        <p><strong>Note:</strong> Note: Outlines differ from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.</p>
+
+        <h3>Example for shorthand of Outline:</h3>
+        <p>
+            .outlineEx
+            {
+                border: 1px solid red;
+                outline: 5px dotted green;
+            }
+        </p>
+        <div class="outlineEx">This is example for shorthand of outline</div>
+    </body>
+</html>

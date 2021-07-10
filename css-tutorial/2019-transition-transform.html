@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transition + Transform</title>
+        <style> 
+            div
+            {
+                width: 300px;
+                height: 300px;
+                background: orange;
+                margin: 100px;
+                padding: 10px;
+                font-size: xx-large;
+                text-align: center;
+                transition: width 2s, height 2s, transform 2s;
+            }
+
+            div:hover
+            {
+                width: 300px;
+                height: 300px;
+                transform: rotate(180deg);
+            }
+
+            #div1
+            {
+                width:250px;
+                height:250px;
+                background-color:blue;
+                color: white;
+                border:1px solid black;
+                transform:rotate(7deg);
+                -ms-transform:rotate(7deg); /* IE 9 */
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Transition + Transform</h1>
+
+        <p>Hover over the div element below:</p>
+        <p>
+           <strong> div</strong>
+            {
+                width: 300px;
+                height: 300px;
+                background: orange;
+                margin: 100px;
+                padding: 10px;
+                font-size: xx-large;
+                text-align: center;
+                <strong>transition: width 2s, height 2s, transform 2s;</strong>
+            } <br><br>
+
+            <strong>div:hover</strong>
+            {
+                width: 300px;
+                height: 300px;
+                <strong>transform: rotate(180deg);</strong>
+            }
+
+        </p>
+
+        <div>
+            Transition + Transform
+        </div>
+
+        <h1>The transform Property</h1>
+
+        <p>To Rotate the div element drag and leave the <strong>range</strong>:</p>
+        <p>
+           <strong>#div1</strong>
+            {
+                width:250px;
+                height:250px;
+                background-color:blue;
+                color: white;
+                border:1px solid black;
+                <strong>transform:rotate(7deg);
+                    -ms-transform:rotate(7deg); /* IE 9 */</strong>
+            }
+        </p>
+
+        <div id="div1">Rotating Box</div>
+
+        <p>
+            <label for="ragne">Rotate:</label>
+            <input type="range" min="-360" max="360" value="7" onchange="rotate(this.value)" />
+        </p>
+        <p>transform: rotate(<span id="span1">7deg</span>);</p>
+
+        <script>
+            function rotate(value)
+            {
+                document.getElementById('div1').style.webkitTransform="rotate(" + value + "deg)";
+                document.getElementById('div1').style.msTransform="rotate(" + value + "deg)";
+                document.getElementById('div1').style.MozTransform="rotate(" + value + "deg)";
+                document.getElementById('div1').style.OTransform="rotate(" + value + "deg)";
+                document.getElementById('div1').style.transform="rotate(" + value + "deg)";
+                document.getElementById('span1').innerHTML=value + "deg";
+            }
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Min Width</title>
+        <style>
+            .minWidth
+            {
+                border: 4px solid red;
+                display: inline-block;
+                padding: 10px;
+                margin: 10px;
+
+                min-width: 450px;
+
+                /* max-width: 600px; */
+
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Forcing a Minimum Width on an Element</h1>
+        <h1>CSS min-width Property</h1>
+        <p>The min-width property defines the minimum width of an element.</p>
+        <p>If the content is smaller than the minimum width, the minimum width will be applied.</p>
+        <p>If the content is larger than the minimum width, the min-width property has no effect.</p>
+        <p>This prevents the value of the width property from becoming smaller than min-width.</p>
+
+        <h3>Example:</h3>
+        <p>
+            .minWidth
+            {
+                border: 4px solid red;
+                display: inline-block;
+                padding: 10px;
+                margin: 10px;
+                <strong>min-width: 450px;</strong>
+                box-sizing: border-box;
+            }
+        </p>
+        
+        <div class="minWidth">
+            It's Minimum Width of 450px
+        </div>
+
+        <div class="minWidth">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quod, facilis rem repellendus eaque vero ut laudantium, eos optio impedit cupiditate?
+        </div>
+    </body>
+</html>
