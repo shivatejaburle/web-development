@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - FlexBox</title>
+        <style>
+
+            /* Everything in the page */
+            *
+            {
+                box-sizing: border-box;
+            }
+
+            /* Parent Element as Flex */
+            #container
+            {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            #container div
+            {
+                /* border: 1px solid red; */
+            }
+
+            /* Child Elements as Flex Items */
+            .navigation
+            {
+                flex-basis: 20%;
+                flex-grow: 0;
+                flex-shrink: 1;
+            }
+
+            .content
+            {
+                flex-basis: 80%;
+                flex-grow: 1;
+                flex-shrink: 0;
+            }
+
+            .header
+            {
+                flex-basis: 100%;
+                flex-grow: 1;
+                flex-shrink: 0;
+                background-color: blue;
+                color: white;
+                border: 2px solid red;
+                padding: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="container">
+
+            <div class="header">
+                <h1>CSS - FlexBox - The new kind of page layout</h1>
+            </div>
+
+            <div class="navigation">
+                Navigation
+            </div>
+
+            <div class="content">
+                <h1>FlexBox Example</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quam necessitatibus explicabo asperiores. Minima cupiditate facere nemo tempore doloribus tenetur soluta? Exercitationem quo sed tempore ut dignissimos iure corrupti minus?</p>
+                <br>
+                <p>
+                    *
+                    {
+                        box-sizing: border-box;
+                    } <br>
+                    #container
+                    {
+                        display: flex;
+                        flex-wrap: wrap;
+                    } <br>
+                    .navigation
+                    {
+                        flex-basis: 20%;
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                    } <br>
+                    .content
+                    {
+                        flex-basis: 80%;
+                        flex-grow: 1;
+                        flex-shrink: 0;
+                    } <br>
+                    .header
+                    {
+                        flex-basis: 100%;
+                        flex-grow: 1;
+                        flex-shrink: 0;
+                        background-color: blue;
+                        color: white;
+                        border: 2px solid red;
+                        padding: 20px;
+                    }
+                </p>
+                <p>
+                    &lt;div id="container"&gt; <br>
+
+                        &emsp;&lt;div class="header"&gt; <br>
+                        &emsp;&emsp;&lt;h1&gt;CSS - FlexBox - The new kind of page layout&lt;/h1&gt; <br>
+                        &emsp;&lt;/div&gt; <br>
+
+                        &emsp;&lt;div class="navigation"&gt; <br>
+                        &emsp;&emsp;Navigation <br>
+                        &emsp;&lt;/div&gt; <br>
+
+                        &emsp;&lt;div class="content"&gt; <br>
+                        &emsp;&emsp;&lt;h1&gt;FlexBox Example&lt;/h1&gt; <br>
+                        &emsp;&emsp;&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quam necessitatibus explicabo asperiores. Minima cupiditate facere nemo tempore doloribus tenetur soluta? Exercitationem quo sed tempore ut dignissimos iure corrupti minus?&lt;/p&gt; <br>
+                        &emsp;&lt;/div&gt;<br>
+
+                    &lt;/div&gt;<br>
+                </p>
+            </div>
+
+        </div>
+    </body>
+</html>

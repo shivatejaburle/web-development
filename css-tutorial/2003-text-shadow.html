@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Text Shadows</title>
+        <style>
+            body
+            {
+                /* background-color: black; */
+            }
+            .textShadow1
+            {
+                font-size: 40px;
+
+                /* text-shadow: x y blur color; */
+
+                /* text-shadow: 2px 2px 0px red; */
+
+                text-shadow: 2px 2px 5px red;
+
+                /* color: rgba(0, 0, 0, 0); */
+            }
+            .textShadow2
+            {
+                font-size: 40px;
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>CSS text-shadow Property</h1>
+        <p>The text-shadow property adds shadow to text.</p>
+        <h2>Syntax</h2>
+        <p>text-shadow: h-shadow v-shadow blur-radius color | none | initial | inherit;</p>
+        <p>
+            <ul><strong>h-shadow: </strong>Required. The position of the horizontal shadow. Negative values are allowed.</ul>
+            <ul><strong>v-shadow: </strong>Required. The position of the vertical shadow. Negative values are allowed.</ul>
+            <ul><strong>blur-radius: </strong>Optional. The blur radius. Default value is 0.</ul>
+            <ul><strong>color: </strong>Optional. The color of the shadow. Look at CSS Color Values for a complete list of possible color values.</ul>
+            <ul><strong>none: </strong>Default value. No shadow.</ul>
+            <ul><strong>initial: </strong>Sets this property to its default value.</ul>
+            <ul><strong>inherit: </strong>Inherits this property from its parent element.</ul>
+            <ul><strong></strong></ul>
+            <ul><strong></strong></ul>
+            <ul><strong></strong></ul>
+        </p>
+        <h3>Example:</h3>
+        <p>
+            .textShadow
+            {
+                font-size: 40px;
+                text-shadow: 2px 2px 5px red;
+            }
+        </p>
+        <div class="textShadow1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi totam veniam facilis minus repellendus libero nulla eum, earum quo quaerat eaque, enim aperiam nobis dolore delectus voluptatibus. Ut, dolor eligendi.
+        </div>
+        <p>
+            .textShadow2
+            {
+                font-size: 40px;
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
+        </p>
+        <div class="textShadow2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi totam veniam facilis minus repellendus libero nulla eum, earum quo quaerat eaque, enim aperiam nobis dolore delectus voluptatibus. Ut, dolor eligendi.
+        </div>
+    </body>
+</html>

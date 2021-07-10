@@ -1,0 +1,53 @@
+<!-- Custom Web Fonts -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - Custom Web Fonts</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            .webFont
+            {
+                /* Google Fonts : https://fonts.google.com/ */
+                font-family: 'Pacifico', cursive;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Web Fonts</h1>
+        <p>Web fonts allow Web designers to use fonts that are not installed on the user's computer.</p>
+        <p>To use the font for an HTML element, refer to the name of the font through the font-family property.</p>
+        <h2>Steps to use Google Web Fonts</h2>
+        <ul>
+            <li>Navigate to <a href="https://fonts.google.com">Google Fonts</a></li>
+            <li>Choose the <strong>Font</strong> that you like</li>
+            <li>Click on <strong>Select this Style</strong></li>
+            <li>Click on <strong>View your selected families</strong></li>
+            <li>Copy the lines in <strong>To embed a font, copy the code into the &lt;head&gt; of your html</strong> with <strong>link</strong> option</li>
+            <li>Copy the lines in <strong>CSS rules to specify families</strong> to use in your HTML Pages</li>
+        </ul>
+        <p style="border: 1px solid black;"><img src="images/google-web-fonts.png" alt="google-web-fonts" width="100%"></p>
+
+        <h3>Example</h3>        
+        <strong>Inserted the following code in &lt;head&gt; element</strong>
+        <p>
+            &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;<br>
+            &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;<br>
+            &lt;link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"&gt;
+        </p>
+        <strong>Adding Font Family</strong>
+        <p>
+            .webFont
+            {
+                <strong>font-family: 'Pacifico', cursive;</strong>
+                font-size: 50px;
+            }
+        </p>
+        <strong>Applying the Web Font</strong>
+        <p>&lt;div <strong>class="webFont"</strong>&gt; - - - Your - - Content - - - &lt;/div&gt;</p>
+        <div class="webFont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur reprehenderit nemo possimus beatae? Temporibus aspernatur mollitia nulla quisquam minus culpa dolore commodi sequi odio dolorem, officia vel facilis blanditiis accusamus.</div>
+    </body>
+</html>

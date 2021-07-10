@@ -1,0 +1,77 @@
+<!-- Overflowing Text-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - Controlling Overflowing Text</title>
+        <style>
+            .box1
+            {
+                width: 500px;
+                height: 100px;
+                border: 10px solid red;
+
+                overflow: auto;
+            }
+            
+            .box2
+            {
+                width: 500px;
+                height: 100px;
+                border: 10px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Controlling Overflowing Text</h1>
+        <h2>CSS overflow Property</h2>
+        <p>The overflow property specifies what should happen if content overflows an element's box.</p>
+        <p>This property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area.</p>
+        <p>The overflow property only works for block elements with a specified height.</p>
+        <h2>Syntax</h2>
+        <p>overflow: visible | hidden | scroll | auto | initial | inherit;</p>
+        <ul>
+            <li><strong>visible : </strong>The overflow is not clipped. It renders outside the element's box (default).</li>
+            <li><strong>hidden : </strong>The overflow is clipped, and the rest of the content will be invisible.</li>
+            <li><strong>scroll : </strong>The overflow is clipped, but a scroll-bar is added to see the rest of the content.</li>
+            <li><strong>auto : </strong>	If overflow is clipped, a scroll-bar should be added to see the rest of the content.</li>
+            <li><strong>initial : </strong>Sets this property to its default value.</li>
+            <li><strong>inherit : </strong>Inherits this property from its parent element</li>
+        </ul>
+
+        <h3>Example with overflow css property</h3>
+        <p>
+            .box1
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid red;
+
+                overflow: auto;
+            }
+        </p>
+        <div class="box1">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+        </div>
+        
+        <h3>Example without overflow css property</h3>
+        <p>
+            .box2
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid red;
+            }
+        </p>
+        <div class="box2">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, iure fuga. Iure neque exercitationem maxime veritatis quam consectetur facere debitis ratione incidunt quaerat tempora distinctio est, saepe, et odio ut?</p>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS - Transformations</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <style>
+            .box1
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                transform: translate(50px, 30px);
+            }
+
+            .box2
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                transform: rotate(20deg);
+            }
+
+            .box3
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                transform: scale(1.5);
+            }
+
+            .box4
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                transform: skew(20deg, 20deg);
+            }
+
+            .box5
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                transform: skewX(20deg);
+            }
+
+            .box6
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                transform: skewY(20deg);
+            }
+
+            
+        </style>
+    </head>
+    <body>
+
+        <h1>Transformations</h1>
+        <h2>CSS transform Property</h2>
+        <p>The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.</p>
+
+        <h2>Syntax</h2>
+        <p>transform: none | transform-functions | initial | inherit;</p>
+
+        <h3>translate(x,y) - Defines a 2D translation</h3>
+        <p>
+            .box1
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin-bottom: 60px;
+                <strong>transform: translate(50px, 30px);</strong>
+            }
+        </p>
+        <div class="box1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora pariatur tempore consequuntur deleniti incidunt iure neque vitae? Earum voluptates illo, dolor ex deleniti repellendus, maxime deserunt reprehenderit, distinctio similique fugit.
+        </div>
+
+        <h3>rotate(angle) - Defines a 2D rotation, the angle is specified in the parameter</h3>
+        <p>
+            .box2
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                <strong>transform: rotate(20deg);</strong>
+            }
+        </p>
+        <div class="box2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora pariatur tempore consequuntur deleniti incidunt iure neque vitae? Earum voluptates illo, dolor ex deleniti repellendus, maxime deserunt reprehenderit, distinctio similique fugit.
+        </div>
+
+        <h3>scale(x,y) - Defines a 2D scale transformation</h3>
+        <p>
+            .box3
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                <strong>transform: scale(1.5);</strong>
+            }
+        </p>
+        <div class="box3">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora pariatur tempore consequuntur deleniti incidunt iure neque vitae? Earum voluptates illo, dolor ex deleniti repellendus, maxime deserunt reprehenderit, distinctio similique fugit.
+        </div>
+
+        <h3>skew(x-angle,y-angle) - Defines a 2D skew transformation along the X- and the Y-axis</h3>
+        <p>
+            .box4
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                <strong>transform: skew(20deg, 20deg);</strong>
+            }
+        </p>
+        <div class="box4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora pariatur tempore consequuntur deleniti incidunt iure neque vitae? Earum voluptates illo, dolor ex deleniti repellendus, maxime deserunt reprehenderit, distinctio similique fugit.
+        </div>
+
+        <h3>skewX(angle) - Defines a 2D skew transformation along the X-axis</h3>
+        <p>
+            .box5
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                <strong>transform: skewX(20deg);</strong>
+            }
+        </p>
+        <div class="box5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora pariatur tempore consequuntur deleniti incidunt iure neque vitae? Earum voluptates illo, dolor ex deleniti repellendus, maxime deserunt reprehenderit, distinctio similique fugit.
+        </div>
+        
+        <h3>skewY(angle) - Defines a 2D skew transformation along the Y-axis</h3>
+        <p>
+            .box6
+            {
+                width: 300px;
+                height: 150px;
+                border: 10px solid red;
+                margin: 100px auto;
+                <strong>transform: skewY(20deg);</strong>
+            }
+        </p>
+        <div class="box6">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora pariatur tempore consequuntur deleniti incidunt iure neque vitae? Earum voluptates illo, dolor ex deleniti repellendus, maxime deserunt reprehenderit, distinctio similique fugit.
+        </div>
+
+    </body>
+</html>

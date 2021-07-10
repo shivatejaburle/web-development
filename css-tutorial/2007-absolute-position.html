@@ -1,0 +1,162 @@
+<!-- CSS position Property with absolute -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Absolute Positioning</title>
+        <style>
+            /* Absolute Positioning */
+            .box
+            {
+                width: 300px;
+                height: 300px;
+                border: 4px solid red;
+                
+                position: relative;
+
+            }
+            .second-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                top: 0;
+                left: 0;
+
+                width: 45%;
+                height: 45%;
+            }
+
+            .third-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                top: 0;
+                right: 0;
+                
+                width: 45%;
+                height: 45%;
+            }
+
+            .fourth-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                bottom: 0;
+                left: 0;
+                
+                width: 45%;
+                height: 45%;
+            }
+
+            .fifth-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                bottom: 0;
+                right: 0;
+                
+                width: 45%;
+                height: 45%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Absolute Positioning</h1>
+        <p>The element is positioned relative to its first positioned (not static) ancestor element.</p>
+        <p>The parent element must be relative when you want to use Absolute Position.</p>
+        <h3>Example:</h3>
+        <p>
+            .box
+            {
+                width: 300px;
+                height: 300px;
+                border: 4px solid red;
+                
+                position: relative;
+
+            } <br>
+            .second-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                top: 0;
+                left: 0;
+
+                width: 45%;
+                height: 45%;
+            } <br>
+
+            .third-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                top: 0;
+                right: 0;
+                
+                width: 45%;
+                height: 45%;
+            } <br>
+
+            .fourth-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                bottom: 0;
+                left: 0;
+                
+                width: 45%;
+                height: 45%;
+            } <br>
+
+            .fifth-box
+            {
+                position: absolute;
+                border: 3px solid blue;
+                bottom: 0;
+                right: 0;
+                
+                width: 45%;
+                height: 45%;
+            }
+        </p>
+        <p>
+            &lt;div class="box"&gt;<br>&emsp;
+                &lt;div class="second-box"&gt;
+                    Top Left
+                &lt;/div&gt; <br>&emsp;
+
+                &lt;div class="third-box"&gt;
+                    Top Right
+                &lt;/div&gt; <br>&emsp;
+
+                &lt;div class="fourth-box"&gt;
+                    Bottom Left
+                &lt;/div&gt; <br>&emsp;
+
+                &lt;div class="fifth-box"&gt;
+                    Bottom Right
+                &lt;/div&gt; <br>
+            &lt;/div&gt;
+        </p>
+        <br><br>
+        <div class="box">
+            <div class="second-box">
+                Top Left
+            </div>
+
+            <div class="third-box">
+                Top Right
+            </div>
+
+            <div class="fourth-box">
+                Bottom Left
+            </div>
+
+            <div class="fifth-box">
+                Bottom Right
+            </div>
+        </div>
+    </body>
+</html>
