@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>box shadow</title>
+        <style>
+            .square
+            {
+                box-shadow: 10px 10px 10px purple;
+                border: 2px solid red;
+                border-radius: 10px;
+                width: 200px;
+                height: 200px;
+                margin: 20px;
+                padding: 20px;
+            }
+            .rectangle
+            {
+                box-shadow: 10px 10px 50px blue inset;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR42o1DX83OIIAI7O2YRMZ1G39mDzJR0ofbjCqmfKkF0sIdbi9J_C2xGKje-nF-oxAWKis&usqp=CAU');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                border: 2px solid red;
+                width: 500px;
+                height: 100px;
+                margin: 20px;
+                padding: 20px;
+            }
+            .circle
+            {
+                box-shadow: 10px 10px 50px lime inset;
+                background-image: url('https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios14-iphone-se-close-app-animation.gif');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                border: 2px solid red;
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+                margin: 20px;
+                padding: 80px 60px 80px 60px;
+            }
+            .leaf
+            {
+                border: 2px solid red;
+                width: 300px;
+                height: 300px;
+                border-top-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+                box-shadow: 10px 10px 50px orangered;
+                background-image: url('https://www.gardeningknowhow.com/wp-content/uploads/2021/02/autumn-park.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                padding-top: 100px;
+            }
+            p.leafshade
+            {
+                border-top-right-radius: 50px;
+                background-color: rgba(0, 0, 0, 0.5);
+                /*background-color: rgba(0, 0, 0);*/
+                color:white;
+                /*opacity: 0.5;*/
+                
+            }
+            .box
+            {
+                max-width: 500px;
+                border: 2px solid red;
+                margin: 20px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>box shadow</h1>
+        <div class="square">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate suscipit necessitatibus facere aut non nulla harum recusandae cumque et, doloremque temporibus ipsam vitae cum aspernatur officiis? Non fugiat incidunt deleniti.
+        </div>
+        <div class="rectangle">
+            
+        </div>
+        <div class="circle">
+            
+        </div>
+        <div class="leaf">
+            <p class="leafshade">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex excepturi, modi quo eos temporibus provident nisi quis nihil quas, placeat nulla neque? Cumque quasi, dolore saepe corrupti illo quidem? Reiciendis!</p>
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto optio aliquid veritatis tenetur corporis perferendis numquam explicabo, hic cum incidunt. Porro ducimus autem distinctio aliquid voluptas quibusdam exercitationem, repellendus vero?
+        </div>
+    </body>
+</html>
