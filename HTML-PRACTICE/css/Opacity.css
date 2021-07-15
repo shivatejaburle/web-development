@@ -1,0 +1,29 @@
+body
+{
+    background-image: url("https://www.australianplantsonline.com.au/media/magefan_blog/570-autumn-trees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+}
+.divtext1
+{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+.divtext2
+{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    opacity: 0.5;
+}
+.divtext3
+{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
