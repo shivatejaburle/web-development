@@ -1,0 +1,22 @@
+#aus-cities
+{
+    background-image: url("https://www.touropia.com/gfx/b/2018/06/cities_australia_map.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    max-width: 100%;
+}
+ul
+{
+    /*background-color: black;
+    opacity: 0.5;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    list-style-type: none;
+}
+li
+{
+    display: inline-block;
+    margin: 20px;
+}
