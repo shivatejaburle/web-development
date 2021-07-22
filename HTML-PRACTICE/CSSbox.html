@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS box model</title>
+        <style>
+            .box1
+            {
+                border: 2px solid red;
+                padding: 20px;
+                width: 300px;
+                height: 300px;
+                box-sizing: content-box;
+            }
+            .box2
+            {
+                border: 2px solid red;
+                padding: 20px;
+                width: 300px;
+                height: 300px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <p>Content box</p>
+        </div>
+        <div class="box2">
+            <p>Border box</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Webpage</title>
+        <style>
+            .content
+            {
+                width: 29%;
+                height: 350px;
+                display: inline-block;
+                box-sizing: content-box;
+                border: 5px solid red;
+                vertical-align: top;
+                padding: 10px;
+                margin: 10px;
+            }
+            img
+            {
+                width: 250px;
+                height: 150px;
+            }
+            .header
+            {
+                text-align: center;
+                box-shadow: 10px 10px 20px red inset;
+                vertical-align: ;
+            }
+            
+            
+            .menu 
+            {
+                text-align: center;
+                font-size: 20px;
+                background-color: black;
+                list-style-type: none;
+
+            }
+            .menu-item
+            {
+                display: inline-block;
+                padding: 10px;
+                margin: 10px;
+                
+                color: white;
+            }
+            .menu-link
+            {
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+            }
+
+            a:hover
+            {
+                /* font-size: 22px; */
+                color: red;
+                background-color: white;
+            }
+            .footer
+            {
+                text-align: center;
+                font-size: 15px;
+                background-color: blue;
+                color: white;
+                font-weight: bold;
+                padding: 20px;
+            }
+            body
+            {
+                margin: 0px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table border="0" width="100%">
+            <tr class="header">
+                <td width="20%">
+                    <img class="logo-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREfrEuUsa36LZenS_xzw8DOcQXyWD5Xha9wiaB6XyB04FTv0U4Erc-BF3OzvqAA5nx0Pg&usqp=CAU" alt="car-logo">
+                </td>
+                <td colspan="2">
+                    <h1>Favourite Cars</h1>
+                </td>
+            </tr>
+            <tr>
+                <td  class="menu" colspan="3">
+                    <ul>
+                        <li class="menu-item">
+                            <a class="menu-link" href="https://en.wikipedia.org/wiki/Car" target="_blank">About Cars</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link"  href="https://www.subaru.com.au" target="_blank">Favourite Cars</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="content Chevrolet">
+                        <h1>Chevrolet</h1>
+                        <p><img src="https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2018/10/chrome-image-3941431.png" alt="car1"></p>
+                        <p>The All-New 203 Corvette Z06 is coming, and the streets will never sound the same. Availability to be announced Fall 2021.</p>
+                        
+                    </div>
+                    <div class="content Renau">
+                        <h1>Renau</h1>
+                        <p><img src="https://imgd.aeplcdn.com/0x0/n/cw/ec/39276/triber-exterior-right-front-three-quarter-168563.jpeg" alt="car2"></p>
+                        <p>Groupe Renau is a French multinational automobile manufacturer established in 1899. The company produces a range of cars and vans, and in the past has manufactured trucks, tractors, tanks, buses/coaches, aircraft and aircraft engines, and autorail vehicles</p>
+                        
+                    </div>
+                    <div class="content Jaguar">
+                        <h1>Jaguar</h1>
+                        <p><img src="https://imgd.aeplcdn.com/0x0/n/cw/ec/19826/xf-exterior-right-front-three-quarter.jpeg" alt="car3"></p>
+                        <p>As a leading vehicle manufacturer utilising cutting-edge technology, Jaguar is currently being affected by the global shortage of computer chips impacting all industries. This means delivery times for some products may be extended, but please be reassured we will do all we can to deliver any vehicle you order to you as soon as possible.</p>
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="footer" colspan="3">2021 &copy; All Rights Reserved</td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
