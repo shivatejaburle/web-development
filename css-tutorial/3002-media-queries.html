@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media Queries</title>
+        <style>
+
+            body
+            {
+                background-color: aqua;
+            }
+            @media (max-width:640px)
+            {
+                body
+                {
+                    background-color: lightblue;
+                }    
+            }
+
+            .box
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid black;
+                /* margin: 50px auto; */
+                background-color: red;
+                border-radius: 0;
+            }
+            @media (max-width: 1000px) and (min-width: 700px)
+            {
+                .box
+                {
+                    background-color: blue;
+                    border-radius: 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Media Queries</h1>
+        <h2>CSS2 Introduced Media Types</h2>
+        <p>The <strong>@media</strong> rule, introduced in CSS2, made it possible to define different style rules for different media types.</p>
+        <p>Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on.</p>
+        <p>Unfortunately these media types never got a lot of support by devices, other than the print media type.</p>
+        <h2>CSS3 Introduced Media Queries</h2>        
+        <p>Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.</p>
+        <p>Media queries can be used to check many things, such as:</p>
+        <ul>
+            <li>width and height of the viewport</li>
+            <li>width and height of the device</li>
+            <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+            <li>resolution</li>
+        </ul>
+        <p>Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).</p>
+        <h2>Syntax</h2>
+        <p>A media query consists of a media type and can contain one or more expressions, which resolve to either true or false.</p>
+        <p>
+            <strong>
+                @media not|only mediatype and (expressions) <br>
+                {<br>
+                   &emsp; CSS-Code; <br>
+                }
+            </strong>
+        </p>
+        <p>The result of the query is true if the specified media type matches the type of device the document is being displayed on and all expressions in the media query are true. When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.</p>
+        <p>Unless you use the not or only operators, the media type is optional and the <strong>all</strong> type will be implied.</p>
+        <h2>Media Types</h2>
+        <p>
+            <img src="images/media-types.png" alt="media-types">
+        </p>
+        <h3>Example:</h3>
+        <p>
+            body <br>
+            { <br>
+                &emsp;background-color: aqua; <br>
+            } <br><br>
+            /* breakpoint at 640px */ <br>
+           <strong> @media (max-width:640px) <br></strong>
+            { <br>
+                &emsp;body <br>
+                &emsp;{ <br>
+                    &emsp;&emsp;background-color: lightblue;<br>
+                &emsp;} <br>
+            }
+        </p>
+        <h2>Multiple Media Queries</h2>
+        <p>You can specify the multiple media Queries as follows.</p>
+        <h3>Example:</h3>
+        <p>Display a Circle when the width in between 1000 and 700.</p>
+        <p>
+            .box
+            {
+                width: 300px;
+                height: 300px;
+                border: 10px solid black;
+                margin: 50px auto;
+                border-radius: 0;
+            } <br>
+            <strong>@media (max-width: 1000px) and (min-width: 700px)</strong> <br>
+            { <br>
+                &emsp; .box <br>
+                &emsp;  { <br>
+                &emsp; &emsp;  border-radius: 50%; <br>
+                &emsp;  } <br>
+            }
+        </p>
+        <p>
+            &lt;div class="box"&gt;&lt;/div&gt;
+        </p>
+        <div class="box"></div>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Layout</title>
+        <style>
+            *
+            {
+                box-sizing: border-box;
+            }
+
+            body
+            {
+                padding: 0;
+                margin: 0;
+            }
+
+            #layout
+            {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            #nav
+            {
+                flex-basis: 100%;
+                border-bottom: 1px solid grey;
+                padding: 20px;
+            }
+
+            #sidebar
+            {
+                flex-basis: 20%;
+                border-right: 1px solid gray;
+                padding: 20px;
+                border-bottom: 1px solid grey;
+            }
+
+            #content
+            {
+                flex-basis: 80%;
+                padding: 20px;
+                border-bottom: 1px solid grey;
+            }
+
+            @media (max-width:640px)
+            {
+                #sidebar
+                {
+                    flex-basis: 100%;
+                    border-right: 0;
+                }
+
+                #content
+                {
+                    flex-basis: 100%;
+                    border-bottom: 0;
+                }
+            }
+
+            @media (max-width:475px)
+            {
+                #sidebar
+                {
+                    display: none;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="layout">
+            <div id="nav">
+                <strong>Site Navigation</strong>
+            </div>
+            <div id="sidebar">
+                <strong>Site Sidebar</strong>
+            </div>
+            <div id="content">
+                <p><strong>Site Content</strong></p>
+                <h1>Responsive Layout</h1>
+                <p>Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor's screen size and orientation and change the layout accordingly.</p>
+                <h3>Example</h3>
+                <div>
+                    <h3>CSS</h3>
+                    *
+                    {
+                        box-sizing: border-box;
+                    } <br>
+
+                    body
+                    {
+                        padding: 0;
+                        margin: 0;
+                    } <br>
+
+                    #layout
+                    {
+                        display: flex;
+                        flex-wrap: wrap;
+                    } <br>
+                    
+                    #nav
+                    {
+                        flex-basis: 100%;
+                        border-bottom: 1px solid grey;
+                        padding: 20px;
+                    } <br>
+
+                    #sidebar
+                    {
+                        flex-basis: 20%;
+                        border-right: 1px solid gray;
+                        padding: 20px;
+                        border-bottom: 1px solid grey;
+                    } <br>
+
+                    #content
+                    {
+                        flex-basis: 80%;
+                        padding: 20px;
+                        border-bottom: 1px solid grey;
+                    } <br>
+
+                    @media (max-width:640px) <br>
+                    { <br> &emsp;
+                        #sidebar
+                        {
+                            flex-basis: 100%;
+                            border-right: 0;
+                        } <br> &emsp;
+
+                        #content
+                        {
+                            flex-basis: 100%;
+                            border-bottom: 0;
+                        } <br>
+                    } <br>
+
+                    @media (max-width:475px) <br>
+                    {<br> &emsp;
+                        #sidebar
+                        {
+                            display: none;
+                        } <br>
+                    }
+                </div>
+                <div>
+                    <h3>HTML</h3>
+                    &lt;div id="nav"&gt; <br>&emsp;
+                        &lt;strong&gt;Site Navigation&lt;/strong&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;div id="sidebar"&gt; <br>&emsp;
+                        &lt;strong&gt;Site Sidebar&lt;/strong&gt;<br>
+                    &lt;/div&gt;<br>
+                    &lt;div id="content"&gt; <br>&emsp;
+                        &lt;strong&gt;Site Content&lt;/strong&gt;<br>
+                    &lt;/div&gt;<br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
