@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Founders</title>
+        <style>
+            table
+            {
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            th, td
+            {
+                padding: 10px;
+            }
+            th
+            {
+                background-color: red;
+                color: white;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            .total
+            {
+                background-color: yellowgreen;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            td
+            {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1" width="100%">
+            <tr>
+                <th>No.</th>
+                <th>Full Name</th>
+                <th>Brand</th>
+                <th>Type</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Bill Gates</td>
+                <td>Founder Microsoft</td>
+                <td rowspan="4">Company Founder</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Steve Jobs</td>
+                <td>Founder Apple</td>
+                <td>$1200</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Larry Page</td>
+                <td>Founder Google</td>
+                <td>$1100</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Mark Zuckeberg</td>
+                <td>Founder Facebook</td>
+                <td>$1300</td>
+            </tr>
+            <tr class="total">
+                <td colspan="4">Total Expense:</td>
+                <td>$4600</td>
+            </tr>
+        </table>
+    </body>
+</html>
