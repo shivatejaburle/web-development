@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Child Selectors</title>
+        <style>
+            p
+            {
+                background-color: red;
+                border: 2px solid black;
+            }
+            div > p
+            {
+                background-color: blue;
+                color: white;
+                border: 2px solid black;
+            }
+            section > p
+            {
+                background-color: yellowgreen;
+                color: azure;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Child (>) Selectors</h1>
+        <p>
+            1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad maiores sed cupiditate similique aliquam minima quasi veritatis saepe provident necessitatibus. Quidem, minus nihil! Perferendis delectus eveniet repudiandae velit non enim.
+        </p>
+        <div>
+            <div>
+                <p>2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae voluptatibus odit provident quos ut pariatur voluptas, ipsa corporis adipisci sunt possimus facilis reprehenderit consectetur nulla autem explicabo eaque soluta? Eos?</p>
+            </div>
+            <p>
+                3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, ipsa consequuntur nisi molestias vitae est? Quas dolores molestias reiciendis officia animi. Inventore ut sapiente consectetur vero, ipsam eveniet tenetur ducimus.
+            </p>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi commodi ratione sed porro assumenda delectus deleniti provident quis unde beatae error veritatis numquam soluta repellendus, exercitationem, quam aperiam libero velit.</p>
+            </section>
+            <div>
+                <p>4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quod officia odio doloremque tempore voluptas, inventore possimus. Quia culpa dolor excepturi sint velit necessitatibus id quaerat at asperiores, iure aliquid.</p>
+            </div>
+            <section>
+                <p>5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui, laboriosam voluptas optio totam ex eligendi iure fugiat dignissimos quibusdam at, deserunt distinctio eos temporibus ab laudantium modi quis quos?</p>
+            </section>
+        </div>
+    </body>
+</html>
