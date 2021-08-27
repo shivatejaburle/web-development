@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Array Iteration</title>
+    </head>
+    <body>
+        <h1>Array Iteration</h1>
+        <p>Array iteration methods operate on every array item.</p>
+        
+        <h2>for()</h2>
+        <p>Loops through a block of code a number of times.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            for(let i = 0; i &lt; programmingLanguages.length; i++) <br>
+            { <br>
+                &emsp;console.log(programmingLanguages[i]);<br>
+            } <br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS
+        </p>
+        
+        <h2>forEach()</h2>
+        <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+        <p>forEach() function takes 3 arguments:</p>
+        <p>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+        </p>
+        <p>
+            <strong>Example 1:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            programmingLanguages.<strong>forEach</strong>(loopArrayItems);<br><br>
+            function loopArrayItems(item)<br>
+            {<br>
+                &emsp;console.log(item); <br>
+            } <br><br>
+            console.log(result);<br><br>
+            <strong>Output:</strong> <br>
+            HTML<br>
+            CSS<br>
+            JS<br>
+        </p>
+        <p>
+            <strong>Example 2:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            programmingLanguages.<strong>forEach</strong>(item => {console.log(item);});<br><br>
+            <strong>Output:</strong> <br>
+            HTML<br>
+            CSS<br>
+            JS<br>
+        </p>
+
+    </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Casting Data Types</title>
+    </head>
+    <body>
+        <h1>JavaScript Type Conversion</h1>
+        <p>JavaScript variables can be converted to a new variable and another data type:</p>
+        <ul>
+            <li>By the use of a JavaScript function</li>
+            <li>Automatically by JavaScript itself</li>
+        </ul>
+
+        <h2>Converting Strings to Numbers</h2>
+        <p>The global method Number() can convert strings to numbers.</p>
+        <p>Strings containing numbers (like "3.14") convert to numbers (like 3.14).</p>
+        <p>Empty strings convert to 0.</p>
+        <p>Anything else converts to NaN (Not a Number).</p>
+        <h3>Number Methods</h3>
+        <ul>
+            <li><b>Number(): </b>Returns a number, converted from its argument</li>
+            <li><b>parseFloat(): </b>Parses a string and returns a floating point number</li>
+            <li><b>parseInt(): </b>Parses a string and returns an integer</li>
+        </ul>
+        <p><b>Example:</b>Number("3.14"), Number(" "), Number(""), Number("99 88")</p>
+
+        <h2>The Unary + Operator</h2>
+        <p>The unary + operator can be used to convert a variable to a number.</p>
+        <p>
+            <b>Example:</b>
+            <br>let a = "5";      // a is a string
+            <br>let b = + a;      // b is a number
+        </p>
+        <p>If the variable cannot be converted, it will still become a number, but with the value NaN (Not a Number).</p>
+        <p>
+            <b>Example:</b>
+            <br>let y = "John";   // y is a string
+            <br>let x = + y;      // x is a number (NaN)
+        </p>
+
+        <h2>Converting Numbers to Strings</h2>
+        <p>The global method String() can convert numbers to strings.</p>
+        <p>It can be used on any type of numbers, literals, variables, or expressions.</p>
+        <p>
+            <b>Example:</b><br>
+            let a = 5 <br>
+            String(x)         // returns a string from a number variable x <br>
+            String(123)       // returns a string from a number literal 123 <br>
+            String(100 + 23)  // returns a string from a number from an expression
+        </p>
+        <p>The Number method toString() does the same.</p>
+        <p>
+            <b>Example:</b><br>
+            let a = 5 <br>
+            x.toString() <br>
+            (123).toString() <br>
+            (100 + 23).toString()
+        </p>
+
+        <h3>toExponential()</h3>
+        <p>Returns a string, with a number rounded and written using exponential notation.</p>
+        <p>A parameter defines the number of characters behind the decimal point.</p>
+        <p>
+            <b>Example:</b> <br>
+            let x = 9.656; <br>
+            x.toExponential(2);     // returns 9.66e+0 <br>
+            x.toExponential(4);     // returns 9.6560e+0 <br>
+            x.toExponential(6);     // returns 9.656000e+0
+        </p>
+
+        <h3>toFixed()</h3>
+        <p>Returns a string, with a number rounded and written with a specified number of decimals.</p>
+        <p>
+            <b>Example:</b> <br>
+            let x = 9.656; <br>
+            x.toFixed(0);           // returns 10 <br>
+            x.toFixed(2);           // returns 9.66 <br>
+            x.toFixed(4);           // returns 9.6560 <br>
+            x.toFixed(6);           // returns 9.656000
+        </p>
+
+        <h3>toPrecision()</h3>
+        <p>Returns a string, with a number written with a specified length</p>
+        <p>
+            <b>Example:</b> <br>
+            let x = 9.656; <br>
+            x.toPrecision();        // returns 9.656 <br>
+            x.toPrecision(2);       // returns 9.7 <br>
+            x.toPrecision(4);       // returns 9.656 <br>
+            x.toPrecision(6);       // returns 9.65600 <br>
+        </p>
+        
+        <h2>Converting Dates to Strings</h2>
+        <p>The global method String() can convert dates to strings - String(Date())</p>
+        <p>The Date method toString() does the same - Date().toString()</p>
+        <h3>Date Methods</h3>
+        <ul>
+            <li>getDate()       - Get the day as a number (1-31)</li>
+            <li>getDay()        - Get the weekday a number (0-6)</li>
+            <li>getFullYear()   - Get the four digit year (yyyy)</li>
+            <li>getHours()      - Get the hour (0-23)</li>
+            <li>getMilliseconds() -	Get the milliseconds (0-999)</li>
+            <li>getMinutes()	- Get the minutes (0-59)</li>
+            <li>getMonth()       - Get the month (0-11)</li>
+            <li>getSeconds()     - sGet the seconds (0-59)</li>
+            <li>getTime()	Get the time (milliseconds since January 1, 1970)</li>
+        </ul>
+
+        <h2>Converting Booleans to Numbers</h2>
+        <p>The global method Number() can also convert booleans to numbers.</p>
+        <p>
+            <b>Example:</b> <br>
+            Number(false)     // returns 0 <br>
+            Number(true)      // returns 1
+        </p>
+
+        <h2>Converting Booleans to Strings</h2>
+        <p>The global method String() can convert booleans to strings.</p>
+        <p>
+            <b>Example:</b> <br>
+            String(false)     // returns 0 <br>
+            String(true)      // returns 1
+        </p>
+        <p>The Boolean method toString() does the same.</p>
+        <p>
+            <b>Example:</b> <br>
+            false.toString()   // returns "false"<br>
+            true.toString()    // returns "true"
+        </p>
+
+        <h2>Automatic Type Conversion</h2>
+        <p>When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.</p>
+        <p><b>Examples:</b></p>
+        <p>5 + null    // returns 5         because null is converted to 0</p>
+        <p>"5" + null  // returns "5null"   because null is converted to "null"</p>
+        <p>"5" + 2     // returns "52"      because 2 is converted to "2"</p>
+        <p>"5" - 2     // returns 3         because "5" is converted to 5</p>
+        <p>"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2</p>
+
+        <h2>Automatic String Conversion</h2>
+        <p>JavaScript automatically calls the variable's toString() function when you try to "output" an object or a variable.</p>
+        <p><b>Examples:</b></p>
+        <p>myVar = {name:"Bshiva"}  // toString converts to "[object Object]"</p>
+        <p>myVar = [1,2,3,4]       // toString converts to "1,2,3,4"</p>
+        <p>myVar = new Date()      // toString converts to "Fri Jul 18 2014 09:08:55 GMT+0200"</p>
+        <p>Numbers and booleans are also converted, but this is not very visible.</p>
+        <p><b>Examples:</b></p>
+        <p>myVar = 123             // toString converts to "123"</p>
+        <p>myVar = true            // toString converts to "true"</p>
+        <p>myVar = false           // toString converts to "false"</p>
+    </body>
+</html>

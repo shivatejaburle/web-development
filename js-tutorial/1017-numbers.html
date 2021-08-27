@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Numbers</title>
+    </head>
+    <body>
+        <h1>JavaScript Numbers</h1>
+        <p>JavaScript has only one type of number. Numbers can be written with or without decimals.</p>
+        <p>
+            <b>Example:</b> <br>
+            let x = 5; <br>
+            let y = "3.14" <br>
+            console.log(x+y); <br> <br>
+            <b>Output:</b> 53.14
+        </p>
+
+        <h2>The Number() Method</h2>
+        <p>Number() can be used to convert JavaScript variables to numbers.</p>
+        <p>
+            <b>Example:</b> <br>
+            let x = 5; <br>
+            let y = "3.14" <br>
+            y = Number(y); <br>
+            console.log(x+y); <br> <br>
+            <b>Output:</b> 8.14
+        </p>
+
+        <h2>The parseInt() Method</h2>
+        <p>parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned.</p>
+        <p>If the number cannot be converted, NaN (Not a Number) is returned.</p>
+
+        <h2>The parseFloat() Method</h2>
+        <p>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned.</p>
+        <p>If the number cannot be converted, NaN (Not a Number) is returned.</p>
+
+        <h2>Number Properties</h2>
+        <p>
+            <ul>
+                <li><b>MAX_VALUE: </b>Returns the largest number possible in JavaScript</li>
+                <li><b>MIN_VALUE: </b>Returns the smallest number possible in JavaScript</li>
+                <li><b>POSITIVE_INFINITY: </b>Represents infinity (returned on overflow)</li>
+                <li><b>NEGATIVE_INFINITY: </b>Represents negative infinity (returned on overflow)</li>
+                <li><b>NaN: </b>Represents a "Not-a-Number" value</li>
+            </ul>
+        </p>
+        <p>
+            <b>Example:</b> <br>
+            console.log(`JavaScript MAX_VALUE is ${Number.MAX_VALUE}`); <br>
+            console.log(`JavaScript MIN_VALUE is ${Number.MIN_VALUE}`); <br>
+            console.log(`JavaScript POSITIVE_INFINITY is ${Number.POSITIVE_INFINITY}`); <br>
+            console.log(`JavaScript NEGATIVE_INFINITY is ${Number.NEGATIVE_INFINITY}`); <br>
+            console.log(`JavaScript NaN is ${Number.NaN}`); <br> <br>
+            <b>Output:</b> <br>
+            JavaScript MAX_VALUE is 1.7976931348623157e+308 <br>
+            JavaScript MIN_VALUE is 5e-324 <br>
+            JavaScript POSITIVE_INFINITY is Infinity <br>
+            JavaScript NEGATIVE_INFINITY is -Infinity <br>
+            JavaScript NaN is NaN <br>
+        </p>
+
+        <h2>Number Properties Cannot be Used on Variables</h2>
+        <p>Number properties belongs to the JavaScript's number object wrapper called <b>Number</b>.</p>
+        <p>These properties can only be accessed as Number.MIN_VALUE.</p>
+        <p>Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined.</p>
+        <p>
+            <b>Example:</b> <br>
+            let num = 10; <br>
+            console.log(num.MAX_VALUE); <br> <br>
+            <b>Output:</b> <br>
+            undefined
+        </p>
+
+        <script>
+            let x = 5;
+            let y = "3.14";
+            console.log(x+y);
+            y = Number(y);
+            console.log(x+y);
+
+            console.log(`JavaScript MAX_VALUE is ${Number.MAX_VALUE}`);
+            console.log(`JavaScript MIN_VALUE is ${Number.MIN_VALUE}`);
+            console.log(`JavaScript POSITIVE_INFINITY is ${Number.POSITIVE_INFINITY}`);
+            console.log(`JavaScript NEGATIVE_INFINITY is ${Number.NEGATIVE_INFINITY}`);
+            console.log(`JavaScript NaN is ${Number.NaN}`);
+
+            let num = 10;
+            console.log(num.MAX_VALUE);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript String Methods</title>
+    </head>
+    <body>
+        <h1>JavaScript String Methods</h1>
+        <p>String methods help you to work with strings.</p>
+        
+        <h2>String Length</h2>
+        <p>The length property returns the length of a string.</p>
+        <p><b>Example:</b></p>
+        <p>let msg = "My name is Shivateja";<br>console.log("Length of name is " + name.length);</p>
+        <p><b>Output:</b></p>
+        <p id="res1"></p>
+
+        <h2>The slice() Method</h2>
+        <p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+        <p>The method takes 2 parameters: the start position, and the end position (end not included).</p>
+        
+        <p>&emsp;<b>Example: </b>console.log(msg.slice(11,16));</p>
+        <p>&emsp;<b>Output: </b><span id="res2"></span></p>
+        
+        <p>If a parameter is negative, the position is counted from the end of the string.</p>
+        <p>&emsp;<b>Example: </b>console.log(msg.slice(-9,-4));</p>
+        <p>&emsp;<b>Output: </b><span id="res3"></span></p>
+        
+        <p>If you omit the second parameter, the method will slice out the rest of the string.</p>
+        <p>&emsp;<b>Example: </b>console.log(msg.slice(11));</p>
+        <p>&emsp;<b>Output: </b><span id="res4"></span></p>
+
+        <h2>The substring() Method</h2>
+        <p>substring() is similar to slice().</p>
+        <p>The difference is that substring() cannot accept negative indexes.</p>
+        <p>If you omit the second parameter, substring() will slice out the rest of the string.</p>
+
+        <h2>The substr() Method</h2>
+        <p>substr() is similar to slice().</p>
+        <p>The difference is that the second parameter specifies the length of the extracted part.</p>
+        <p>If you omit the second parameter, substr() will slice out the rest of the string.</p>
+        <p>If the first parameter is negative, the position counts from the end of the string.</p>
+
+        <h2>Replacing String Content</h2>
+        <p>The replace() method replaces a specified value with another value in a string.</p>
+        <p>The replace() method does not change the string it is called on. It returns a new string.</p>
+        <p>By default, the replace() method replaces only the first match.</p>
+        <p><b>Example:</b></p>
+        <p>&lt;p id="res5"&gt;&lt;/p&gt;<br><br>let message = "Please visit India";<br>let newMsg = message.replace("India","Australia");<br>document.getElementById("res5").innerHTML = newMsg;</p>
+        <p><b>Output:</b></p>
+        <p id="res5"></p>
+
+        <h2>The search() Method</h2>
+        <p>The search() method searches a string for a specified value and returns the position of the match.</p>
+        <p><b>Example: </b>console.log(newMsg.search("Australia"));</p>
+        <p><b>Output: </b><span id="res6"></span></p>
+
+        <h2>Converting to Upper Case</h2>
+        <p>A string is converted to upper case with toUpperCase() method.</p>
+        <p><b>Example: </b>console.log(newMsg.toUpperCase());</p>
+        <p><b>Output: </b><span id="res7"></span></p>
+
+        <h2>Converting to Lower Case</h2>
+        <p>A string is converted to lower case with toLowerCase() method.</p>
+        <p><b>Example: </b>console.log(newMsg.toLowerCase());</p>
+        <p><b>Output: </b><span id="res8"></span></p>
+
+        <h2>The trim() Method</h2>
+        <p>The trim() method removes whitespace from both sides of a string.</p>
+        <p><b>Example:</b></p>
+        <p>
+            &lt;p id="res9"&gt;&lt;/p&gt;<br><br>
+            let spaceText = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"; <br>
+            console.log(spaceText.trim()); <br>
+            document.getElementById("res9").innerHTML = spaceText.trim();
+        </p>
+        <p><b>Output: </b></p>
+        <p id="res9"></p>
+
+        <h2>Converting a String to an Array</h2>
+        <p>A string can be converted to an array with the split() method.</p>
+        <p>If the separator is omitted, the returned array will contain the whole string in index [0].</p>
+        <p>If the separator is "", the returned array will be an array of single characters.</p>
+        <p><b>Example:</b></p>
+        <p>&lt;p id="res10"&gt;&lt;/p&gt;<br><br>words = newMsg.split(" ");<br>document.getElementById("res10").innerHTML = words;</p>
+        <p><b>Output:</b></p>
+        <p id="res10"></p>
+
+        <script>
+            let msg = "My name is Shivateja";
+            
+            console.log("Length of name is " + name.length);
+            document.getElementById("res1").innerHTML = "Length of name is " + name.length;
+            
+            console.log(msg.slice(11,16));
+            document.getElementById("res2").innerHTML = msg.slice(11,16);
+
+            console.log(msg.slice(-9,-4));
+            document.getElementById("res3").innerHTML = msg.slice(-9,-4);
+
+            console.log(msg.slice(11));
+            document.getElementById("res4").innerHTML = msg.slice(11);
+
+            let message = "Please visit India";
+            let newMsg = message.replace("India","Australia");
+
+            console.log(newMsg);
+            document.getElementById("res5").innerHTML = newMsg;
+
+            console.log(newMsg.search("Australia"));
+            document.getElementById("res6").innerHTML = newMsg.search("Australia");
+
+            console.log(newMsg.toUpperCase());
+            document.getElementById("res7").innerHTML = newMsg.toUpperCase();
+
+            console.log(newMsg.toLowerCase());
+            document.getElementById("res8").innerHTML = newMsg.toLowerCase();
+
+            let spaceText = "      JavaScript      ";
+            console.log(spaceText.trim());
+            document.getElementById("res9").innerHTML = spaceText.trim();
+
+            words = newMsg.split(" ");
+            console.log(words);
+            document.getElementById("res10").innerHTML = words;
+
+        </script>
+    </body>
+</html>

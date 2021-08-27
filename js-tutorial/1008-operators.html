@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Operators</title>
+        <link rel="stylesheet" href="css/table-style.css">
+    </head>
+    <body>
+        <h1>JavaScript Operators</h1>
+        
+        <h2>Arithmetic Operators</h2>
+        <p>Arithmetic operators are used to perform arithmetic on numbers:</p>
+        <p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Values</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Addition</td>
+                    <td>a + b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction</td>
+                    <td>a - b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                    <td>a * b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>**</td>
+                    <td>Exponentiation</td>
+                    <td>a ** b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>3125</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                    <td>a / b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulus</td>
+                    <td>a % b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td>Increment</td>
+                    <td>a++</td>
+                    <td>a = 5;</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>--</td>
+                    <td>Decrement</td>
+                    <td>b--</td>
+                    <td>b = 5;</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </p>
+
+        <h2>Assignment Operators</h2>
+        <p>Assignment operators assign values to JavaScript variables.</p>
+        <p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Same As</th>
+                    <th>Values</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>a = b</td>
+                    <td>b = a</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 5; b = 5;</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>a += b</td>
+                    <td>a = a + b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 10;</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>a -= b</td>
+                    <td>a = a - b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 0;</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>a *= b</td>
+                    <td>a = a * b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 25;</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>a /= b</td>
+                    <td>a = a / b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 1;</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>a %= b</td>
+                    <td>a = a % b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 0;</td>
+                </tr>
+                <tr>
+                    <td>**=</td>
+                    <td>a **= b</td>
+                    <td>a = a ** b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>a = 3125;</td>
+                </tr>
+            </table>
+        </p>
+
+        <h2>String Operators</h2>
+        <p>The + operator can also be used to add (concatenate) strings.</p>
+        <p><b>Example:</b></p>
+        <p>let firstName = "Shivateja";<br>lastName = "Burle";<br>fullName = firstName + " " + lastName;<br>console.log(fullName);</p>
+        <p><b>Result:</b></p>
+        <p>Shivateja Burle</p>
+
+        <p>The += assignment operator can also be used to add (concatenate) strings</p>
+        <p><b>Example:</b></p>
+        <p>let name = "Shivateja";<br>name += name + " Burle";<br>console.log(name);</p> 
+        <p><b>Result:</b></p>
+        <p>Shivateja Burle</p>
+
+        <h2>Adding Strings and Numbers</h2>
+        <p>Adding two numbers, will return the sum, but adding a number and a string will return a string.</p>
+
+        <h2>Comparison Operators</h2>
+        <p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Values</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>equal to</td>
+                    <td>a == b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>===</td>
+                    <td>equal value and equal type</td>
+                    <td>a === b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>not equal</td>
+                    <td>a != b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>!==</td>
+                    <td>not equal value or not equal type</td>
+                    <td>a !== b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>greater than</td>
+                    <td>a &gt; b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>less than</td>
+                    <td>a &lt; b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>&gt;&equals;</td>
+                    <td>greater than or equal to</td>
+                    <td>a &gt;&equals; b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>&lt;&equals;</td>
+                    <td>less than or equal to</td>
+                    <td>a &lt;&equals; b</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>ternary operator</td>
+                    <td>(a &gt; b) ? "YES" : "NO"</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>NO</td>
+                </tr>
+            </table>
+        </p>
+        
+        <h2>Logical Operators</h2>
+        <p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Values</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>logical and</td>
+                    <td>(a &lt; 1) && (b &gt; 1)</td>
+                    <td>a = 10; b = 5;</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>logical or</td>
+                    <td>(a &lt; 1) || (b &gt; 1)</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>logical not</td>
+                    <td>!(a == b)</td>
+                    <td>a = 5; b = 5;</td>
+                    <td>true</td>
+                </tr>
+            </table>
+        </p>
+
+        <h2>Type Operators</h2>
+        <p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>typeof</td>
+                    <td>Returns the type of a variable</td>
+                </tr>
+                <tr>
+                    <td>instanceof</td>
+                    <td>Returns true if an object is an instance of an object type</td>
+                </tr>
+            </table>
+        </p>
+
+        <h2>Bitwise Operators</h2>
+        <p>Bit operators work on 32 bits numbers.</p>
+        <p>Any numeric operand in the operation is converted into a 32 bit number. The result is converted back to a JavaScript number.</p>
+        <p>
+            <table>
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Same as</th>
+                    <th>Result</th>
+                    <th>Decimal</th>
+                </tr>
+                <tr>
+                    <td>&</td>
+                    <td>AND</td>
+                    <td>5 & 1</td>
+                    <td>0101 & 0001</td>
+                    <td>0001</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>|</td>
+                    <td>OR</td>
+                    <td>5 | 1</td>
+                    <td>0101 | 0001</td>
+                    <td>0101</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>NOT</td>
+                    <td>~5</td>
+                    <td>~0101</td>
+                    <td>1010</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                    <td>XOR</td>
+                    <td>5 ^ 1</td>
+                    <td>0101 ^ 0001</td>
+                    <td>0100</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>&lt;&lt;</td>
+                    <td>Zero fill left shift</td>
+                    <td>5 &lt;&lt; 1</td>
+                    <td>0101 &lt;&lt; 1</td>
+                    <td>1010</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>&gt;&gt;</td>
+                    <td>Signed right shift</td>
+                    <td>5 &gt;&gt; 1</td>
+                    <td>0101 &gt;&gt; 1</td>
+                    <td>0010</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>&gt;&gt;&gt;</td>
+                    <td>Zero fill right shift</td>
+                    <td>5 &gt;&gt;&gt; 1</td>
+                    <td>0101 &gt;&gt;&gt; 1</td>
+                    <td>0010</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </p>
+        <p><b>Note:</b> The examples above uses 4 bits unsigned examples. But JavaScript uses 32-bit signed numbers.
+            Because of this, in JavaScript, ~ 5 will not return 10. It will return -6.
+            ~00000000000000000000000000000101 will return 11111111111111111111111111111010</p>
+
+        <script>
+            const name = "Shivateja Burle";
+            let profession = "Programmer";
+        </script>
+    </body>
+</html>

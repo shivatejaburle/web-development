@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Arrays</title>
+    </head>
+    <body>
+        <h1>JavaScript Arrays</h1>
+        <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+        <p>It is a common practice to declare arrays with the const keyword.</p>
+
+        <h2>Creating an Array</h2>
+        <h3>Method 1:</h3>
+        <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+        <p><strong>Syntax:</strong> const array_name = [item1, item2, ..., itemN];</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS
+        </p>
+
+        <h3>Method 2:</h3>
+        <p>Spaces and line breaks are not important. A declaration can span multiple lines.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = [<br>
+            &emsp;"HTML",<br>
+            &emsp; "CSS",<br>
+            &emsp;"JS"<br>
+            ];<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS
+        </p>
+
+        <h3>Method 3:</h3>
+        <p>You can also create an array, and then provide the elements.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = [];<br>
+            programmingLanguages[0] = "HTML";<br>
+            programmingLanguages[1] = "CSS";<br>
+            programmingLanguages[2] = "JS";<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS
+        </p>
+
+        <h3>Method 4:</h3>
+        <p>Using the JavaScript Keyword new.</p>
+        <p>
+            <strong>Example:</strong>
+            const programmingLanguages = new Array("HTML", "CSS", "JS");<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong><br>
+            HTML,CSS,JS
+        </p>
+
+        <h2>Accessing Array Elements</h2>
+        <p>You access an array element by referring to the <strong>index number</strong>.</p>
+        <p>Array indexes start with 0.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            let favLanguage = programmingLanguages[2]; <br>
+            console.log(favLanguage);<br><br>
+            <strong>Output:</strong> <br>
+            JS
+        </p>
+
+        <h2>Arrays are Objects</h2>
+        <p>Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.</p>
+        <p>
+            <b>Example:</b><br>
+            const companyDetails = {name:"i-Dizital Software Solutions", location:"Australia", employees:10};
+            console.log(companyDetails.name);
+            console.log(companyDetails.location);
+            console.log(companyDetails.employees);
+        </p>
+
+        <h2>The Difference Between Arrays and Objects</h2>
+        <p>In JavaScript, <strong>arrays</strong> use <strong>numbered indexes</strong>.</p>
+        <p>In JavaScript, <strong>objects</strong> use <strong>named indexes</strong>.</p>
+
+        <h2>The length Property</h2>
+        <p>The length property of an array returns the length of an array (the number of array elements).</p>
+        <p>The length property is always one more than the highest array index.</p>
+
+        <h2>Adding Array Elements</h2>
+        <h3>Pushing</h3>
+        <p>The easiest way to add a new element to an array is using the push() method.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            programmingLanguages.push("Python");<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS,Python
+        </p>
+        <p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS", "Python"];<br>
+            programmingLanguages[7] = "ReactJS";<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS,Python,undefined,undefined,undefined,ReactJS
+        </p>
+
+        <p>The push() method returns the new array length.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS"];<br>
+            let n = programmingLanguages.push("Python");<br>
+            console.log(n); <br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            4<br>
+            HTML,CSS,JS,Python
+        </p>
+
+        <h2>Removing Array Elements</h2>
+        <h3>Popping</h3>
+        <p>The pop() method removes the last element from an array.</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS", "Python"];<br>
+            programmingLanguages.pop();<br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            HTML,CSS,JS
+        </p>
+        <p>The pop() method returns the value that was "popped out".</p>
+        <p>
+            <strong>Example:</strong><br>
+            const programmingLanguages = ["HTML", "CSS", "JS", "Python"];<br>
+            let popItem = programmingLanguages.pop(); <br>
+            console.log(popItem); <br>
+            console.log(programmingLanguages);<br><br>
+            <strong>Output:</strong> <br>
+            Python<br>
+            HTML,CSS,JS
+        </p>
+
+        <h2>Shifting Elements</h2>
+        <p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
+        <p>The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+        <p>The shift() method returns the value that was "shifted out".</p>
+
+        <h2>Unshifting Elements</h2>
+        <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements</p>
+        <p>The unshift() method returns the new array length.</p>
+        
+    </body>
+</html>

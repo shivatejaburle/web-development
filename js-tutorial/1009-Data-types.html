@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Data Types</title>
+    </head>
+    <body>
+        <h1>JavaScript Data Types</h1>
+
+        <h2>JavaScript Strings</h2>
+        <p>A string (or a text string) is a series of characters.</p>
+        <p>Strings are written with quotes. You can use single or double quotes.</p>
+        <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+        <p><b>Example: </b>let CarName = "Jaguar XF", message = "Hello 'Shiva'";</p>
+
+        <h2>JavaScript Numbers</h2>
+        <p>JavaScript has only one type of numbers.</p>
+        <p>Numbers can be written with, or without decimals.</p>
+        <p><b>Example: </b>let num1 = 20, pi = 3.14;</p>
+
+        <h2>JavaScript Booleans</h2>
+        <p>Booleans can only have two values: true or false.</p>
+        <p><b>Example:</b></p>
+        <p>let num1 = 3, num2 = 6, num3 = 3;<br>res = (num1==num2);</p>
+
+        <h2>JavaScript Arrays</h2>
+        <p>JavaScript arrays are written with square brackets.</p>
+        <p>Array items are separated by commas.</p>
+        <p><b>Example:</b> const fruits = ["Apple", "Cherry", "Grapes"];</p>
+        <p>Array indexes are zero-based, which means the first item is [0], second is [1], and so on.</p>
+        <p><b>Example: </b>console.log(fruits[1]);</p>
+
+        <h2>JavaScript Objects</h2>
+        <p>JavaScript objects are written with curly braces {}.</p>
+        <p>Object properties are written as name:value pairs, separated by commas.</p>
+        <p><b>Example:</b></p>
+        <p>const employee = {firstName:"Shiva", lastName:"Burle", designation:"Solutions Lead", company:"i-Dizital"};<br>console.log(employee.firstName);<br>console.log(employee['company']);</p>
+        <p>The object (employee) in the example above has 4 properties: firstName, lastName, designation, and company.</p>
+
+        <h2>Undefined</h2>
+        <p>In JavaScript, a variable without a value, has the value undefined. The type is also undefined.</p>
+        <p><b>Example: </b>let name;</p>
+        <p>Any variable can be emptied, by setting the value to undefined. The type will also be undefined.</p>
+        <p><b>Example: </b> name = undefined;</p>
+
+        <h2>Empty Values</h2>
+        <p>An empty value has nothing to do with undefined.</p>
+        <p>An empty string has both a legal value and a type.</p>
+        <p><b>Example: </b>let name = "Shiva";</p>
+
+        <script>
+            let num1 = 3, num2 = 6, num3 = 3;
+            let res1 = (num1 == num2);
+            let res2 = (num1 == num3);
+            console.log(res1);
+            console.log(res2);
+
+            const employee = {firstName:"Shiva", lastName:"Burle", designation:"Solutions Lead", company:"i-Dizital"};
+            console.log(employee.firstName);
+            console.log(employee['company']);
+        </script>
+
+    </body>
+</html>

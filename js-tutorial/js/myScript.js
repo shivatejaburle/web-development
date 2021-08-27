@@ -1,0 +1,1 @@
+console.log("Page loaded successfully myScript.js");
