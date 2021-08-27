@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The getElementById Method</title>
+    </head>
+    <body>
+        <h1>Selecting Elements by their Id's</h1>
+        <h2>The getElementById Method</h2>
+        <p>The most common way to access an HTML element is to use the id of the element.</p>
+
+        <h2>The innerHTML Property</h2>
+        <p>The easiest way to get the content of an element is by using the innerHTML property.</p>
+        <p>The innerHTML property is useful for getting or replacing the content of HTML elements.</p>
+        <p>The innerHTML property can be used to get or change any HTML element, including &lt;html&gt; and &lt;body&gt;.</p>
+
+        <h3>Example:</h3>
+        <p>
+            &lt;p id="welcomeMsg"&gt;Hello World!!!&lt;/p&gt; <br><br>
+            &lt;script&gt; <br>
+            &emsp; console.log(document.getElementById("welcomeMsg").innerHTML); <br>
+            &emsp; document.getElementById("welcomeMsg").innerHTML = "Hello Shiva!!!"; <br>
+            &lt;/script&gt;
+        </p>
+
+        <p><b>Output when page:</b></p>
+        <p id="welcomeMsg">Hello World!!!</p>
+        <script>
+            console.log(document.getElementById("welcomeMsg").innerHTML);
+            document.getElementById("welcomeMsg").innerHTML = "Hello <strong>Shiva</strong>!!!";
+        </script>
+    </body>
+</html>

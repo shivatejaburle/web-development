@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objects with Functions</title>
+    </head>
+    <body>
+        <h1>Objects with Functions</h1>
+        
+        <h2>Objects</h2>
+        <p>A JavaScript object is a collection of named values.</p>
+        <p>It is a common practice to declare objects with the const keyword.</p>
+        <p>The named values, in JavaScript objects, are called properties.</p>
+        <h3>Example</h3>
+        <p>
+            const person = { <br>
+                &emsp; 'name': 'Shiva', <br>
+                &emsp; 'email': 'shiva@gmail.com', <br>
+                &emsp; 'mobile': '9848012345', <br>
+                &emsp; 'age': 25 <br>
+            } <br>
+            console.log(person['name']); <br>
+            person['country'] = 'India'; <br>
+            console.log(person['country']);
+        </p>
+
+        <h2>Object Methods</h2>
+        <p>Methods are actions that can be performed on objects.</p>
+        <p>Object properties can be both primitive values, other objects, and functions.</p>
+        <p>An object method is an object property containing a function definition.</p>
+        <h3>Example</h3>
+        <p>
+            const person = { <br>
+                &emsp; 'name': 'Shiva', <br>
+                &emsp; 'email': 'shiva@gmail.com', <br>
+                &emsp; 'mobile': '9848012345', <br>
+                &emsp; 'age': 25, <br>
+                &emsp; 'speak': function(){ <br>
+                    &emsp; &emsp; return 'English'; <br>
+                &emsp;  } <br>
+            } <br>
+            console.log(person.speak());
+        </p>
+        
+        <h2>this Keyword</h2>
+        <p>In a function definition, <strong>this</strong> refers to the "owner" of the function.</p>
+        <p></p>
+        <h3>Example</h3>
+        <p>
+            const person = { <br>
+                &emsp; 'name': 'Shiva', <br>
+                &emsp; 'email': 'shiva@gmail.com', <br>
+                &emsp; 'mobile': '9848012345', <br>
+                &emsp; 'age': 25, <br>
+                &emsp; 'speak': function(){ <br>
+                    &emsp; &emsp; return this.name + ' speaks English'; <br>
+                &emsp;  } <br>
+            } <br>
+            console.log(person.speak());
+        </p>
+        <p>In the example above, <strong>this</strong> is the <strong>person</strong> object that "owns" the speak function.</p>
+        <p>In the above example, <strong>this.name</strong> means the <strong>name</strong> property of <strong>this</strong> object.</p>
+    </body>
+</html>

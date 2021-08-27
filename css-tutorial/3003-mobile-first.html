@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mobile First</title>
+        <style>
+            body
+            {
+                background-color: lightcoral;
+            }
+            @media (min-width:640px)
+            {
+                body
+                {
+                    background-color: aqua;
+                }    
+            }
+
+            .resbox 
+            {
+                padding: 20px;
+                color: white;
+            }
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) 
+            {
+                .resbox {background: red;}
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) 
+            {
+                .resbox {background: green;}
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) 
+            {
+                .resbox {background: blue;}
+            } 
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) 
+            {
+                .resbox {background: orange;}
+            } 
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) 
+            {
+                .resbox {background: black;}
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Always Design for Mobile First</h1>
+        <p>Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).</p>
+        <p>This means that we must make some changes in our CSS.</p>
+        <p>Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. This will make our design Mobile First.</p>
+        <h3>resbox:</h3>
+        <p>
+            body <br>
+            { <br>
+                &emsp;background-color: lightcoral; <br>
+            } <br><br>
+            /* breakpoint at 640px */ <br>
+           <strong> @media (min-width:640px) <br></strong>
+            { <br>
+                &emsp;body <br>
+                &emsp;{ <br>
+                    &emsp;&emsp;background-color: aqua;<br>
+                &emsp;} <br>
+            }
+        </p>
+        <h2>Device Breakpoints</h2>
+        <p>There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device.</p>
+        <p>To keep things simple you could target five groups.</p>
+        <ol>
+            <li>Extra small devices (phones, 600px and down)</li>
+            <li>Small devices (portrait tablets and large phones, 600px and up)</li>
+            <li>Medium devices (landscape tablets, 768px and up)</li>
+            <li>Large devices (laptops/desktops, 992px and up)</li>
+            <li>Extra large devices (large laptops and desktops, 1200px and up)</li>
+        </ol>
+        <h3>Example:</h3>
+        <div class="resbox">
+            <p>Resize your browser to change the color</p>
+        </div>
+        
+        <p>
+            .resbox 
+            {
+                padding: 20px;
+                color: white;
+            } <br>
+            
+            @media only screen and (max-width: 600px) 
+            {
+                .resbox {background: red;}
+            } <br>
+
+            @media only screen and (min-width: 600px) 
+            {
+                .resbox {background: green;}
+            } <br>
+
+            @media only screen and (min-width: 768px) 
+            {
+                .resbox {background: blue;}
+            } <br>
+
+            @media only screen and (min-width: 992px) 
+            {
+                .resbox {background: orange;}
+            } <br>
+
+            @media only screen and (min-width: 1200px) 
+            {
+                .resbox {background: black;}
+            }<br>
+        </p>
+
+        <p>
+            &lt;div class="resbox"&gt; <br>
+                &emsp;&lt;p&gt;Resize your browser to change the color&lt;/p&gt;<br>
+            &lt;/div&gt;
+        </p>
+
+    </body>
+</html>

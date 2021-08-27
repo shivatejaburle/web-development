@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String Concatenation</title>
+    </head>
+    <body>
+        <h1>String Concatenation</h1>
+        <h2>Method 1: Using the + Operator</h2>
+        <p>The same + operator you use for adding two numbers can be used to concatenate two strings.</p>
+        <p>
+            <b>Example:</b><br>
+            let name = "Shiva"; <br>
+            let age = 18; <br>
+            console.log(name + " is my name and age is " + age); <br> <br>
+            <b>Output:</b> <br>
+            Shiva is my name and age is 18
+        </p>
+
+        <h2>Method 2: Using the concat() method</h2>
+        <p>The concat() method joins two or more strings.</p>
+        <p>concat() does not change the existing strings, but returns a new string.</p>
+        <p><b>Syntax: </b>string.concat(string1, string2, ..., stringN)</p>
+        <p>
+            <b>Example:</b> <br>
+            let firstName ="Shivateja"; <br>
+            let lastName = "Burle"; <br>
+            let space = " "; <br>
+            let fullName = firstName.concat(space, lastName); <br>
+            console.log("Full Name: " + fullName); <br> <br>
+            <b>Output: </b> <br>
+            Full Name: Shivateja Burle
+        </p>
+
+        <h2>Method 3: Using Template Literals</h2>
+        <p>With Template Literals, you can write exactly how you want your string to appear. So it's very easy to spot if a space is missing.</p>
+        <p>
+            <b>Example:</b>
+            let name = "Shiva"; <br>
+            let age = 18; <br>
+            console.log(`${name} is my name and age is ${age}`); <br> <br>
+            <b>Output:</b> <br>
+            Shiva is my name and age is 18
+        </p>
+
+        <script>
+            // Method 1
+            let name = "Shiva";
+            let age = 18;
+            console.log(name + " is my name and age is " + age);
+
+            // Method 2
+            let firstName ="Shivateja";
+            let lastName = "Burle";
+            let space = " ";
+            let fullName = firstName.concat(space, lastName);
+            console.log("Full Name: " + fullName);
+
+            // Method 3
+            console.log(`${name} is my name and age is ${age}`);
+        </script>
+    </body>
+</html>

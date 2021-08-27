@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variable Types</title>
+        <style>
+            q
+            {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Type of JavaScript Variables</h1>
+        <p>There are 3 ways to declare a JavaScript variable, using <q>var</q>, <q><b>let</b></q> and <q><b>const</b></q>.</p>
+
+        <h2>let:</h2>
+        <p>Variables defined with <b>let</b> cannot be re-declared.</p>
+        <p>Variables defined with <b>let</b> must be Declared before use.</p>
+        <p>You cannot accidentally redeclare a variable.</p>
+        <p>Variables defined with <b>let</b> have Block Scope.</p>
+
+        <h3>Block Scope:</h3>
+        <p>Variables declared of type <b>let</b> inside a { } block cannot be accessed from outside the block.</p>
+
+        <h3>Re-declaring Variables</h3>
+        <p>Re-declaring a variable using the var keyword can impose problems.</p>
+        <p>Re-declaring a variable inside a block will also redeclare the variable outside the block</p>
+        <p>With <b>let</b>, re-declaring a variable in the same block is NOT allowed.</p>
+        <p>But, re-declaring a variable with <b>let</b>, in another block, IS allowed.</p>
+        <p><b>Example:</b></p>
+        <p>
+            <b>let</b> country = "India";<br>
+            console.log(country);<br>
+            {<br>
+                &emsp;<b>let</b> country = "Australia";<br>
+                &emsp;console.log(country);<br>
+            } <br>
+            console.log(country);
+        </p>
+
+        <h2>const:</h2>
+        <p>Variables defined with <b>const</b> cannot be Re-declared.</p>
+        <p>Variables defined with <b>const</b> have Block Scope.</p>
+        <p>JavaScript <b>const</b> variables must be assigned a value when they are declared.</p>
+        <p>Always declare a variables with <b>const</b> unless you know that the value will change.</p>
+        <p>Always use <b>const</b> when you declare: new Array, Object, Function RegExp.</p>
+        <p><b>Example:</b></p>
+        <p>
+            <b>const</b> zipCode = 2906;<br>
+            console.log(zipCode);
+        </p>
+
+        <script>
+            let country = "India";
+            console.log(country);
+            {
+                let country = "Australia";
+                console.log(country);
+            }
+            console.log(country);
+
+            const zipCode = 2906;
+            console.log(zipCode);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Images</title>
+        <style>
+            img
+            {
+                max-width: 50%;
+                height: auto;
+            }
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px)
+            {
+                img
+                {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Responsive Images</h1>
+
+        <h2>Using The width Property</h2>
+        <p>If the <strong>width</strong> property is set to a percentage and the height property is set to <strong>"auto"</strong>, the image will be responsive and scale up and down.</p>
+        
+        <h2>Using The max-width Property</h2>
+        <p>If the <strong>max-width</strong> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size.</p>
+
+        <h2>Different Image Size for Different Devices</h2>
+        <p>A large image can be perfect on a big computer screen, but useless on a small device. You can use media queries to display different image sizes on different devices.</p>
+        <p>You can use the media query <strong>min-device-width</strong>, instead of <strong>min-width</strong>, which checks the device width, instead of the browser width. Then the image will not change when you resize the browser window.</p>
+
+        <h3>Example:</h3>
+        <p>
+            img
+            {
+               <strong> max-width: 50%;</strong>
+                height: auto;
+            } <br>
+            /* Extra small devices (phones, 600px and down) */ <br>
+            @media only screen and ( <strong>max-width: 600px</strong> )
+            {
+                img
+                {
+                    <strong>max-width: 100%;</strong>
+                }
+            }
+        </p>
+        <p>
+            &lt;img src="../images/web-development.png" alt="web-development"&gt;
+        </p>
+        <p>
+            <img src="../images/web-development.png" alt="web-development">
+        </p>
+    </body>
+</html>

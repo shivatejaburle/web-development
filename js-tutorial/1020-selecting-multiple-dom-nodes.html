@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selecting DOM Nodes</title>
+    </head>
+    <body>
+        <h1>HTML DOM querySelector() Method</h1>
+        <p>The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.</p>
+        <h2>Syntax: <span style="font-weight: lighter;">document.querySelector(CSS selectors);</span></h2>
+        <p><strong>CSS Selectors</strong><br>For multiple selectors, separate each selector with a comma.
+            <br>The returned element depends on which element that is first found in the document.</p>
+        <h3>Examples:</h3>
+        <p><strong>Get the first &lt;p&gt; element in the document</strong><br>document.querySelector("p");</p>
+        <p><strong>Get the first element in the document with class="example"</strong><br>document.querySelector(".example");</p>
+        <p><strong>Get the first &lt;p&gt; element in the document with class="example"</strong><br>document.querySelector("p.example").style.backgroundColor = "red";</p>
+        <p><strong>Change the text of an element with id="demo"</strong><br>document.querySelector("#demo").innerHTML = "Nee Content!";</p>
+        <p><strong>Get the first &lt;p&gt; element in the document where the parent is a &lt;div&gt; element</strong><br>document.querySelector("div > p");</p>
+        <p><strong>Get the first &lt;a&gt; element in the document that has a "target" attribute</strong><br>document.querySelector("a[target]");</p>
+
+        <h1>HTML DOM querySelectorAll() Method</h1>
+        <p>The querySelectorAll() method returns all elements in the document that matches a specified CSS selector(s), as a static NodeList object.</p>
+        <p>The NodeList object represents a collection of nodes. The nodes can be accessed by index numbers. The index starts at 0.</p>
+        <p>You can use the length property of the NodeList object to determine the number of elements that matches the specified selector, then you can loop through all elements and extract the info you want.</p>
+        <h2>Syntax: <span style="font-weight: lighter;">document.querySelectorAll(CSS selectors);</span></h2>
+        <p><strong>CSS Selectors</strong><br>Specifies one or more CSS selectors to match the element.
+            <br>These are used to select HTML elements based on their id, classes, types, attributes, values of attributes, etc.
+            <br>For multiple selectors, separate each selector with a comma.</p>
+        <h3>Examples:</h3>
+        <p>
+            <strong>Get all &lt;p&gt; elements in the document, and set the background color of the first &lt;p&gt; element (index 0).</strong><br>
+            var x = document.querySelectorAll("p");<br>
+            x[0].style.backgroundColor = "red"; 
+        </p>
+        <p>
+            <strong>Get all &lt;p&gt; elements in the document with class="example", and set the background of the first &lt;p&gt; element.</strong><br>
+            var x = document.querySelectorAll("p.example");<br>
+            x[0].style.backgroundColor = "red"; 
+        </p>
+        <p>
+            <strong>Using length property of the NodeList object finding how many elements with class="example" there are in the document.</strong><br>
+            var len = document.querySelectorAll(".example").length;
+        </p>
+        <p>
+            <strong>Set the background color of all elements in the document with class="example".</strong><br>
+            var x = document.querySelectorAll(".example");<br>
+            var i;<br>
+            for (i = 0; i &lt; x.length; i++) <br>
+            { <br>
+                &emsp;x[i].style.backgroundColor = "red"; <br>
+            } <br>
+        </p>
+        <p>
+            <strong>Set the background color of all &lt;p&gt; elements in the document.</strong><br>
+                var x = document.querySelectorAll("p"); <br>
+                var i; <br>
+                for (i = 0; i &lt; x.length; i++) <br>
+                { <br>
+                  &emsp; x[i].style.backgroundColor = "red"; <br>
+                }
+        </p>
+        <p>
+            <strong>Set the background color of every &lt;p&gt; element where the parent is a &lt;div&gt; element.</strong><br>
+                var x = document.querySelectorAll("div > p"); <br>
+                var i; <br>
+                for (i = 0; i  &lt; x.length; i++) <br>
+                { <br>
+                  &emsp;x[i].style.backgroundColor = "red"; <br>
+                }
+        </p>
+        <p>
+            <strong>Set the background color of all &lt;h2&gt;, &lt;div&gt; and &lt;span&gt; elements in the document.</strong><br>
+                var x = document.querySelectorAll("h2, div, span"); <br>
+                var i; <br>
+                for (i = 0; i  &lt; x.length; i++) <br>
+                {
+                  &emsp;x[i].style.backgroundColor = "red"; <br>
+                }
+        </p>
+    </body>
+</html>
