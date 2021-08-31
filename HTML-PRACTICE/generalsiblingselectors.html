@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>General Sibling Selector</title>
+        <style>
+            div ~ p
+            {
+                background-color: brown;
+                color: white;
+                font-size: 20px;
+            }
+            div + p
+            {
+                background-color: blue;
+                color: white;
+            }
+            div > p
+            {
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, itaque sequi, ducimus, provident ipsa asperiores libero quidem ullam sunt ea alias tempore maxime! Reiciendis fuga amet quia consequatur pariatur placeat?</p>
+            <p>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ut voluptate recusandae, dolorum itaque quod eveniet corrupti aspernatur animi beatae ipsum eius fuga, mollitia in. Expedita quis dolorem unde eveniet.</p>
+        </div>
+        <p>3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat fugit explicabo quas voluptatibus laborum cum, rem eligendi est, debitis temporibus inventore ipsam facilis, quasi id omnis doloremque ex ad similique?</p>
+        <p>4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ratione totam eos autem reprehenderit similique voluptas porro? Ratione, porro quos! Minima assumenda facilis, dolor et suscipit odit itaque non eaque.</p>
+        <p>5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nesciunt eius, nemo nostrum quaerat velit pariatur eum fugit tempora libero temporibus ullam explicabo ab, molestias consequuntur amet architecto quae beatae.</p>
+    </body>
+</html>
