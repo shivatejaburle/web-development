@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Elements</title>
+        <style>
+            div > h1::before
+            {
+                content: "\"";
+                color: green;
+            }
+            div > h1::after
+            {
+                content: "\"";
+                color: red;
+            }
+            a
+            {
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                background-color: purple;
+            }
+            a:hover
+            {
+                background-color: blue;
+                color: white;
+            }
+            p
+            {
+                background-color: yellow;
+                font-size: 20px;
+                padding: 20px;
+                border: 2px solid red;
+                display: none;
+            }
+            div:hover p
+            {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Sriram Surya</h1>
+        </div>
+        <div>
+            <h1>Shivateja Burle</h1>
+        </div>
+        <h1>Ravi Teja</h1>
+        <a href="https://covid19vaccine.act.gov.au" target="_blank">COVID-19 Vaccine</a>
+        <div>
+            hover over me to show the p element
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet architecto laboriosam aut laborum quas in rerum animi repellat molestias provident veritatis laudantium, deleniti ipsam voluptatibus cum dolore iure sed ex?</p>
+        </div>
+    </body>
+</html>

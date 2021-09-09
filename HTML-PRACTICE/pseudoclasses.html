@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseuodo Classes</title>
+    </head>
+    <style>
+        .box
+        {
+            border: 1px solid blue;
+            height: 50px;
+        }
+        .box:not(.doNotSelectMe)
+        {
+            background-color: red;
+        }
+        .box:hover
+        {
+            background-color: grey;
+        }
+        .box:nth-child(13)
+        {
+            background-color: yellow;
+        }
+    </style>
+    <body>
+        <div class="parent">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box doNotSelectMe"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

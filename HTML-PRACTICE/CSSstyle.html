@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS style</title>
+        <style>
+            div > p
+            {
+                background-color: red;
+            }
+            div ~ p
+            {
+                background-color: lime;
+            }
+            body
+            {
+                background-image: url('../images/Australian-streetlight.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .box
+            {
+                border: 1px solid rgb(255, 0, 64);
+                background-image: url('../images/Rocketman.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>child selectors</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum modi fugit molestias deserunt ullam odit voluptas, nihil dolore mollitia, atque esse eos minus recusandae facilis laborum optio aspernatur ut laboriosam.</p>
+        </div>
+        
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi culpa, harum fuga eaque, dolorum odit nobis hic vero quaerat ad ut quisquam temporibus, est minima nam praesentium eos numquam et.</p>
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium porro pariatur dolor, ipsum consequatur libero incidunt corporis? Consequuntur molestias, tempora possimus fugit ex consequatur doloremque! Ullam tempore tempora voluptas ipsum?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, culpa vitae iusto porro dolorem fugiat error reiciendis vel neque optio quaerat consequuntur? Quasi aut placeat nesciunt reiciendis repellendus ea accusantium?</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto consequatur, aut accusantium laudantium consectetur, nulla voluptatum repellat, eligendi fuga reiciendis obcaecati architecto earum. Laborum quis sapiente mollitia hic eaque rerum.</p>
+        </div>
+    </body>
+</html>
