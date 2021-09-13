@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Styles</title>
+        <style>
+            .box1
+            {
+                border: 5px solid black;
+                background-color: yellow;
+                width: 170px;
+                height: 170px;
+                position: relative;
+                margin: 100px;
+            }
+            .box1::after
+            {
+                content: "";
+                border: 5px solid red;
+                background-color: limegreen;
+                width: 170px;
+                height: 170px;
+                position: absolute;
+                z-index: -1;
+                top: -40px;
+                left: -40px;
+            }
+            .box1::before
+            {
+                content: "";
+                border: 5px solid blue;
+                background-color: deepskyblue;
+                width: 170px;
+                height: 170px;
+                position: absolute;
+                z-index: 1;
+                top: 40px;
+                left: 40px;
+            }
+            div > p::first-letter
+            {
+                font-size: 50px;
+                font-weight: bold;
+                color: orange;
+            }
+            #Aus > p::first-letter
+            {
+                color: pink;
+            }
+            #WA > p::first-letter
+            {
+                color: blue;
+            }
+            #NT > p::first-letter
+            {
+                color: green;
+            }
+            #TAS > p::first-letter
+            {
+                color: brown;
+            }
+            .Lorem > p::first-line
+            {
+                color: orchid;
+            }
+            ::selection
+            {
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fugit minima, adipisci non eaque quibusdam fugiat similique ut accusantium aperiam animi, porro voluptatibus error, ea odio aliquam itaque ipsam suscipit.</p>
+        </div>
+        <div id="Aus">
+            <p>Australia has 6 states <br> Canberra is the capital city of Australia</p>
+        </div>
+        <div id="WA">
+            <p>Western Australia has 9 regions <br> Perth is the capital city of Western Australia</p>
+        </div>
+        <div id="NT">
+            <p>Northern Territory has 4 regions <br> Darwin is the capital city of Northern Territory</p>
+        </div>
+        <div id="TAS">
+            <p>Tasmania has 3 subregions <br> Hobart is the capital city of Tasmania</p>
+        </div>
+        <div class="Lorem">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit voluptates officiis eveniet soluta, recusandae animi eligendi ut ea impedit perspiciatis necessitatibus, distinctio assumenda expedita in corporis quisquam. Deleniti, atque voluptatem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quidem, at obcaecati saepe adipisci enim impedit mollitia quisquam corrupti numquam optio dicta, voluptas laudantium deserunt harum ea! Deleniti, ducimus veritatis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, quidem? Animi vitae minima doloremque maiores adipisci sed impedit tempora recusandae blanditiis cumque nihil neque libero, quia ullam molestiae eligendi perspiciatis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat reiciendis voluptatibus suscipit deserunt soluta, illo voluptatem? Illo libero consectetur doloribus architecto praesentium accusantium, a molestias non, impedit est, aliquid id.</p>
+        </div>
+    </body>
+</html>
