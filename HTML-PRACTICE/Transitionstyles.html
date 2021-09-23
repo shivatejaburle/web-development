@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transition Styles</title>
+        <style>
+            .box1
+            {
+                background-image: linear-gradient(yellow, red);
+                width: 300px;
+                height: 300px;
+                transition: width 5s, height 5s, transform 5s;
+                transition-timing-function: linear;
+            }
+            .box1:hover
+            {
+                width: 730px;
+                height: 730px;
+                transform: rotate(180deg);
+            }
+            .box2
+            {
+                background-image: linear-gradient(aqua, blue);
+                width: 300px;
+                height: 300px;
+                transition: height 5s, transform 5s;
+                transition-timing-function: linear;
+                transition-duration: 5s;
+            }
+            .box2:hover
+            {
+                height: 730px;
+                transform: rotate(180deg);
+            }
+            .box3
+            {
+                background-image: linear-gradient(45deg, yellow, blue);
+                width: 300px;
+                height: 300px;
+                transition: width 7s;
+                transition-timing-function: ease;
+                transition-duration: 7s;
+            }
+            .box3:hover
+            {
+                width: 730px;
+                background-image: linear-gradient(45deg, lightgrey, orange);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <br>
+        <div class="box2"></div>
+        <br>
+        <div class="box3"></div>
+    </body>
+</html>
