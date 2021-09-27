@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transtion and gradient</title>
+        <style>
+            .box
+            {
+                background-image: linear-gradient(45deg, lime, orange);
+                width: 300px;
+                height: 300px;
+                transition: width 5s, height 5s;
+                transition-timing-function: linear;
+                transition-delay: 2s;
+            }
+            .box:hover
+            {
+                background-image: linear-gradient(45deg, gray, mediumblue);
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>
