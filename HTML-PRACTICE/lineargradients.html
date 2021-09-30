@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Linear Gradients transition</title>
+        <style>
+            .box1
+            {
+                background-image: linear-gradient(0deg, yellow, lawngreen);
+                width: 300px;
+                height: 300px;
+                transition: width 5s, height 5s;
+                transition-timing-function: linear;
+                border-radius: 15px;
+            }
+            .box1:hover
+            {
+                background-image: linear-gradient(0deg, gray, rebeccapurple);
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+    </body>
+</html>
