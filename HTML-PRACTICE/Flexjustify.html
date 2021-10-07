@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Justify content</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet"> 
+        <style>
+            body
+            {
+                font-family: 'Italianno', cursive;
+            }
+            #container1
+            {
+                display: flex;
+                border: 3px solid black;
+                background-color: blue;
+                justify-content: flex-start;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            #container2
+            {
+                display: flex;
+                border: 3px solid black;
+                background-color: blue;
+                justify-content: flex-end;
+                margin: 5px;
+                padding: 5px;
+            }
+            
+            #container3
+            {
+                display: flex;
+                border: 3px solid black;
+                background-color: blue;
+                justify-content: center;
+                margin: 5px;
+                padding: 5px;
+            }
+            
+            #container4
+            {
+                display: flex;
+                border: 3px solid black;
+                background-color: blue;
+                justify-content: space-between;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            #container5
+            {
+                display: flex;
+                border: 3px solid black;
+                background-color: blue;
+                justify-content: space-around;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            #container6
+            {
+                display: flex;
+                border: 3px solid black;
+                background-color: blue;
+                justify-content: space-evenly;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            #container1 div, #container2 div, #container3 div, #container4 div, #container5 div, #container6 div 
+            {
+                border: 3px solid black;
+                background-color: red;
+                color: white;
+                font-size: 24px;
+                padding: 5px;
+                margin: 5px;
+            }
+            h1
+            {
+                font-size: 50px;
+                margin-left: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>justify-content: flex-start;</h1>
+        <div id="container1">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+        </div>
+        <h1>justify-content: flex-end;</h1>
+        <div id="container2">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+        </div>
+        <h1>justify-content: center;</h1>
+        <div id="container3">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+        </div>
+        <h1>justify-content: space-between;</h1>
+        <div id="container4">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+        </div>
+        <h1>justify-content: space-around;</h1>
+        <div id="container5">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+        </div>
+        <h1>justify-content: space-evenly;</h1>
+        <div id="container6">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+        </div>
+    </body>
+</html>
