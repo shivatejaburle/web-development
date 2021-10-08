@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Styles</title>
+    <style>
+        body
+        {
+            font-family: 'Italianno', cursive;
+        }
+        #container1
+        {
+            border: 3px solid black;
+            background-color: green;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #container2
+        {
+            border: 3px solid black;
+            background-color: green;
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #container1 div, #container2 div 
+        {
+            border: 3px solid black;
+            background-color: red;
+            display: flex;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-direction: column;</h1>
+    <div id="container1">
+        <div><img src="https://cdn.shopify.com/s/files/1/1045/6906/products/SP-20180927-0049-H-SKYPERTH.COM.jpg?v=1571540142" alt="Perth, WA" width="300" height="300"></div>
+        <div><img src="https://media.istockphoto.com/photos/view-of-darwin-at-night-from-fishermans-wharf-darwin-picture-id923127366?k=20&m=923127366&s=170667a&w=0&h=QpaWtC-hIgcuSflsB-BdxGACHV-oqJqeHf1ZAV6sA9Q=" alt="Darwin, NT" width="300" height="300"></div>
+        <div><img src="https://live.staticflickr.com/4427/36991017141_146238e56c_b.jpg" alt="Hobart, TAS" width="300" height="300"></div>
+    </div>
+    <h1>flex-direction: row;</h1>
+    <div id="container2">
+        <div>Perth city</div>
+        <div>Darwin city</div>
+        <div>Hobart city</div>
+    </div>
+</body>
+</html>
