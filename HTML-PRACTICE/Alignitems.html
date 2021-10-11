@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Align Items</title>
+        <style>
+            #container1
+            {
+                display: flex;
+                border: 3px solid red;
+                background-color: yellow;
+                padding: 10px;
+                margin: 10px;
+                height: 200px;
+                align-items: flex-start;
+            }
+
+            #container2
+            {
+                display: flex;
+                border: 3px solid red;
+                background-color: yellow;
+                padding: 10px;
+                margin: 10px;
+                height: 200px;
+                align-items: flex-end; 
+            }
+
+            #container3
+            {
+                display: flex;
+                border: 3px solid red;
+                background-color: yellow;
+                padding: 10px;
+                margin: 10px;
+                height: 200px;
+                align-items: center; 
+            }
+
+            #container4
+            {
+                display: flex;
+                border: 3px solid red;
+                background-color: yellow;
+                padding: 10px;
+                margin: 10px;
+                height: 200px;
+                align-items: baseline; 
+            }
+
+            #container5
+            {
+                display: flex;
+                border: 3px solid red;
+                background-color: yellow;
+                padding: 10px;
+                margin: 10px;
+                height: 200px;
+                align-items: stretch; 
+            }
+
+            #container1 div, #container2 div, #container3 div, #container4 div, #container5 div  
+            {
+                background-color: red;
+                padding: 10px;
+                margin: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>align-items: flex-start;</h1>
+        <div id="container1">
+            <div><h1>Flex Item 1</h1></div>
+            <div><h2>Flex Item 2</h2></div>
+            <div><h3>Flex Item 3</h3></div>
+            <div>Flex Item 4</div>
+            <div><h4>Flex Item 5</h4></div>
+            <div><h6>Flex Item 6</h6></div>
+        </div>
+        <h1>align-items: flex-end;</h1>
+        <div id="container2">
+            <div><h1>Flex Item 1</h1></div>
+            <div><h2>Flex Item 2</h2></div>
+            <div><h3>Flex Item 3</h3></div>
+            <div>Flex Item 4</div>
+            <div><h4>Flex Item 5</h4></div>
+            <div><h6>Flex Item 6</h6></div>
+        </div>
+        <h1>align-items: center;</h1>
+        <div id="container3">
+            <div><h1>Flex Item 1</h1></div>
+            <div><h2>Flex Item 2</h2></div>
+            <div><h3>Flex Item 3</h3></div>
+            <div>Flex Item 4</div>
+            <div><h4>Flex Item 5</h4></div>
+            <div><h6>Flex Item 6</h6></div>
+        </div>
+        <h1>align-items: baseline;</h1>
+        <div id="container4">
+            <div><h1>Flex Item 1</h1></div>
+            <div><h2>Flex Item 2</h2></div>
+            <div><h3>Flex Item 3</h3></div>
+            <div>Flex Item 4</div>
+            <div><h4>Flex Item 5</h4></div>
+            <div><h6>Flex Item 6</h6></div>
+        </div>
+        <h1>align-items: stretch;</h1>
+        <div id="container5">
+            <div><h1>Flex Item 1</h1></div>
+            <div><h2>Flex Item 2</h2></div>
+            <div><h3>Flex Item 3</h3></div>
+            <div>Flex Item 4</div>
+            <div><h4>Flex Item 5</h4></div>
+            <div><h6>Flex Item 6</h6></div>
+        </div>
+    </body>
+</html>
