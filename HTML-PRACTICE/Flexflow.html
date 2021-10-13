@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex flow</title>
+        <style>
+            #container1
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            #container2
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-flow: column wrap;
+            }
+
+            #container1 div, #container2 div  
+            {
+                background-color: orange;
+                margin: 5px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>flex-direction: column; flex-wrap: wrap;</h1>
+        <div id="container1">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+        <h1>flex-flow: column wrap;</h1>
+        <div id="container2">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Align contents</title>
+        <style>
+            h1
+            {
+                margin: 10px;
+            }
+            #container1
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-wrap: wrap;
+                align-content: flex-start;
+            }
+
+            #container2
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-wrap: wrap;
+                align-content: flex-end;
+            }
+            
+            #container3
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-wrap: wrap;
+                align-content: center;
+            }
+
+            #container4
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+            #container5
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-wrap: wrap;
+                align-content: space-around;
+            }
+
+            #container6
+            {
+                display: flex;
+                border: 2px solid orange;
+                background-color: lime;
+                margin: 10px;
+                padding: 10px;
+                height: 300px;
+                flex-wrap: wrap;
+                align-content: stretch;
+            }
+
+            #container1 div, #container2 div, #container3 div, #container4 div, #container5 div, #container6 div  
+            {
+                background-color: orange;
+                margin: 5px;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>flex-wrap: wrap; align-content: flex-start;</h1>
+        <div id="container1">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+        <h1>flex-wrap: wrap; align-content: flex-end;</h1>
+        <div id="container2">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+        <h1>flex-wrap: wrap; align-content: center;</h1>
+        <div id="container3">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+        <h1>flex-wrap: wrap; align-content: space-between;</h1>
+        <div id="container4">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+        <h1>flex-wrap: wrap; align-content: space-around;</h1>
+        <div id="container5">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+        <h1>flex-wrap: wrap; align-content: stretch;</h1>
+        <div id="container6">
+            <div>Flex item 01</div>
+            <div>Flex item 02</div>
+            <div>Flex item 03</div>
+            <div>Flex item 04</div>
+            <div>Flex item 05</div>
+            <div>Flex item 06</div>
+            <div>Flex item 07</div>
+            <div>Flex item 08</div>
+            <div>Flex item 09</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+        </div>
+    </body>
+</html>
