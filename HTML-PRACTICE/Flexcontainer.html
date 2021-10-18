@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Container Properties</title>
+        <style>
+            #container1
+            {
+                background-color: mediumblue;
+                color: white;
+                margin: 20px;
+                display: flex;
+                flex-direction: row-reverse;
+            }
+            #container2
+            {
+                background-color: mediumspringgreen;
+                color: white;
+                margin: 20px;
+                display: flex;
+                flex-wrap: wrap; 
+            }
+            #container3
+            {
+                background-color: limegreen;
+                color: white;
+                margin: 20px;
+                display: flex;
+                flex-flow: row wrap-reverse; 
+            }
+            #container4
+            {
+                background-color: brown;
+                color: white;
+                margin: 20px;
+                display: flex;
+                align-items: stretch;
+                height: 150px;
+            }
+            #container5
+            {
+                background-color: brown;
+                color: white;
+                margin: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-around;
+                height: 300px;
+                width: 70px;
+            }
+            #container6
+            {
+                background-color: brown;
+                color: white;
+                margin: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            #container5 div
+            {
+                border: 3px solid gray;
+                width: 70px;
+                height: 70px;
+            }
+            #container6 div
+            {
+                border: 3px solid gray;
+                margin: 5px;
+                padding: 10px;
+            }
+            #container1 div, #container2 div, #container3 div, #container4 div
+            {
+                border: 3px solid gray;
+                margin: 5px;
+                padding: 10px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>flex-direction</h1>
+        <div id="container1">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+        </div>
+        <h1>flex-wrap</h1>
+        <div id="container2">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+            <div>Flex item 13</div>
+            <div>Flex item 14</div>
+            <div>Flex item 15</div>
+        </div>
+        <h1>flex-flow</h1>
+        <div id="container3">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+            <div>Flex item 7</div>
+            <div>Flex item 8</div>
+            <div>Flex item 9</div>
+            <div>Flex item 10</div>
+            <div>Flex item 11</div>
+            <div>Flex item 12</div>
+            <div>Flex item 13</div>
+            <div>Flex item 14</div>
+            <div>Flex item 15</div>
+        </div>
+        <h1>align-items</h1>
+        <div id="container4">
+            <div><h1>Flex item 1</h1></div>
+            <div><h2>Flex item 2</h2></div>
+            <div><h3>Flex item 3</h3></div>
+            <div>Flex item 4</div>
+            <div><h5>Flex item 5</h5></div>
+            <div><h4>Flex item 6</h4></div>
+        </div>
+        <h1>align-content</h1>
+        <div id="container5">
+            <div style="background-color: coral;"></div>
+            <div style="background-color: lightblue;"></div>
+            <div style="background-color: pink;"></div>
+        </div>
+        <h1>justify-content</h1>
+        <div id="container6">
+            <div>Flex item 1</div>
+            <div>Flex item 2</div>
+            <div>Flex item 3</div>
+            <div>Flex item 4</div>
+            <div>Flex item 5</div>
+            <div>Flex item 6</div>
+        </div>
+    </body>
+</html>

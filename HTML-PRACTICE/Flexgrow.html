@@ -4,29 +4,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flex items - Order</title>
+        <title>Flex grow</title>
         <style>
-            #container1
+            #container
             {
                 display: flex;
-                border: 2px solid lime;
+                border: 10px solid dodgerblue;
                 background-color: orange;
                 margin: 10px;
                 padding: 10px;
             }
-            #container1 div
+            #container div
             {
                 border: 2px solid white;
                 background-color: orange;
                 color: white;
-                margin: 10px;
                 padding: 10px;
+                margin: 10px;
+                flex-grow: 1px; 
             }
         </style>
     </head>
     <body>
-        <h1>Flex items without order property</h1>
-        <div id="container1">
+        <div id="container">
             <div>Flex item 1</div>
             <div>Flex item 2</div>
             <div>Flex item 3</div>
@@ -34,14 +34,13 @@
             <div>Flex item 5</div>
             <div>Flex item 6</div>
         </div>
-        <h1>Flex items with order property</h1>
-        <div id="container1">
-            <div style="order: 3;">Flex item 1</div>
-            <div style="order: 1;">Flex item 2</div>
-            <div style="order: 2;">Flex item 3</div>
-            <div style="order: 6;">Flex item 4</div>
-            <div style="order: 4;">Flex item 5</div>
-            <div style="order: 5;">Flex item 6</div>
+        <div id="container">
+            <div style="flex-grow: 1;">Flex item 1</div>
+            <div style="flex-grow: 2;">Flex item 2</div>
+            <div style="flex-grow: 3;">Flex item 3</div>
+            <div style="flex-grow: 4;">Flex item 4</div>
+            <div style="flex-grow: 5;">Flex item 5</div>
+            <div style="flex-grow: 6;">Flex item 6</div>
         </div>
     </body>
 </html>

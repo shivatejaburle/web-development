@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Items</title>
+        <style>
+            #item1
+            {
+                background-color: yellowgreen;
+                color: white;
+                margin: 5px;
+                display: flex;
+            }
+            #item2
+            {
+                background-color: rebeccapurple;
+                color: white;
+                margin: 5px;
+                display: flex;
+            }
+            #item3
+            {
+                background-color: red;
+                color: white;
+                margin: 5px;
+                display: flex;
+                align-items: stretch;
+            }
+            #item4
+            {
+                background-color: brown;
+                color: white;
+                margin: 5px;
+                display: flex;
+                align-items: stretch;
+            }
+            #item5
+            {
+                background-color: black;
+                color: white;
+                margin: 5px;
+                display: flex;
+                height: 200px;
+            }
+            #item4 div
+            {
+                border: 2px solid yellow;
+                padding: 5px;
+                margin: 10px;
+                width: 100px;
+            }
+            #item5 div
+            {
+                border: 2px solid yellow;
+                padding: 5px;
+                margin: 10px;
+                width: 100px;
+            }
+            #item1 div, #item2 div, #item3 div 
+            {
+                border: 2px solid yellow;
+                padding: 5px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>order</h1>
+        <div id="item1">
+            <div style="order: 3;">Flex box 1</div>
+            <div style="order: 1;">Flex box 2</div>
+            <div style="order: 2;">Flex box 3</div>
+            <div style="order: 5;">Flex box 4</div>
+            <div style="order: 6;">Flex box 5</div>
+            <div style="order: 4;">Flex box 6</div>
+        </div>
+        <h1>flex-grow</h1>
+        <div id="item2">
+            <div style="flex-grow: 3;">Flex box 1</div>
+            <div style="flex-grow: 1;">Flex box 2</div>
+            <div style="flex-grow: 2;">Flex box 3</div>
+            <div style="flex-grow: 5;">Flex box 4</div>
+            <div style="flex-grow: 6;">Flex box 5</div>
+            <div style="flex-grow: 4;">Flex box 6</div>
+        </div>
+        <h1>flex-shrink</h1>
+        <div id="item3">
+            <div>Flex box 1</div>
+            <div style="flex-shrink: 0;">Flex box 2</div>
+            <div>Flex box 3</div>
+            <div style="flex-shrink: 0;">Flex box 4</div>
+            <div>Flex box 5</div>
+            <div style="flex-shrink: 0;">Flex box 6</div>
+            <div>Flex box 7</div>
+            <div style="flex-shrink: 0;">Flex box 8</div>
+            <div>Flex box 9</div>
+            <div style="flex-shrink: 0;">Flex box 10</div>
+            <div>Flex box 11</div>
+            <div style="flex-shrink: 0;">Flex box 12</div>
+        </div>
+        <h1>flex-basis</h1>
+        <div id="item4">
+            <div>Flex box 1</div>
+            <div style="flex-basis: 200px;">Flex box 2</div>
+            <div>Flex box 3</div>
+            <div style="flex-basis: 200px;">Flex box 4</div>
+            <div>Flex box 5</div>
+            <div style="flex-basis: 200px;">Flex box 6</div>
+            <div>Flex box 7</div>
+            <div style="flex-basis: 200px;">Flex box 8</div>
+            <div>Flex box 9</div>
+            <div style="flex-basis: 200px;">Flex box 10</div>
+        </div>
+        <h1>align-self</h1>
+        <div id="item5">
+            <div>Flex box 1</div>
+            <div style="align-self: flex-start;">Flex box 2</div>
+            <div>Flex box 3</div>
+            <div style="align-self: center;">Flex box 4</div>
+            <div>Flex box 5</div>
+            <div style="align-self: flex-end;">Flex box 6</div>
+        </div>
+    </body>
+</html>
