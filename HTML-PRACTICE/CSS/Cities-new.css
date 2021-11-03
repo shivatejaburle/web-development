@@ -1,0 +1,40 @@
+body
+{
+    margin: 0;
+    font-family: Arial;
+}
+header
+{
+    background-color: gray;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+section
+{
+    display: flex;
+    height: 555px;
+}
+nav
+{
+    background-color: lightgray;
+    flex: 1;
+    padding: 20px;
+}
+nav ul
+{
+    list-style-type: none;
+}
+article
+{
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 25px;
+}
+footer
+{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
