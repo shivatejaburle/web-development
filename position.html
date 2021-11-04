@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+        div.relative {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border: 3px solid #73AD21;
+            left:30px;
+            padding: 10px;
+        }
+         
+        div.absolute {
+            position: absolute;
+            top:   50px;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+	</style>
+</head>
+
+<body>
+	<h1>position: relative;</h1>
+
+	<div class="relative">
+		Setting the top, right, bottom, and left properties of an element with position: relative; property will cause it to adjust from its normal position. The other objects or elements will not fill the gap.
+	</div>
+    <h1>position: absolute;</h1>
+ 
+    <div class="relative">
+        This element has position: relative;
+        <div class="absolute">
+            An element with position: absolute;
+        </div>
+    </div>
+</body>
+
+</html>

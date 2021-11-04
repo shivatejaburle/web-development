@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            .box {
+                    margin: 60px 0 0 0;
+                    width: 250px;
+                    height: 50px;
+                    background-color: rgba(255, 144, 89, 0.5);
+                    border-radius: 5px;
+                    position: relative;
+                    border: 2px solid #ff6e26;
+                    }
+
+                .box:after,
+                .box:before {
+                bottom: 100%;
+                left: -50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+    </body>
+</html>

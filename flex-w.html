@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+
+            /*html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            */
+            .flex-body {
+                min-height: 100%;
+                display: flex;
+                flex-direction:column;
+            }
+            
+            
+            
+            .main {
+                display: flex;
+                flex: 1 0 auto;
+            }
+            
+            .nav {
+                flex: 0 0 12em;
+            }
+            
+            .content {
+                flex: 1 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .row {
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: row;
+                
+            }
+            .col {
+                flex: 1 0 auto;
+                height: 100px;
+            }
+            
+            /* TEMP CODE FOR THIS TEST, REMOVE FOR ACTUAL USE
+            */
+            body {
+                text-align: center;
+            }
+            
+            *{
+                box-shadow:inset 0px 0px 0px 1px #f00;
+            }
+            </style>
+            </head>
+    <body>
+  <div class="flex-body">
+    <header class="header">
+        <section class="content">
+        <div class="row">
+            <div class="col">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+            <div class="col">
+                Upper Middle
+            </div>
+            <div class="col">
+                Upper Right
+            </div>
+        </div>
+    
+        </section>
+    </header>
+    <main class="main">
+        <nav class="nav">
+            Nav
+        </nav>
+        <section class="content">
+            <div class="row">
+                <div class="col">
+                    Upper Left
+                </div>
+                <div class="col">
+                    Upper Middle
+                </div>
+                <div class="col">
+                    Upper Right
+                </div>
+            </div>
+            <div class="row">
+                Middle
+            </div>
+            <div class="row">
+                Lower
+            </div>
+        </section>
+    </main>
+    <footer class="footer">Footer</footer>
+    </div>
+</body>
+    </html>

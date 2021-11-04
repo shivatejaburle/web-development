@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+ <html>  
+ <head>  
+  <title>Form in HTML</title>  
+</head>  
+ <body>  
+     <h2>Registration form</h2>  
+    <form>  
+     <fieldset>  
+        <p>User personal information</p>  
+        <label>first name</label><br>  
+        <input type="text" name="name"><br>
+        <label>last name</label><br>  
+        <input type="text" name="name"><br>  
+         <label>Enter your email</label><br>  
+         <input type="email" name="email"><br>
+         <br><label>Enter your gender</label><br>  
+         <input type="radio" id="gender" name="gender" value="male"/>Male  <br>  
+         <input type="radio" id="gender" name="gender" value="female"/>Female <br/>    
+         <input type="radio" id="gender" name="gender" value="others"/>others <br/>
+         Engineering: <select name="eng" id="eng">
+            <option selected>-- Select Group --</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>CIVIL</option>
+            <option>EEE</option>
+          </select><br><br>
+          Hobbies: <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup1">Playing chess
+                    <input type="checkbox" name="CheckboxGroup1" value="checkbox" id="CheckboxGroup2">Reading Books<br><br>   
+          <br>Enter your Address:<br>  
+         <textarea></textarea><br>  
+         <input type="submit" value="sign-up">  
+     </fieldset>  
+  </form>  
+ </body>  
+</html>  

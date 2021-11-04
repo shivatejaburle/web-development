@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - FlexBox</title>
+    <style>
+        /* display */
+        #container1
+        {
+            display: flex;
+            background-color: orange;
+        }
+
+        #container1 div
+        {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* flex-direction */
+        #container2
+        {
+            display: flex;
+            background-color: blue;
+            flex-direction: column;
+        }
+
+        #container2 div
+        {
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            
+        }
+
+       /* flex-wrap */
+        #container3
+        {
+            display: flex;
+            background-color: green;
+            flex-wrap: wrap-reverse;
+        }
+
+        #container3 div
+        {
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            
+        }
+
+         /* justify-content */
+        #container4
+        {
+            display: flex;
+            background-color: aqua;
+            justify-content: space-evenly;
+        }
+
+        #container4 div
+        {
+            border: 1px solid brown;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+
+        /* align-items */
+        #container5
+        {
+            display: flex;
+            background-color: yellow;
+            height: 150px;
+            align-items: baseline;
+        }
+
+        #container5 div
+        {
+            border: 1px solid brown;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+
+        /* align-content */
+        #container6
+        {
+            display: flex;
+            background-color: brown;
+            height: 300px;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        #container6 div
+        {
+            border: 1px solid wheat;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+        }
+
+        /* order */
+        #container7
+        {
+            display: flex;
+            background-color: yellowgreen;
+        }
+
+        #container7 div
+        {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+        /* flex-grow */
+        #container8
+        {
+            display: flex;
+            background-color: burlywood;
+        }
+
+        #container8 div
+        {
+            border: 1px solid crimson;
+            padding: 10px;
+            margin: 10px;
+            color: crimson;
+        }
+
+        /* flex-shrink */
+        #container9
+        {
+            display: flex;
+            background-color: crimson;
+            align-items: stretch;
+        }
+
+        #container9 div
+        {
+            border: 1px solid honeydew;
+            padding: 10px;
+            margin: 10px;
+            color: honeydew;
+            width: 100px;
+        }
+
+        /* flex-basis */
+        #container10
+        {
+            display: flex;
+            background-color: coral;
+            align-items: stretch;
+        }
+
+        #container10 div
+        {
+            border: 1px solid darkblue;
+            padding: 10px;
+            margin: 10px;
+            color: darkblue;
+            width: 100px;
+        }
+
+        /* align-self */
+        #container11
+        {
+            display: flex;
+            background-color: cornflowerblue;
+            height: 200px;
+        }
+
+        #container11 div
+        {
+            border: 1px solid aliceblue;
+            padding: 10px;
+            margin: 10px;
+            color: aliceblue;
+            width: 100px;
+        }
+
+        /* responsive flex using flex-direction*/
+        #container12
+        {
+            display: flex;
+            flex-direction: row;
+            background-color: powderblue;   
+        }
+
+        #container12 div
+        {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+
+        .left-content
+        {
+            background-color: red;
+            padding: 10px;
+            flex: 50%;
+        }
+
+        .right-content
+        {
+            background-color: yellow;
+            padding: 10px;
+            flex: 50%;
+        }
+
+        @media (max-width: 800px)
+        {
+            #container12
+            {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>FlexBox</h1>
+    <p>Before the Flexbox Layout module, there were four layout modes:</p>
+    <ol>
+        <li>Block - for sections in a webpage</li>
+        <li>Inline - for text</li>
+        <li>Table - for two-dimensional table data</li>
+        <li>Positioned - for explicit position of an element</li>
+    </ol>
+    <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+    <h2>Flexbox Elements</h2>
+    <p>To start using the Flexbox model, you need to first define a flex container.</p>
+    <h3>Example:</h3>
+    <p>
+        #container1
+        {
+            <strong>display: flex;</strong>
+            background-color: orange;
+        } <br>
+
+        #container1 div
+        {
+            border: 1px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+    </p>
+    <p>
+        &lt;div id="container1"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container1">
+        <div>Flexbox 1</div>
+        <div>Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div>Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div>Flexbox 6</div>
+    </div>
+    <p>This is a flex container (the ORANGE area) with six flex items.</p>
+
+    <br><hr>
+
+    <h2>Flex Container</h2>
+    <p>The flex container properties are:</p>
+    <p><img src="images/CSS-Flexbox-Container.jpg" alt="CSS-Flexbox-Container-Properties"></p>
+
+    <h3>flex-direction</h3>
+    <p>The flex-direction property defines in which direction the container wants to stack the flex items.</p>
+    <p><img src="images/fc-flex-direction.jpg" alt="flex-direction"></p>
+    <p>
+        #container2
+        {
+            <strong>display: flex;</strong>
+            background-color: blue;
+            <strong>flex-direction: column;</strong>
+        } <br>
+
+        #container2 div
+        {
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            
+        }
+    </p>
+    <p>
+        &lt;div id="container2"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container2">
+        <div>Flexbox 1</div>
+        <div>Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div>Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div>Flexbox 6</div>
+    </div>
+
+    <h3>flex-wrap</h3>
+    <p>The flex-wrap property specifies whether the flex items should wrap or not.</p>
+    <p><img src="images/fc-flex-wrap.jpg" alt="flex-wrap"></p>
+    <p>
+        #container3
+        {
+            <strong>display: flex;</strong>
+            background-color: green;
+            <strong>flex-wrap: wrap-reverse;</strong>
+        } <br>
+        #container3 div
+        {
+            border: 1px solid white;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+            
+        }
+    </p>
+    <p>
+        &lt;div id="container3"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 6&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 7&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 8&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 9&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 10&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 11&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 12&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 13&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 14&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 15&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 16&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 17&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 18&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 19&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 20&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container3">
+        <div>Flexbox 1</div>
+        <div>Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div>Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div>Flexbox 6</div>
+        <div>Flexbox 7</div>
+        <div>Flexbox 8</div>
+        <div>Flexbox 9</div>
+        <div>Flexbox 10</div>
+        <div>Flexbox 11</div>
+        <div>Flexbox 12</div>
+        <div>Flexbox 13</div>
+        <div>Flexbox 14</div>
+        <div>Flexbox 15</div>
+        <div>Flexbox 16</div>
+        <div>Flexbox 17</div>
+        <div>Flexbox 18</div>
+        <div>Flexbox 19</div>
+        <div>Flexbox 20</div>
+    </div>
+
+    <h3>justify-content</h3>
+    <p>The justify-content property is used to align the flex items:</p>
+    <p><img src="images/fc-justify-content.jpg" alt="justify-content"></p>
+    <p>
+        #container4
+        {
+           <strong> display: flex;</strong>
+            background-color: aqua;
+            <strong>justify-content: space-evenly;</strong>
+        } <br>
+
+        #container4 div
+        {
+            border: 1px solid brown;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+    </p>
+    <p>
+        &lt;div id="container4"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container4">
+        <div>Flexbox 1</div>
+        <div>Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div>Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div>Flexbox 6</div>
+    </div>
+
+    <h3>align-items</h3>
+    <p>The align-items property is used to align the flex items.</p>
+    <p><img src="images/fc-align-items.jpg" alt="align-items"></p>
+    <p>
+        #container5
+        {
+            <strong>display: flex;</strong>
+            background-color: yellow;
+            height: 150px;
+            <strong>align-items: baseline;</strong>
+        } <br>
+
+        #container5 div
+        {
+            border: 1px solid brown;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+    </p>
+    <p>
+        &lt;div id="container5"&gt;<br>
+            &emsp;&lt;div&gt;&lt;h1&gt;Flexbox 1&lt;/h1&gt;&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;&lt;h3&gt;Flexbox 2&lt;/h3&gt;&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;&lt;h2&gt;Flexbox 3&lt;/h2&gt;&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;&lt;h4&gt;Flexbox 5&lt;/h4&gt;&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;&lt;h6&gt;Flexbox 6&lt;/h6&gt;&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div style="position:relative;">
+        <hr style="position:absolute;color:red;background-color:red;border-color:red;top:58px;width:100%">
+    </div>
+    <div id="container5">
+        <div><h1>Flexbox 1</h1></div>
+        <div><h3>Flexbox 2</h3></div>
+        <div><h2>Flexbox 3</h2></div>
+        <div>Flexbox 4</div>
+        <div><h4>Flexbox 5</h4></div>
+        <div><h6>Flexbox 6</h6></div>
+    </div>
+
+    <h3>align-content</h3>
+    <p>The align-content property is used to align the flex lines.</p>
+    <p><img src="images/fc-align-content.jpg" alt="align-content"></p>
+    <p>
+        #container6
+        {
+            display: flex;
+            background-color: brown;
+            <strong>height: 300px;
+                flex-wrap: wrap;
+                align-content: space-between;</strong>
+        } <br>
+
+        #container6 div
+        {
+            border: 1px solid wheat;
+            padding: 10px;
+            margin: 10px;
+            color: white;
+        }
+    </p>
+    <p>
+        &lt;div id="container6"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container6">
+        <div>Flexbox 1</div>
+        <div>Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div>Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div>Flexbox 6</div>
+        <div>Flexbox 7</div>
+        <div>Flexbox 8</div>
+        <div>Flexbox 9</div>
+        <div>Flexbox 10</div>
+        <div>Flexbox 11</div>
+        <div>Flexbox 12</div>
+        <div>Flexbox 13</div>
+        <div>Flexbox 14</div>
+        <div>Flexbox 15</div>
+        <div>Flexbox 16</div>
+        <div>Flexbox 17</div>
+        <div>Flexbox 18</div>
+        <div>Flexbox 19</div>
+        <div>Flexbox 20</div>
+    </div>
+
+    <h3>flex-flow</h3>
+    <p>The flex-flow property is a shorthand property for setting both the <strong>flex-direction</strong> and <strong>flex-wrap</strong> properties.</p>
+    <p>
+        #container
+        {
+            display: flex;
+            <strong>flex-flow: row wrap;</strong>
+        }
+    </p>
+    <hr>
+
+    <h2>Flex Items</h2>
+    <p>The direct child elements of a flex container automatically becomes flexible (flex) items.</p>
+    <p>The flex item properties are:</p>
+    <p><img src="images/CSS-Flexbox-Items-properties.jpg" alt="CSS-Flexbox-Items-properties"></p>
+
+    <h3>order</h3>
+    <p>The order property specifies the order of the flex items.</p>
+    <p><img src="images/fcc-order.jpg" alt="fcc-order"></p>
+    <p>
+        #container7
+        {
+            display: flex;
+            background-color: yellowgreen;
+        } <br>
+        #container7 div
+        {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }
+    </p>
+    <p>
+        &lt;div id="container7"&gt;<br>
+            &emsp;&lt;div <strong>style="order: 3"</strong>&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="order: 2"</strong>&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="order: 1"</strong>&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="order: 6"</strong>&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="order: 4"</strong>&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="order: 5"</strong>&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container7">
+        <div style="order: 3">Flexbox 1</div>
+        <div style="order: 2">Flexbox 2</div>
+        <div style="order: 1">Flexbox 3</div>
+        <div style="order: 6">Flexbox 4</div>
+        <div style="order: 4">Flexbox 5</div>
+        <div style="order: 5">Flexbox 6</div>
+    </div>
+
+    <h3>flex-grow</h3>
+    <p>The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.</p>
+    <p>The value must be a number, default value is 0.</p>
+    <p><img src="images/fcc-flex-grow.jpg" alt="fcc-order"></p>
+    <p>
+        #container8
+        {
+            display: flex;
+            background-color: burlywood;
+        } <br>
+
+        #container8 div
+        {
+            border: 1px solid crimson;
+            padding: 10px;
+            margin: 10px;
+            color: crimson;
+        }
+    </p>
+    <p>
+        &lt;div id="container8"&gt;<br>
+            &emsp;&lt;div <strong>style="flex-grow: 1"</strong>&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-grow: 2"</strong>&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-grow: 3"</strong>&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-grow: 4"</strong>&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-grow: 5"</strong>&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-grow: 6"</strong>&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container8">
+        <div style="flex-grow: 1">Flexbox 1</div>
+        <div style="flex-grow: 2">Flexbox 2</div>
+        <div style="flex-grow: 3">Flexbox 3</div>
+        <div style="flex-grow: 4">Flexbox 4</div>
+        <div style="flex-grow: 5">Flexbox 5</div>
+        <div style="flex-grow: 6">Flexbox 6</div>
+    </div>
+
+    <h3>flex-shrink</h3>
+    <p>The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items.</p>
+    <p>The value must be a number, default value is 1.</p>
+    <p><img src="images/fcc-flex-shrink.jpg" alt="flex-shrink"></p>
+    <p>
+        #container9
+        {
+            display: flex;
+            background-color: yellowgreen;
+           <strong> align-items: stretch;</strong>
+        } <br>
+
+        #container9 div
+        {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        }   
+    </p>
+    <p>
+        &lt;div id="container9"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-shrink: 0"</strong>&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-shrink: 0"</strong>&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-shrink: 0"</strong>&gt;Flexbox 6&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 7&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-shrink: 0"</strong>&gt;Flexbox 8&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 9&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-shrink: 0"</strong>&gt;Flexbox 10&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 11&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-shrink: 0"</strong>&gt;Flexbox 12&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container9">
+        <div>Flexbox 1</div>
+        <div  style="flex-shrink: 0">Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div  style="flex-shrink: 0">Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div  style="flex-shrink: 0">Flexbox 6</div>
+        <div>Flexbox 7</div>
+        <div  style="flex-shrink: 0">Flexbox 8</div>
+        <div>Flexbox 9</div>
+        <div  style="flex-shrink: 0">Flexbox 10</div>
+        <div>Flexbox 11</div>
+        <div style="flex-shrink: 0">Flexbox 12</div>
+    </div>
+
+    <h3>flex-basis</h3>
+    <p>The flex-basis property specifies the initial length of a flex item.</p>
+    <p><img src="images/fcc-flex-basis.jpg" alt="flex-basis"></p>
+    <p>
+        #container10
+        {
+            display: flex;
+            background-color: coral;
+            <strong> align-items: stretch;</strong>
+        } <br>
+
+        #container10 div
+        {
+            border: 1px solid darkblue;
+            padding: 10px;
+            margin: 10px;
+            color: darkblue;
+            width: 100px;
+        } 
+    </p>
+    <p>
+        &lt;div id="container10"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-basis: 200px;"</strong>&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-basis: 200px;"</strong>&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-basis: 200px;"</strong>&gt;Flexbox 6&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 7&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-basis: 200px;"</strong>&gt;Flexbox 8&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 9&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="flex-basis: 200px;"</strong>&gt;Flexbox 10&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container10">
+        <div>Flexbox 1</div>
+        <div style="flex-basis: 200px;">Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div style="flex-basis: 200px;">Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div style="flex-basis: 200px;">Flexbox 6</div>
+        <div>Flexbox 7</div>
+        <div style="flex-basis: 200px;">Flexbox 8</div>
+        <div>Flexbox 9</div>
+        <div style="flex-basis: 200px;">Flexbox 10</div>
+    </div>
+
+    <h3>align-self</h3>
+    <p>The align-self property specifies the alignment for the selected item inside the flexible container.</p>
+    <p>The align-self property overrides the default alignment set by the container's align-items property.</p>
+    <p><img src="images/fcc-align-self.jpg" alt="flex-align-self"></p>
+    <p>
+        #container11
+        {
+            display: flex;
+            background-color: cornflowerblue;
+            <strong>height: 200px;</strong>
+        } <br>
+
+        #container11 div
+        {
+            border: 1px solid aliceblue;
+            padding: 10px;
+            margin: 10px;
+            color: aliceblue;
+            width: 100px;
+        }
+    </p>
+    <p>
+        &lt;div id="container11"&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="align-self: flex-start;"</strong>&gt;Flexbox 2&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 3&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="align-self: center;"</strong>&gt;Flexbox 4&lt;/div&gt;<br>
+            &emsp;&lt;div&gt;Flexbox 5&lt;/div&gt;<br>
+            &emsp;&lt;div <strong>style="align-self: flex-end;"</strong>&gt;Flexbox 6&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container11">
+        <div>Flexbox 1</div>
+        <div style="align-self: flex-start;">Flexbox 2</div>
+        <div>Flexbox 3</div>
+        <div style="align-self: center;">Flexbox 4</div>
+        <div>Flexbox 5</div>
+        <div style="align-self: flex-end;">Flexbox 6</div>
+    </div>
+
+    <h3>flex</h3>
+    <p>The flex property is a shorthand property for the <strong>flex-grow</strong>, <strong>flex-shrink</strong>, and <strong>flex-basis</strong> properties.</p>
+    
+    <h3>Responsive Flexbox</h3>
+    <p>You can use media queries to create different layouts for different screen sizes and devices.</p>
+    <h3>Example:</h3>
+    <p>For example, if you want to create a two-column layout for most screen sizes, and a one-column layout for small screen sizes (such as phones and tablets), you can change the flex-direction from row to column at a specific breakpoint (800px in the example below).</p>
+    <p>
+        #container12
+        {
+            display: flex;
+            <strong>flex-direction: row;</strong>
+            background-color: powderblue;   
+        } <br>
+
+        #container12 div
+        {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            color: black;
+        } <br>
+
+        .left-content
+        {
+            background-color: red;
+            padding: 10px;
+            flex: 50%;
+        } <br>
+
+        .right-content
+        {
+            background-color: yellow;
+            padding: 10px;
+            flex: 50%;
+        } <br>
+
+        <strong>
+            @media (max-width: 800px) <br>
+            { <br>
+            &emsp; #container12
+                {
+                    flex-direction: column;
+                } <br>
+            }
+        </strong>
+    </p>
+    <p>
+        &lt;div id="container12"&gt;<br>
+            &emsp;&lt;div class="left-content"&gt;Flexbox 1&lt;/div&gt;<br>
+            &emsp;&lt;div class="right-content"&gt;Flexbox 2&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </p>
+    <div id="container12">
+        <div class="left-content">Flexbox 1</div>
+        <div class="right-content">Flexbox 2</div>
+    </div>
+
+</body>
+</html>

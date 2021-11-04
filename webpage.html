@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Layout using Tables</title>
+      <style>
+            a
+            {
+            font-size: 20px;
+            }
+            ul 
+            {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            li 
+            {
+                float: right;  
+            }
+
+            li a 
+            {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover:not(.active) 
+            {
+                background-color: #111;
+            }
+
+            .active 
+            {
+                background-color: #04AA6D;
+            }
+      </style>
+   </head>
+
+   <body>
+    
+      <table width = "100%" border = "2">
+         
+         <tr>
+            <td colspan = "2" bgcolor = "#b5dcb3">
+               <h1>This is Web Page Main title</h1>
+               <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+              
+            </td>
+         </tr>
+         <tr>
+            <td bgcolor = "#aaa" width = "300">
+               <b>Main Menu</b><br />
+               <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a><br />
+               <a href="https://www.oracle.com/java/" target="_blank">Java</a><br />
+               <a href="https://www.python.org/" target="_blank">Python</a>
+            </td>
+            
+            <td bgcolor = "#eee" width = "100" height = "200">
+               <p>Technical and Managerial Tutorials</p>
+               <img src="C:\Users\ravii\Downloads\programming_languages.png">
+               <p>Computer programming languages allow us to give instructions to a computer in a language the computer understands. Just as many human-based languages exist, there are an array of computer programming languages that programmers can use to communicate with a computer. The portion of the language that a computer can understand is called a “binary.” Translating programming language into binary is known as “compiling.” Each language, from C Language to Python, has its own distinct features, though many times there are commonalities between programming languages.
+
+                These languages allow computers to quickly and efficiently process large and complex swaths of information. For example, if a person is given a list of randomized numbers ranging from one to ten thousand and is asked to place them in ascending order, chances are that it will take a sizable amount of time and include some errors.</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan = "2" bgcolor = "#b5dcb3">
+               <center>
+                  Copyright © 2021
+               </center>
+            </td>
+         </tr>
+         
+      </table>
+   </body>
+
+</html>
