@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid: align-content</title>
+        <style>
+            .main-container
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: lightgray;
+                gap: 3px;
+            }
+            .main-container > div
+            {
+                border: 1px solid blue;
+                padding: 10px;
+            }
+            .container
+            {
+                display: inline-grid;
+                grid-template-columns: auto auto auto auto;
+                background-color: red;
+                gap: 10px;
+                padding: 10px;
+                height: 200px;
+            }
+            .container > div
+            {
+                border: 1px solid black;
+                background-color: yellow;
+                padding: 10px;
+                text-align: center;
+            }
+            #grid-style1
+            {
+                align-content: start;
+            }
+            #grid-style2
+            {
+                align-content: end;
+            }
+            #grid-style3
+            {
+                align-content: center;
+            }
+            #grid-style4
+            {
+                align-content: space-between;
+            }
+            #grid-style5
+            {
+                align-content: space-around;
+            }
+            #grid-style6
+            {
+                align-content: space-evenly;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grid: align-content</h1>
+        <div class="main-container">
+            <div>
+                <h1>align-content: start;</h1>
+                <div id="grid-style1" class="container">
+                    <div>Item 01</div>
+                    <div>Item 02</div>
+                    <div>Item 03</div>
+                    <div>Item 04</div>
+                    <div>Item 05</div>
+                    <div>Item 06</div>
+                    <div>Item 07</div>
+                    <div>Item 08</div>
+                </div>
+            </div>
+            <div>
+                <h1>align-content: end;</h1>
+                <div id="grid-style2" class="container">
+                    <div>Item 01</div>
+                    <div>Item 02</div>
+                    <div>Item 03</div>
+                    <div>Item 04</div>
+                    <div>Item 05</div>
+                    <div>Item 06</div>
+                    <div>Item 07</div>
+                    <div>Item 08</div>
+                </div>
+            </div>
+            <div>
+                <h1>align-content: center;</h1>
+                <div id="grid-style3" class="container">
+                    <div>Item 01</div>
+                    <div>Item 02</div>
+                    <div>Item 03</div>
+                    <div>Item 04</div>
+                    <div>Item 05</div>
+                    <div>Item 06</div>
+                    <div>Item 07</div>
+                    <div>Item 08</div>
+                </div>
+            </div>
+            <div>
+                <h1>align-content: space-between;</h1>
+                <div id="grid-style4" class="container">
+                    <div>Item 01</div>
+                    <div>Item 02</div>
+                    <div>Item 03</div>
+                    <div>Item 04</div>
+                    <div>Item 05</div>
+                    <div>Item 06</div>
+                    <div>Item 07</div>
+                    <div>Item 08</div>
+                </div>
+            </div>
+            <div>
+                <h1>align-content: space-around;</h1>
+                <div id="grid-style5" class="container">
+                    <div>Item 01</div>
+                    <div>Item 02</div>
+                    <div>Item 03</div>
+                    <div>Item 04</div>
+                    <div>Item 05</div>
+                    <div>Item 06</div>
+                    <div>Item 07</div>
+                    <div>Item 08</div>
+                </div>
+            </div>
+            <div>
+                <h1>align-content: space-evenly;</h1>
+                <div id="grid-style6" class="container">
+                    <div>Item 01</div>
+                    <div>Item 02</div>
+                    <div>Item 03</div>
+                    <div>Item 04</div>
+                    <div>Item 05</div>
+                    <div>Item 06</div>
+                    <div>Item 07</div>
+                    <div>Item 08</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
