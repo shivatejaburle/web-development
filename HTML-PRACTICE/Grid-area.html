@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grid-area</title>
+        <style>
+            .container
+            {
+                border: 1px solid red;
+                display: grid;
+                padding: 5px;
+                grid-template-columns: auto auto auto auto;
+            }
+            .container > div
+            {
+                border: 1px solid black;
+                background-color: gold;
+                padding: 10px;
+                margin: 5px;
+            }
+            .container .merge-cols-rows-1
+            {
+                grid-area: 2/2/4/4;
+                background-color: gray;
+            }
+            .container .merge-cols-rows-2
+            {
+                grid-area: 4/2/6/4;
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>grid-area</h1>
+        <div class="container">
+            <div>Item 01</div>
+            <div>Item 02</div>
+            <div>Item 03</div>
+            <div>Item 04</div>
+            <div>Item 05</div>
+            <div class="merge-cols-rows-1">Item 06</div>
+            <div>Item 07</div>
+            <div>Item 08</div>
+            <div>Item 09</div>
+            <div>Item 10</div>
+            <div class="merge-cols-rows-2">Item 11</div>
+            <div>Item 12</div>
+            <div>Item 13</div>
+            <div>Item 14</div>
+            <div>Item 15</div>
+            <div>Item 16</div>
+            <div>Item 17</div>
+            <div>Item 18</div>
+        </div>
+    </body>
+</html>
