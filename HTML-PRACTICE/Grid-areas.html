@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid-areas</title>
+        <style>
+            .myGridAreas1
+            {
+                grid-area: areas1;
+            }
+            .myGridAreas2
+            {
+                grid-area: areas2;
+            }
+            .container
+            {
+                display: grid;
+                gap: 10px;
+                grid-template-areas: 'areas1 . . .' 'areas1 . . areas2' '. . . areas2';
+            }
+            .container > div
+            {
+                border: 1px solid red;
+                background-color: gold;
+                color: red;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grid-areas</h1>
+        <div class="container">
+            <div class="myGridAreas1">Item 01</div>
+            <div>Item 02</div>
+            <div>Item 03</div>
+            <div>Item 04</div>
+            <div>Item 05</div>
+            <div>Item 06</div>
+            <div class="myGridAreas2">Item 07</div>
+            <div>Item 08</div>
+            <div>Item 09</div>
+            <div>Item 10</div>
+            <div>Item 11</div>
+            <div>Item 12</div>
+            <div>Item 13</div>
+            <div>Item 14</div>
+        </div>
+    </body>
+</html>
