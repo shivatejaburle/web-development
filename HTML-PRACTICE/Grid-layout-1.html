@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Layout 1</title>
+        <style>
+            body
+            {
+                margin: 0px;
+            }
+            .container
+            {
+                display: grid;
+                grid-template-areas: 
+                'header header header header header header' 
+                'left left middle middle right right' 
+                'footer footer footer footer footer footer';
+            }
+            .header
+            {
+                grid-area: header;
+                background-color: lightgray;
+                padding: 20px;
+                text-align: center;
+            }
+            .left
+            {
+                grid-area: left;
+                background-color: orange;
+                padding: 10px;
+            }
+            .middle
+            {
+                grid-area: middle;
+                background-color: purple;
+                color: white;
+                padding: 10px;
+            }
+            .right
+            {
+                grid-area: right;
+                background-color: pink;
+                padding: 10px;
+            }
+            .footer
+            {
+                grid-area: footer;
+                background-color: darkslategray;
+                padding: 10px;
+                text-align: center;
+            }
+            @media (max-width: 600px)
+            {
+                .container
+                {
+                    grid-template-areas: 
+                    'header header header header header header'
+                    'left left left left left left'
+                    'middle middle middle middle middle middle'
+                    'right right right right right right'
+                    'footer footer footer footer footer footer';
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Grid Layout 1</h1>    
+            </div>
+            <div class="left">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sunt autem libero eum ipsum beatae, animi delectus facere. Odit alias laudantium corrupti, aspernatur ea reprehenderit nobis reiciendis nostrum veniam voluptatibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem minima ex libero aspernatur mollitia quod, incidunt amet nostrum nulla itaque ullam non, necessitatibus inventore. Quas illum ratione aspernatur minus. Ut.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minus atque eos fugit optio. Pariatur id in praesentium. Esse nobis labore possimus voluptate temporibus voluptates inventore quibusdam earum quo alias.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quo architecto nesciunt, voluptatum eum impedit corrupti tempore, sed ullam blanditiis dicta quod recusandae iusto ea aut iste tempora quos quisquam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eaque nam commodi repellendus eos quas consequatur, sint ut soluta, vitae culpa explicabo quibusdam et laboriosam magnam obcaecati hic sed reprehenderit.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis eligendi nam aliquid! Repudiandae dolore reprehenderit nostrum natus porro alias facere excepturi repellendus labore deserunt tempora aspernatur inventore, odit sed doloremque.</p>
+            </div>
+            <div class="middle">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui id earum similique illum dolorum. Ad consectetur perferendis quas quam, minima culpa, quasi, vel aperiam earum at accusantium architecto maiores option.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium mollitia sequi repellat molestiae quam vel, totam tenetur architecto earum temporibus, odio modi rem eius reiciendis expedita. Ipsum assumenda cum dicta.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deleniti exercitationem molestiae sequi obcaecati. Quia quo porro ipsa, sint harum natus blanditiis iusto quod delectus, officia eius est enim quisquam!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quam excepturi ullam officia, architecto sunt, dolore quasi corrupti consequatur repellendus asperiores modi numquam assumenda? In provident odit nam dolor consectetur?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas perspiciatis quam praesentium? Ut accusantium consequatur at ab explicabo maiores incidunt quia nulla. In magni id at explicabo quisquam aperiam voluptas?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, porro voluptatibus id recusandae ipsam nihil sequi. Minus reiciendis ratione suscipit deleniti veniam ea consequuntur, error unde dolores, ipsam voluptas consectetur.</p>
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam totam natus illum ex dolorum, nam illo ipsum mollitia voluptate necessitatibus laudantium sequi, quia tempore exercitationem officia voluptas deleniti dicta tenetur!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, placeat. Molestiae obcaecati asperiores, perferendis aut odio impedit quaerat quibusdam harum itaque deserunt accusantium ab natus, eveniet, consequatur qui nisi temporibus!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi velit eius animi obcaecati provident voluptatem porro voluptates et adipisci dolor recusandae blanditiis, quibusdam doloribus pariatur tenetur neque. Assumenda, adipisci!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita rem laborum fugit provident ipsam? Sapiente dolore hic dolores in, similique veniam incidunt laboriosam, natus, quos sit unde ipsam. Tempore, itaque!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium deleniti veniam amet. Nobis animi odit modi, inventore fugit eveniet necessitatibus magnam vel, quos nisi soluta vitae enim ratione eum. Unde.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed, minus in numquam quas, neque atque cum maiores possimus totam vitae sequi corporis et qui amet nulla officiis rerum dolor.</p>
+            </div>
+            <div class="footer">
+                <p>All Rights Reserved | &copy; Sriram Surya Bandaru</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid page layout</title>
+        <style>
+            .item1
+            {
+                grid-area: site-header;
+            }
+            .item2
+            {
+                grid-area: navigation;
+            }
+            .item3
+            {
+                grid-area: main-content;
+            }
+            .item4
+            {
+                grid-area: right-sidebar;
+            }
+            .item5
+            {
+                grid-area: site-footer;
+            }
+            .container
+            {
+                display: grid;
+                grid-template-areas: 
+                'site-header site-header site-header site-header site-header site-header' 
+                'navigation main-content main-content main-content right-sidebar right-sidebar' 
+                'navigation site-footer site-footer site-footer site-footer site-footer';
+                background-color: orange;
+                padding: 10px;
+                gap: 10px;
+            }
+            .container > div
+            {
+                background-color: red;
+                border: 1px solid rgb(255, 51, 0);
+                padding: 20px;
+                text-align: center;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grid page layout</h1>
+        <div class="container">
+            <div class="item1">
+                Site header
+            </div>
+            <div class="item2">
+                Navigation
+            </div>
+            <div class="item3">
+                Main content
+            </div>
+            <div class="item4">
+                Right Sidebar
+            </div>
+            <div class="item5">
+                Site Footer
+            </div>
+        </div>
+    </body>
+</html>
