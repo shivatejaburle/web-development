@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Webpage</title>
+        <style>
+            h1
+            {
+                background-color: orange;
+                color: white;
+            }
+            .container
+            {
+                display: grid;
+                color: white;
+                grid-template-columns: auto auto auto auto;
+                gap: 10px;
+            }
+            .container > p
+            {
+                border: 1px solid blue;
+                background-color: rgba(19, 19, 172, 0.5);
+                color: white; 
+            }
+            /* breakpoint */
+            @media (max-width: 600px)
+            {
+                .container
+                {
+                    grid-template-columns: auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Responsive Webpage</h1>
+        <div class="container">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque illum, quos eaque laboriosam expedita repudiandae obcaecati aliquam soluta ipsam natus? Culpa fuga modi mollitia est ex quo temporibus quasi magnam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque delectus odio excepturi autem. Esse, mollitia expedita voluptatibus veritatis similique consectetur tempore aliquid reprehenderit atque optio alias iste blanditiis asperiores quibusdam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto maxime culpa incidunt quasi officia. Maxime animi, quos exercitationem reprehenderit obcaecati omnis? A ea aliquid veniam delectus, modi dolores in deleniti.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat harum itaque enim. Corporis illo veniam ullam praesentium itaque eaque odit delectus quis amet quaerat autem, iusto doloribus magnam voluptates laborum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quia aliquam ut blanditiis officiis eligendi id! Cum, commodi officia. Dolores ab aliquid vitae itaque ex? Alias sint ab minus illum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi iusto labore. Nemo eos illum molestiae officiis inventore cumque reiciendis ea recusandae, eligendi delectus explicabo qui provident totam voluptatem amet!</p>
+        </div>
+    </body>
+</html>
