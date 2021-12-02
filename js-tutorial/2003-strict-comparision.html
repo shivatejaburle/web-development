@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Strict Comparison</title>
+    </head>
+    <body>
+        <h1>Strict Equality Vs Loose Equality</h1>
+        <p>The Loose Equality Operator <q><strong>==</strong></q> allows us to compare two or more operands by converting their value to a common type first and then checking for the equality between them.</p>
+        <p>
+            <strong>Example:</strong><br>
+            let num = "0";<br>
+            console.log(typeof(num));<br>
+            console.log(num == "0");<br>
+            console.log(num == 0);<br>
+        </p>
+        <p>The Strict Equality Operator <q><strong>===</strong></q> allows us to compare two or more operands by checking the equality between the values as well as their types . It returns true only if the values and the type both match with the other operand.</p>
+        <p>
+            <strong>Example:</strong><br>
+            let num = "0";<br>
+            console.log(typeof(num));<br>
+            console.log(num === "0");<br>
+            console.log(num === 0);<br>
+        </p>
+        <p>Strict comparisons are faster for processing and you're going to see these in the future and in production level code.</p>
+    </body>
+</html>

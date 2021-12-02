@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variable Scoping</title>
+    </head>
+    <body>
+        <h1>JavaScript Variable Scoping</h1>
+        <p>Scope determines the accessibility (visibility) of variables.</p>
+        <p>Scope determines the accessibility of variables, objects, and functions from different parts of the code.</p>
+        <p>JavaScript has 3 types of scope:</p>
+        <p>
+            <ul>
+                <li>Block Scope</li>
+                <li>Function Scope</li>
+                <li>Global Scope</li>
+            </ul>
+        </p>
+        <h2>Block Scope</h2>
+        <p>Variables declared with the <b>let</b> and <b>const</b> keyword can provides block scope.</p>
+        <p>Variables declared of type <b>let</b> and <b>const</b> inside a { } block cannot be accessed from outside the block.</p>
+        <p>Variables declared with the <b>var</b> keyword can NOT have block scope.</p>
+        <p><b>Example:</b></p>
+        <p>
+            <b>let</b> country = "India";<br>
+            console.log(country);<br>
+            {<br>
+                &emsp;<b>let</b> country = "Australia";<br>
+                &emsp;console.log(country);<br>
+            } <br>
+            console.log(country);
+        </p>
+
+        <h2>Function Scope</h2>
+        <p>JavaScript has function scope: Each function creates a new scope.</p>
+        <p>Variables defined inside a function are not accessible (visible) from outside the function.</p>
+        <p>Variables declared with var, let and const are quite similar when declared inside a function.</p>
+        <p><b>Example:</b></p>
+        <p>
+            function person()<br>
+            {<br>
+                &emsp;const country = "Australia";<br>
+                &emsp;let name = "Shiva";<br>
+                &emsp;var location = "Melbourne";<br>
+            }
+        </p>
+
+        <h2>Global Scope</h2>
+        <p>A variable declared outside any function have <b>Global</b> Scope.</p>
+        <p>A global variable has Global Scope.</p>
+        <p>Global variables can be accessed from anywhere in a JavaScript program.</p>
+        <p>Variables declared with var, let and const are quite similar when declared outside a block.</p>
+        <p><b>Example:</b></p>
+        <p>
+            let x = 5;<br>
+            const y = 6;<br>
+            var z = 7; 
+        </p>
+    </body>
+</html>
