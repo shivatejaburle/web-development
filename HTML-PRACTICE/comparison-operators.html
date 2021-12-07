@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comparison operators</title>
+    </head>
+    <body>
+        <h1>Comparison operators</h1>
+        <ul>
+            <li>== Equals to</li>
+            <li>=== Equal value and Equal type</li>
+            <li>!= Not equals to</li>
+            <li>!== Not equal value and equal type</li>
+            <li>&gt; Greater than</li>
+            <li>&lt; Less than</li>
+            <li>&gt;= Greater than or equal to</li>
+            <li>&lt;= Less than or equal to</li>
+            <li>? ternary</li>
+        </ul>
+        <script>
+            {
+                let a = 5, b = 5, c = 6, d = "5";
+                console.log(a);
+                console.log(typeof(a));
+                console.log(d);
+                console.log(typeof(d));
+                console.log(a==b);
+                console.log(a===b);
+                console.log(a==d);
+                console.log(a===d);
+                console.log(a!=b);
+                console.log(a!=c);
+                console.log(a!==d);
+                console.log(a>b);
+                console.log(d>a);
+                console.log(c>a);
+                console.log(b>=a);
+                console.log(a<b);
+                console.log(d<a);
+                console.log(a<c);
+                console.log(b<=a);
+                let e = (a==b)? "Correct" : "Incorrect";
+                console.log(e);
+                e = (a!=b)? "Correct" : "Incorrect";
+                console.log(e);
+            }
+        </script>
+    </body>
+</html>
