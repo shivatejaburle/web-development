@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ternary Operator</title>
+    </head>
+    <body>
+        <h1>Ternary Operator</h1>
+        <h3>Syntax</h3>
+        <p>(condition)? expression1:expression2</p>
+        <p>If the condition is True, expression1 will execute.</p>
+        <p>If the condition is False, expression2 will execute.</p>
+        <script>
+            {
+                let a = 5;
+                let result1 = (a > 10)? "Correct":"Incorrect";
+                console.log(result1);
+
+                let result2 = (a < 10)? "Correct":"Incorrect";
+                console.log(result2);
+
+                let result3 = (a == 10)? console.log("Correct"):console.error("Incorrect");
+            }
+        </script>
+    </body>
+</html>

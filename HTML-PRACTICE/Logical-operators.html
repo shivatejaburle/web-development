@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logical Operators</title>
+    </head>
+    <body>
+        <h1>Logical Operators</h1>
+        <ul>
+            <li>Logical and - &&</li>
+            <li>Logical or - ||</li>
+            <li>Logical not - ! </li>
+        </ul>
+        <script>
+            //Logical and - &&
+            console.log("Logical AND - &&");
+            {
+                let a = 5, b = 6, res;
+                res = (a>1) && (b>1);
+                console.log(res);
+                res = (a>1) && (b<1);
+                console.log(res);
+                res = (a<1) && (b>1);
+                console.log(res);
+                res = (a<1) && (b<1);
+                console.log(res)
+            }
+
+            //Logical or - ||
+            console.log("Logical OR - ||");
+            {
+                let a = 5, b = 6, res;
+                res = (a>1) || (b>1);
+                console.log(res);
+                res = (a>1) || (b<1);
+                console.log(res);
+                res = (a<1) || (b>1);
+                console.log(res)
+                res = (a<1) || (b<1);
+                console.log(res);
+            }
+
+            //Logical not - !
+            console.log("Logical NOT - ! ");
+            {
+                let a = 5, b = 6, res;
+                res = !(a!=b);
+                console.log(res);
+                res = !(a==b);
+                console.log(res);
+            }
+        </script>
+    </body>
+</html>
