@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logical</title>
+    </head>
+    <body>
+        <ul>
+            <li>Logical and - &&</li>
+            <li>Logical or - ||</li>
+            <li>Logical not - !</li>
+        </ul>
+        <script>
+            //logical and - &&
+            console.log("Console AND - &&");
+            {
+                let a = 4, b = 10, result;
+                res = (a>1) && (b>1);
+                console.log(res);
+                res = (a>1) && (b<1);
+                console.log(res);
+                res = (a<1) && (b>1);
+                console.log(res);
+                res = (a>1) && (b>1);
+                console.log(res);
+            }
+            
+            //logical or - ||
+            console.log("Console OR - ||");
+            {
+                let a = 4, b = 10, result;
+                res = (a>1) || (b>1);
+                console.log(res);
+                res = (a>1) || (b<1);
+                console.log(res);
+                res = (a<1) || (b>1);
+                console.log(res);
+                res = (a>1) || (b>1);
+                console.log(res);
+            }
+
+            //logical not - !
+            console.log("Console NOT - !");
+            {
+                let a = 4, b = 10, result;
+                res = !(a!=b);
+                console.log(res);
+                res = !(a==b);
+                console.log(res);
+            }
+        </script>
+    </body>
+</html>
