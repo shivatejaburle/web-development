@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Data Types</title>
+    </head>
+    <body>
+        <h1>JavaScript Data Types</h1>
+        <ol>
+            <li>Strings</li>
+            <li>Numbers</li>
+            <li>Booleans</li>
+            <li>Arrays</li>
+            <li>Undefined</li>
+            <li>Objects</li>
+        </ol>
+        <script>
+            {
+                //Undefined
+                let message;
+                console.log(message);
+
+                //Strings
+                message = "Hello!@#"
+                console.log(message);
+                console.log(typeof(message));
+
+                //Numbers
+                let x = 10;
+                console.log(x);
+                console.log(typeof(x));
+
+                //Booleans - true or false
+                let res = (message === x);
+                console.log(res);
+                console.log(typeof(res));
+                
+                //Arrays
+                const fruits = ['apple', 'banana', 'cherry', 'danish'];
+                console.log(fruits);
+                console.log(fruits[0]);
+                console.log(fruits[2]);
+
+                //Empty value
+                let e = "";
+                console.log(e);
+                console.log(typeof(e));
+
+                //Objects
+                let person = {firstName: "Sriram Surya", lastName: "Bandaru", city: "Canberra", country: "Australia"};
+                console.log(person);
+                console.log(typeof(person));
+                console.log(person['city']);
+                console.log(person.city);
+                
+            }
+        </script>
+    </body>
+</html>
