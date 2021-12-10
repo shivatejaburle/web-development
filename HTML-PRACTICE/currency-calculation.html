@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Calculation</title>
+    </head>
+    <body>
+        <script>
+            {
+                const australianNotes = [100, 50, 20, 10, 5, 2, 1];
+
+                //no.of Notes
+                let n100 = 0, n50 = 0, n20 = 0, n10 = 0, n5 = 0, n2 = 0, n1 = 0;
+
+                n100 = 5;
+                n50 = 2;
+                n20 = 1;
+                
+                //Amount
+                let a100, a50, a20, a10, a5, a2, a1;
+                
+                a100 = australianNotes[0]*n100;
+                a50 = australianNotes[1]*n50;
+                a20 = australianNotes[2]*n20;
+                a10 = australianNotes[3]*n10;
+                a5 = australianNotes[4]*n5;
+                a2 = australianNotes[5]*n2;
+                a1 = australianNotes[6]*n1;
+
+                let totalamount = a100 + a50 + a20 + a10 + a5 + a2 + a1;
+                console.log(totalamount);
+            }
+        </script>
+    </body>
+</html>
