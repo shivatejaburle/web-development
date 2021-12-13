@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Australian Notes</title>
+    </head>
+    <body>
+        <h1>Australian Notes</h1>
+        <script>
+            {
+                const australianNotes = [1, 2, 5, 10, 20, 50, 100];
+
+                //No.of Notes
+                let n100 = 20, n50 = 15, n20 = 3, n10 = 6, n5 = 0, n2 = 10, n1 = 0;
+
+                //Amount
+                let a100, a50, a20, a10, a5, a2, a1;
+
+                a100 = australianNotes[6]*n100;
+                console.log("$" + a100);
+                a50 = australianNotes[5]*n50;
+                console.log("$" + a50);
+                a20 = australianNotes[4]*n20;
+                console.log("$" + a20);
+                a10 = australianNotes[3]*n10;
+                console.log("$" + a10);
+                a5 = australianNotes[2]*n5;
+                console.log("$" + a5);
+                a2 = australianNotes[1]*n2;
+                console.log("$" + a2);
+                a1 = australianNotes[0]*n1;
+                console.log("$" + a1);
+                
+                let totalamount = a100 + a50 + a20 + a10 + a5 + a2 + a1;
+                console.log("Total Amount: $" + totalamount);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currency Notes</title>
+    </head>
+    <body>
+        <h1>Currency Notes Calculation</h1>
+        <script>
+            {
+                const australianNotes = [1, 2, 5, 10, 20, 50, 100];
+                
+                //no.of Notes
+                let n100 = 10, n50 = 3, n20 = 8, n10 = 0, n5 = 5, n2 = 0, n1 = 4; 
+                
+                //Amount
+                let a100, a50, a20, a10, a5, a2, a1;
+
+                a100 = australianNotes[6]*n100;
+                a50 = australianNotes[5]*n50;
+                a20 = australianNotes[4]*n20;
+                a10 = australianNotes[3]*n10;
+                a5 = australianNotes[2]*n5;
+                a2 = australianNotes[1]*n2;
+                a1 = australianNotes[0]*n1;
+
+                let totalamount = a100 + a50 + a20 + a10 + a5 + a2 + a1;
+                console.log("Total Amount: $" + totalamount);
+            }
+        </script>
+    </body>
+</html>
