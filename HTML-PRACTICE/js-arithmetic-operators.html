@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS arithmetic operators</title>
+</head>
+<body>
+    <h1>JS arithmetic operators</h1>
+    <p id="Numbers"></p>
+    <p id="Addition">Addition: </p>
+    <p id="Subtraction">Subtraction: </p>
+    <p id="Multiplication">Multiplication: </p>
+    <p id="Division">Division: </p>
+    <p id="Modulus">Modulus: </p>
+    <p id="Increment">Increment: </p>
+    <p id="Decrement">Decrement: </p>
+    <p id="Exponential">Exponential: </p>
+    <script>
+        let num1 = Number(prompt("Enter your Number 1"));
+        let num2 = Number(prompt("Enter your Number 2"));
+
+        document.getElementById("Addition").innerHTML+=num1 + num2;
+        document.getElementById("Subtraction").innerHTML+=num1 - num2;
+        document.getElementById("Multiplication").innerHTML+=num1 * num2;
+        document.getElementById("Division").innerHTML+=num1 / num2;
+        document.getElementById("Modulus").innerHTML+=num1 % num2;
+        num2++;
+        document.getElementById("Increment").innerHTML+= num2;
+        num2--;
+        document.getElementById("Decrement").innerHTML+= num2 ;
+        document.getElementById("Exponential").innerHTML+=num1 ** num2;
+    </script>
+</body>
+</html>
