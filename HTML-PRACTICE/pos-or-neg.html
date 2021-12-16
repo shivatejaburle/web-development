@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Positive or Negative</title>
+    </head>
+    <body>
+        <h1>Positive or Negative</h1>
+        <h2 id="msg"></h2>
+        <script>
+            {
+                let number = Number(prompt("Please enter a number: "));
+
+                let res = (number == 0)? "Number is Neither Positive or Negative" : ((number < 0)? "Number is Negative" : "Number is Positive");
+
+                document.getElementById("msg").innerHTML = res;
+            }
+        </script>
+    </body>
+</html>

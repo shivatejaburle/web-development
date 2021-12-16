@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Driver License</title>
+    </head>
+    <body>
+        <h1>Check Eligiblity for Driver License</h1>
+        <h4 id="Driver"></h4>
+        <script>
+            {
+                let age = Number(prompt("Enter your age"));
+                if(age > 18){
+                    document.getElementById("Driver").innerHTML = "You are Eligible";
+                }
+                else
+                {
+                    document.getElementById("Driver").innerHTML = "You are not Eligible";
+                }
+            }
+        </script>
+    </body>
+</html>
