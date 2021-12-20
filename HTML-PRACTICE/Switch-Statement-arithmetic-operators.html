@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Switch Statement - Arithmetic operators</title>
+    </head>
+    <body>
+        <h1>Arithmetic operators</h1>
+        <ol>
+            <li>Addition</li>
+            <li>Subtraction</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+            <li>Modulus</li>
+            <li>Increment</li>
+            <li>Decrement</li>
+            <li>Exponential</li>
+        </ol> 
+        <h2>Input</h2>
+        <p id="num1"></p>
+        <p id="num2"></p>
+        <h2>Output</h2>
+        <p id="res"></p>
+        <script>
+            let num1 = Number(prompt("Enter a Number 1:"));
+            let num2 = Number(prompt("Enter a Number 2:"));
+            let choice = Number(prompt("Choose the following that you wish to perform:\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Modulus\n6.Increment\n7.Decrement\n8.Exponential"));
+            let res;
+            switch(choice){
+                case 1:
+                    res = "Addition is "+ (num1 + num2);
+                    break;
+                case 2:
+                    res = "Subtraction is "+ (num1 - num2);
+                    break;
+                case 3:
+                    res = "Multiplication is "+ (num1 * num2);
+                    break;
+                case 4:
+                    res = "Division is "+ (num1 / num2);
+                    break;
+                case 5:
+                    res = "Modulus is "+ (num1 % num2);
+                    break;
+                case 6:
+                    num1++;
+                    num2++;
+                    res = "Increment of Number 1 and Number 2 are "+ num1 + " & " + num2;
+                    break;
+                case 7:
+                    num1--;
+                    num2--;
+                    res = "Decrement of Number 1 and Number 2 are " + num1 + " & " + num2;
+                    break;
+                case 8:
+                    res = "Exponential is " + (num1 ** num2);
+                    break;
+                default:
+                    res = "You entered invalid choice";
+            }
+            document.getElementById("num1").innerHTML = "Number 1 is " + num1;
+            document.getElementById("num2").innerHTML = "Number 2 is " + num2;
+            document.getElementById("res").innerHTML = res;
+        </script>
+    </body>
+</html>
