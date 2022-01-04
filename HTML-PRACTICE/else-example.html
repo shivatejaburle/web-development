@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>else example</title>
+    </head>
+    <body>
+        <h1>else-if example</h1>
+        <h3 id="number"></h3>
+        <script>
+            {
+                let num = Number(prompt("Please enter a number:"));
+
+                if(num < 0){
+                    document.getElementById("number").innerHTML="Negative";
+                }
+                else if(num > 0){
+                    document.getElementById("number").innerHTML="Positive"
+                }
+                else{
+                    document.getElementById("number").innerHTML="You entered Zero"
+                }
+            }
+        </script>
+    </body>
+</html>
