@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>if-else statement</title>
+    </head>
+    <body>
+        <h1>If...Else Statements!!!</h1>
+        <h3 id="hours"></h3>
+        <script>
+            {
+                //let hours = new Date().getHours();
+                 var hours= Number(prompt("Enter a number"));
+                alert(hours);
+                if(hours<12){
+                    document.getElementById("hours").innerHTML="Good Morning!!!";
+                }
+                else if(hours>12){
+                    document.getElementById("hours").innerHTML="Good Afternoon!!!";
+                }
+            }
+        </script>
+    </body>
+</html>
