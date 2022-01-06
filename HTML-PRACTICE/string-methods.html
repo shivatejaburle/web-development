@@ -9,15 +9,19 @@
     <body>
         <h1>String Methods</h1>
         <ol>
-            <li>String Length</li>
-            <li>Uppercase</li>
-            <li>Lowercase</li>
+            <li>String Length: Returns the Length of the String</li>
+            <li>Uppercase: Returns the Capital Letters or Uppercase String</li>
+            <li>Lowercase: Returns the Small Letters or Lowercase String</li>
+            <li>Slice: Extract the part of the string and returns Extracted part as new String</li>
+            <li>Search: Searches a sting and returns a start position of a match String</li>
+            <li>Replace: Replaces the specified value with another value in a String</li>
+            <li>Trim: Removes the spaces from both sides of a String</li>
         </ol>
         <script>
             let msg = "Hello";
+            console.log(msg);
             //String Length
             let len = msg.length;
-            console.log(msg);
             console.log("Length: " + len);
             //Uppercase
             let ucMsg = msg.toUpperCase();
@@ -25,6 +29,33 @@
             //Lowercase
             let lcMsg = msg.toLowerCase();
             console.log(lcMsg);
+            //Slice
+            let name = "My name is Sriram Surya";
+            let newName = name.slice(11, 23);
+            console.log(name);
+            console.log(newName);
+            newName = name.slice(11);
+            console.log(newName);
+            newName = name.slice(11, 17);
+            console.log(newName);
+            newName = name.slice(-12, -6);
+            console.log(newName);
+            //Search
+            let pos = name.search("Sriram");
+            console.log(pos);
+            pos = name.search("sriram");
+            console.log(pos);
+            pos = name.search("shiva");
+            console.log(pos);
+            //Replace
+            console.log(name);
+            name = name.replace("Sriram", "Bandaru");
+            console.log(name);
+            //Trim
+            let prLang = "     JavaScript     ";
+            console.log(prLang);
+            prLang = prLang.trim();
+            console.log(prLang);
         </script>
     </body>
 </html>
