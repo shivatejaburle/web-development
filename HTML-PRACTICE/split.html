@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>split</title>
+    </head>
+    <body>
+        <h1>split</h1>
+        <script>
+            let sentence = "Canberra is the capital city of Australia";
+            console.log(sentence);
+            let words = sentence.split(" ");
+            console.log(words);
+            let character = sentence.split("");
+            console.log(character);
+
+            let brands = "Volvo,Jaguar,BMW,Hyundai,Toyota,Mitsubushi,Holden,Kia";
+            console.log(brands);
+            let brand = brands.split(",");
+            console.log(brand);
+            console.log(brand[3]);
+            let len = brand.length;
+            console.log(len);
+            console.log(brand.length);
+            
+            let fruits = "Apple; Banana; Cherry; Danish; Grapes; Mango";
+            console.log(fruits);
+            let fruit = fruits.split("; ");
+            console.log(fruit);
+            console.log(fruit[4]);
+            console.log(fruit.length);
+
+            let vegetables = "Carrot; Potato; Tomato; Capsicum; Beans";
+            console.log(vegetables);
+            let vegetable = vegetables.split("; ");
+            console.log(vegetable);
+            console.log(vegetable[3]);
+            console.log(vegetable.length);
+        </script>
+    </body>
+</html>
