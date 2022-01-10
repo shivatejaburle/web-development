@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js objects-typeof and string-concatenation</title>
+    </head>
+    <body>
+        <h1>typeof</h1>
+        <script>
+            //typeof
+            let var1 = "Australia";
+            console.log(var1);
+            console.log(typeof(var1));
+            let var2 = 2007;
+            console.log(var2);
+            console.log(typeof(var2));
+            
+            //string concatenation
+            console.log("Method 1 : Using the + operator");
+            let a = 286, b = 3934, c;
+            c = a + b;
+            console.log("Addition: " + a + " + " + b + " = " + c);
+            console.log("Method 2 : concat()");
+            let city = "Canberra", state = "ACT", Address = "5 Milligan Street";
+            console.log("I live in ", city);
+            console.log("My state is", state);
+            console.log("my Address is", Address);
+            console.log("Method 3 : template literal");
+            let a = 5;
+            let b = 10;
+            console.log(`fifteen is ${a+b}`);
+        </script>
+    </body>
+</html>
