@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js type conversions</title>
+    </head>
+    <body>
+        <h1>js type conversions</h1>
+        <h2>Converting strings to numbers</h2>
+        <ol>
+            <li>Number(): Number method is used to convert a string to a number and returns a number</li>
+            <li>parseInt(): parseInt method is used to parse a string and returns an integer</li>
+            <li>parseFloat(): parseFloat method is used to parse a string and returns a floating point number</li>
+        </ol>
+
+        <h2>Converting numbers to strings</h2>
+        <ol>
+            <li>String() or toString(): String method is used to convert a number to a string and returns a string</li>
+            <li>toFixed(): Fixed method returns a string of number rounded with specified number of decimals</li>
+        </ol>
+        <script>
+            console.log("Converting strings to numbers");
+            console.log("--------------------------------");
+            let x = prompt("Enter a first number:");
+            console.log(`value of x is ${x} and type of x is ${typeof(x)}`);
+            let y = Number(prompt("Enter a second number:"));
+            console.log(`value of y is ${y} and type of y is ${typeof(y)}`);
+            let m = "1", n = "25.915", o = "", p;
+            console.log(`value of m is ${m} and type of m is ${typeof(m)} and after conversion ${Number(m)}`);
+            console.log(`value of n is ${n} and type of n is ${typeof(n)} and after conversion ${Number(n)}`);
+            console.log(`value of o is ${o} and type of o is ${typeof(o)} and after conversion ${Number(o)}`);
+            console.log(`value of p is ${p} and type of p is ${typeof(p)} and after conversion ${Number(p)}`);
+            
+            let a = prompt("Enter a third number:");
+            console.log(`value of a is ${a} and type of a is ${typeof(a)} and after conversion ${parseInt(a)}`);
+
+            let b = prompt("Enter a fourth number:");
+            console.log(`value of b is ${b} and type of b is ${typeof(b)} and after conversion ${parseFloat(b)}`);
+            console.log("--------------------------------");
+
+            console.log("Converting number to strings");
+            console.log("-------------------------------")
+            let num1 = 5;
+            console.log(`value of num1 is ${num1} and type of num1 is ${typeof(num1)}`);
+            let newNum1 = String(num1);
+            console.log(`value of newNum1 is ${newNum1} and type of newNum1 ${typeof(newNum1)}`);
+            let num2 = 7;
+            console.log(`value of num2 is ${num2} and type of num2 is ${typeof(num2)}`);
+            let newNum2 = num2.toString();
+            console.log(`value of newNum2 is ${newNum2} and type of newNum2 is ${typeof(newNum2)}`);
+            let num3 = 3.1432;
+            console.log(`value of num3 is ${num3} and type of num3 is ${typeof(num3)}`);
+            let newNum3 = num3.toFixed();
+            console.log(`value of newNum3 is ${newNum3} and type of newNum3 is ${typeof(newNum3)}`);
+            let num4 = 25.3152;
+            console.log(`value of num4 is ${num4} and type of num4 is ${typeof(num4)}`);
+            let newNum4 = num4.toFixed(2);
+            console.log(`value of newNum4 is ${newNum4} and type of newNum4 is ${typeof(newNum4)}`);
+        </script>
+    </body>
+</html>
