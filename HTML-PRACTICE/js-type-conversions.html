@@ -20,6 +20,8 @@
             <li>String() or toString(): String method is used to convert a number to a string and returns a string</li>
             <li>toFixed(): Fixed method returns a string of number rounded with specified number of decimals</li>
         </ol>
+
+        <h2>Converting booleans to strings</h2>
         <script>
             console.log("Converting strings to numbers");
             console.log("--------------------------------");
@@ -58,6 +60,26 @@
             console.log(`value of num4 is ${num4} and type of num4 is ${typeof(num4)}`);
             let newNum4 = num4.toFixed(2);
             console.log(`value of newNum4 is ${newNum4} and type of newNum4 is ${typeof(newNum4)}`);
+        
+            
+            console.log("--------------------------------");
+            console.log("Converting booleans to strings");
+            console.log("--------------------------------");
+            let msg1 = true, msg2 = false;
+            console.log(`value of msg1 is ${msg1} and type of msg1 is ${typeof(msg1)}`);
+            console.log(`value of msg2 is ${msg2} and type of msg2 is ${typeof(msg2)}`);
+            let newMsg1 = String(msg1), newMsg2 = msg2.toString();
+            console.log(`value of newMsg1 is ${newMsg1} and type of newMsg1 is ${typeof(newMsg1)}`);
+            console.log(`value of newMsg2 is ${newMsg2} and type of newMsg2 is ${typeof(newMsg2)}`);
+            console.log("--------------------------------");
+            console.log("Converting booleans to numbers");
+            console.log("--------------------------------");
+            let n1 = true, n2 = false;
+            console.log(`value of n1 is ${n1} and type of n1 is ${typeof(n1)}`);
+            console.log(`value of n2 is ${n2} and type of n2 is ${typeof(n2)}`);
+            let newN1 = Number(n1), newN2 = Number(n2);
+            console.log(`value of newN1 is ${newN1} and type of newN1 is ${typeof(newN1)}`);
+            console.log(`value of newN2 is ${newN2} and type of newN2 is ${typeof(newN2)}`);
         </script>
     </body>
 </html>

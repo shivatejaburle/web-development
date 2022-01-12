@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS date methods</title>
+    </head>
+    <body>
+        <h1>JS date methods</h1>
+        <ol>
+            <li>Date(): It will returns current date and time as a string</li>
+            <li>getDate(): To get day (1 to 31)</li>
+            <li>getMonth(): To get month (0 to 11)</li>
+            <li>getFullYear(): To get year (yyyy)</li>
+            <li>getDay(): To get weekday (0 to 6)</li>
+            <li>getHours(): To get hours (0 to 23)</li>
+            <li>getMinutes(): To get minutes (0 to 59)</li>
+            <li>getSeconds(): To get seconds (0 to 59)</li>
+            <li>getMilliseconds(): To get milliseconds (0 to 999)</li>
+        </ol>
+        <script>
+            let currentDate = new Date();
+            console.log("Current Date : " + currentDate);
+
+            let day = currentDate.getDate();
+            console.log("Day : " + day);
+
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let month = currentDate.getMonth();
+            console.log("Month : " + month);
+            console.log("Month : " + months[month]);
+
+            let year = currentDate.getFullYear();
+            console.log("Year : " + year);
+
+            const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let weekday = currentDate.getDay();
+            console.log("Weekday : " + weekday);
+            console.log("Weekday : " + weekdays[weekday]);
+
+            let hours = currentDate.getHours();
+            console.log("hours : " + hours);
+
+            let minutes = currentDate.getMinutes();
+            console.log("minutes : " + minutes);
+
+            let seconds = currentDate.getSeconds();
+            console.log("seconds : " + seconds);
+
+            let milliseconds = currentDate.getMilliseconds();
+            console.log("milliseconds : " + milliseconds);
+        </script>
+    </body>
+</html>
