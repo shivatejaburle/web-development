@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS arrays</title>
+    </head>
+    <body>
+        <h1>JS arrays</h1>
+        <p>arrays are used to store multiple values of same type in a single variable.</p>
+        <h2>syntax</h2>
+        <p>const arrayName = ["Item 1", "Item 2", "Item 3", ".......", "ItemN"];</p>
+        <h3>Example</h3>
+        <p>const transport = ["Cars", "Buses", "Trucks", "Trains", "Light Rails", "Aeroplanes", "Helicopters", "Ships", "Jeeps", "Vans"];</p>
+        <h2>Accessing array elements</h2>
+        <p>You can access an array item by the refering to index number</p>
+        <h1>Push()</h1>
+        <p>Using Push() we can add items to the array</p>
+        <p>The Push() will return to the new array length</p>
+        <h2>Pop()</h2>
+        <p>Using Pop() we can remove items to the array</p>
+        <p>The Pop() Will return the value that was removed</p>
+        <script>
+            //Method 1
+            const transport = ["Cars", "Buses", "Trucks", "Trains", "Light Rails", "Aeroplanes", "Helicopters", "Ships", "Jeeps", "Vans"];
+            console.log(transport[5]);
+
+            //Method 2
+            const brands = ["Jaguar: is a car company", "Python: is programming language", "ICT: is Information Communications Technology"];
+            console.log(brands);
+            console.log(brands[1]);
+
+            //Method 3
+            const languages = [];
+            languages[0] = "English";
+            languages[1] = "Telugu";
+            languages[2] = "Hindi";
+            languages[3] = "Vietnamese";
+            languages[4] = "Spanish";
+            console.log(languages);
+            console.log(languages[3]);
+            
+            //Method 4
+            const fruits = new Array("Apples", "Bananas", "Cherries", "Grapes");
+            console.log(fruits);
+            console.log(fruits[3]);
+            let favFruit = fruits[3];
+            console.log(`My favourite fruit is ${favFruit}`);
+            
+            //Length property
+            console.log("My favourite fruits is " + fruits.length);
+
+            //Adding Elements to arrays using push()
+            let res = fruits.push("guava");
+            console.log(res);
+            console.log(fruits);
+            console.log(fruits[4]);
+
+            //Removing Elements to arrays us Pop()
+            let removingItem = transport.pop();
+            console.log("Remove the item from transport array is " + removingItem);
+            console.log(transport);
+
+            //Array are Objēcts
+            let employee = {name: "Sriram Surya",
+                            company: "i-Dizital Software Solutions",
+                            designation: "HTML developer",
+                            location: "Australia"
+                           };
+            console.log(employee);
+            console.log(employee.location);
+            console.log(`I am ${employee.name} working at ${employee.company} from ${employee.location} as a ${employee.designation}`);
+        </script>
+    </body>
+</html>

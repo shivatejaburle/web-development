@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS fixed and precision</title>
+    </head>
+    <body>
+        <h1>JS number to toFixed()</h1>
+        <p>Returns a string, with a number rounded and written with a specified number of decimals</p>
+        <h1>JS number to toPrecision()</h1>
+        <p>Returns a string, with number written with a specified length</p>
+        <script>
+            let x = 9.656;
+            console.log("toFixed()");
+            console.log(x.toFixed(0));
+            console.log(x.toFixed(2));
+            console.log(x.toFixed(4));
+            console.log(x.toFixed(6));
+            let y = 7.78;
+            console.log("toPrecision()");
+            console.log(y.toPrecision());
+            console.log(y.toPrecision(2));
+            console.log(y.toPrecision(4));
+            console.log(y.toPrecision(6));
+        </script>
+    </body>
+</html>
