@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>20220118</title>
+    </head>
+    <body>
+        <h1>Subjects</h1>
+        <p id="subjects"></p>
+        <p id="subjectNames"></p>
+        <script>
+            const subjects = ["Mathematics", "English", "Geography", "Chemistry", "Physics", "Information Technology"];
+            document.getElementById("subjects").innerHTML = subjects;
+            for(s = 0; s < subjects.length; s++){
+                document.getElementById("subjectNames").innerHTML += subjects[s] + "<br>";
+            }
+        </script>
+    </body>
+</html>

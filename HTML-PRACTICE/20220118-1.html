@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+    </head>
+    <body>
+        <h1>countries</h1>
+        <p id="countryNames"></p>
+        <p id="Countries"></p>
+        <script>
+            const countries = ["Australia", "New Zealand", "Singapore", "China", "USA", "Japan", "India"];
+            document.getElementById("countryNames").innerHTML = countries;
+            for(let c = 0; c < 7; c++){
+                document.getElementById("Countries").innerHTML += countries[c] + "<br>";
+            }
+        </script>
+    </body>
+</html>

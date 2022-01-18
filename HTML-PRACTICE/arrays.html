@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>arrays</title>
+    </head>
+    <body>
+        <h1>array length</h1>
+        <h1>Push()</h1>
+        <h1>Pop()</h1>
+        <script>
+            let companyList = ["Apple", "Google", "Facebook", "Amazon"];
+            console.log(companyList.length);
+
+            let randomList = ["JavaScript", 44];
+            console.log(randomList.length);
+            
+            let emptyList = [];
+            console.log(emptyList.length);
+
+            //Change length property of array
+            let languages = ["HTML", "Python", "C++", "JavaScript"];
+            languages.length = 3;
+            console.log(languages);
+            
+            //JavaScript array Push()
+            let city = ["Canberra", "Sydney", "Brisbane", "Melbourne", "Adelaide", "Perth"];
+            city.push("Darwin", "Hobart");
+            console.log(city);
+
+            let priceList = [12, 28, 36];
+
+            let count1 = priceList.push(2.2, 4.4, 6.6);
+            console.log(priceList);
+            console.log(count1);
+
+            //JavaScript array Pop()
+            let movieName = ["Cars", "Cars 2", "Cars 3", "Cars 4"];
+            let removedMov = movieName.pop();
+            console.log(movieName);
+            console.log(removedMov);
+
+            let vegetables = ["Carrot", "Potato", "Tomato", "Beans", "Capsicum"];
+            let removedVeg = vegetables.pop();
+            console.log(vegetables);
+            console.log(removedVeg);
+                    
+        </script>
+    </body>
+</html>

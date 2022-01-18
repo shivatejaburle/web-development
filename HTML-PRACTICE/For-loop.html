@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>For loop</title>
+    </head>
+    <body>
+        <h1>For loop</h1>
+        <script>
+            //Program to display the text 3 times
+            const z = 3;
+            for(i = 1; i <= z; i++){
+                console.log(`I love JavaScript.`);
+                console.log(i);
+            }
+            //Program to display the numbers 1 to 5
+            const x = 5; 
+            for(i = 1; i <= x; i++){
+                console.log(i);
+            }
+            //Program to display sum of natural numbers
+            let sum = 0;
+            let n = 100;
+            for(i = 1; i <= n; i++){
+                sum += i;
+            }
+
+            console.log("sum : " + sum);
+            //Decreased by 1
+
+            let s = 0;
+            let w = 100;
+            for(i = w; i >= 1; i--){
+                s += i;
+            }
+            console.log("sum : " + s);
+
+            for(j = 1; j < 10; j+=2){
+                console.log(j);
+            }
+        </script>
+    </body>
+</html>

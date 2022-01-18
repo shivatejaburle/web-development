@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220117</title>
+</head>
+<body>
+    <h1>Planets</h1>
+    <p id="Planets"></p>
+    <p id="planetNames"></p>
+    <script>
+        
+        const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"];
+        console.log(planets);
+        console.log(planets[2]);
+        document.getElementById("Planets").innerHTML = planets;
+        for(let p = 0; p < planets.length; p++){
+            document.getElementById("planetNames").innerHTML += planets[p] + "<br>";
+        }
+    </script>
+</body>
+</html>

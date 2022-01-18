@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS forEach loopa</title>
+    </head>
+    <body>
+        <h1>JS forEach loop</h1>
+        <script>
+            const animals = ["Bear", "Cat", "Rabbit", "Owl", "Sheep"];
+            animals.forEach(loopArrayElements1);
+            animals.forEach(loopArrayElements2);
+            animals.forEach(loopArrayElements3);
+
+            function loopArrayElements1(item){
+                console.log(item);
+            }
+            
+            function loopArrayElements2(item,index){
+                console.log(item + " - " + index);
+            }
+
+            function loopArrayElements3(item,index,arr){
+                console.log(index + " - " + item + " - " + arr[index])
+            }
+        </script>
+    </body>
+</html>
