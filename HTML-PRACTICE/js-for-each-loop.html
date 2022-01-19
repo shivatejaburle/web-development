@@ -8,11 +8,15 @@
     </head>
     <body>
         <h1>JS forEach loop</h1>
+        <h2>animals</h2>
+        <p id="animals"></p>
         <script>
             const animals = ["Bear", "Cat", "Rabbit", "Owl", "Sheep"];
             animals.forEach(loopArrayElements1);
             animals.forEach(loopArrayElements2);
             animals.forEach(loopArrayElements3);
+            animals.forEach(loopArrayElements4);
+            animals.forEach(item => {console.log(item);});
 
             function loopArrayElements1(item){
                 console.log(item);
@@ -23,7 +27,11 @@
             }
 
             function loopArrayElements3(item,index,arr){
-                console.log(index + " - " + item + " - " + arr[index])
+                console.log(index + " - " + item + " - " + arr[index]);
+            }
+
+            function loopArrayElements4(item){
+                document.getElementById("animals").innerHTML += item + "<br>";
             }
         </script>
     </body>

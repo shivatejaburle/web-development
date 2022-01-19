@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS numbers</title>
+    </head>
+    <body>
+        <style>
+            p{
+                font-size: 20px;
+            }
+        </style>
+        <h1>JS numbers</h1>
+        <p id="numbers"></p>
+        <script>
+            let n = Number(prompt("Enter a number:"));
+            
+            for(let i = 1; i <= n; i++){
+                document.getElementById("numbers").innerHTML += i + "<br>";
+            }
+        </script>
+    </body>
+</html>
