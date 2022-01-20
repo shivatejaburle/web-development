@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>for each</title>
+    </head>
+    <body>
+        <h1>for each</h1>
+        <script>
+            function func(){
+
+
+                const items = [12, 24, 36];
+                const copy = [];
+
+                items.forEach(function(item){
+                copy.push(item + item+2);
+
+                
+                });
+
+                document.write(copy + "<br>");
+            }
+            func();
+            
+
+            function fun(){
+
+
+            const items = [1, 29, 47];
+            const copy = [];
+
+            items.forEach(function(item){
+            copy.push(item*item);
+
+
+            });
+
+            document.write(copy + "<br>");
+            }
+            fun();
+            
+            var arr = [2, 3, 4, 5, 6];
+            arr.forEach(function(number,i){
+            arr[i]*=2;
+            
+        
+            });
+
+            document.write(arr + "<br>");
+
+        </script>
+    </body>
+</html>

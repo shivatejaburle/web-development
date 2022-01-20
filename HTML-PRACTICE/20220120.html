@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>20220120</title>
+    </head>
+    <body>
+        <h1>JS forEach loop</h1>
+        <h2>tourist places</h2>
+        <p id="tourist places"></p>
+        <script>
+            const tourist = ["Stachue of Liberty and Golden Gate Bridge", "Taj Mahal", "Harbour Bridge and Opera House", "Pisa and Tower Pisa", "Arc De Triophe and Eiffel Tower", "Big Ben"];
+            tourist.forEach(loopArrayElements1);
+            tourist.forEach(loopArrayElements2);
+            tourist.forEach(loopArrayElements3);
+            tourist.forEach(loopArrayElements4);
+            tourist.forEach(loopArrayElements5);
+            tourist.forEach(item => {console.log (item);});
+
+            function loopArrayElements1(item){
+                console.log(item);
+            }
+
+            function loopArrayElements2(item,index){
+                console.log(item + " - " + index);
+            }
+            
+            function loopArrayElements3(item,index,arr){
+                console.log(index + " - " + item + " - " + arr[index]);
+            }
+
+            function loopArrayElements4(item,index,arr){
+                console.log(index + " - " + item + " - " + item + " - " + arr[index]);
+            }
+
+            function loopArrayElements5(item){
+                document.getElementById("tourist places").innerHTML += item + "<br>";
+            }
+        </script>
+    </body>
+</html>
