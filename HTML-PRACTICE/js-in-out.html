@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS input output</title>
+    </head>
+    <body>
+        <h1>JS input output</h1>
+        <p id="numbers"></p>
+        <script>
+            let n = Number(prompt("How many numbers that you enter:"));
+            let numbers = [];
+            
+            for(i = 0; i < n; i++){
+                numbers[i] = Number(prompt("Enter a number " + (i + 1) + ":"));
+            }
+
+            for(i = 0; i < n; i++){
+                document.getElementById("numbers").innerHTML += numbers[i] + "<br>";
+            }
+
+            
+        </script>
+    </body>
+</html>

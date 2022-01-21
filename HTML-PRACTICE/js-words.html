@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS words</title>
+    </head>
+    <body>
+        <h1>Words</h1>
+        <p id="myWords"></p>
+        <script>
+            let w = Number(prompt("How many words that you like to store:"));
+            let words = [];
+
+            console.log(typeof(w));
+            console.log(words);
+            
+            for(i = 0; i < w; i++){
+                words[i] = prompt("Enter a word " + (i + 1) + ":");
+            }
+
+            for(i = 0; i < w; i++){
+                document.getElementById("myWords").innerHTML += words[i] + "<br>";
+            }
+        </script>
+    </body>
+</html>
