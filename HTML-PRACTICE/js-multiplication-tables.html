@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS multiplication tables</title>
+    </head>
+    <body>
+        <h1>JS multiplication tables</h1>
+        <p>The number is divisible by 2 is Even</p>
+        <p>The number is not divisible by 2 is Odd</p>
+        <script>
+            const number = parseInt(prompt('Enter an integer: '));
+
+            const range = parseInt(prompt('Enter a range: '));
+
+            for(let i = 1; i <= range; i++) {
+                const result = i * number;
+                console.log(`${number} * ${i} = ${result}`);
+            }
+
+            if(number % 2 == 0){
+                console.log("The number is Even");
+            }
+            else{
+                console.log("The number is Odd");
+            }
+        </script>
+    </body>
+</html>

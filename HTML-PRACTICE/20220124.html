@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js functions</title>
+    </head>
+    <body>
+        <h1>JS function</h1>
+        <p id="Display"></p>
+        <p id="myname"></p>
+        <p id="numbers"></p>
+        <script>
+            //Display text
+            function greet(){
+                console.log("Hello there!");
+            }
+            greet();
+            document.getElementById("Display").innerHTML = "Hello there!";
+            
+            //Function with parameter
+            let name = prompt("Enter a name:");
+            function myself(name){
+                console.log("Hello " + name);
+            }
+            myself(name);
+            document.getElementById("myname").innerHTML = "Hello " + name;
+
+            let a = 780;
+            let b = 7;
+            function add(a, b){
+                console.log(a + b);
+            }
+            add(a, b);
+            document.getElementById("numbers").innerHTML = a + b;
+
+            function myCars(company){
+                company.make = "Hyundai";
+            }
+            var myCar = {make: "toyota", model: "fortuner", year: "2016"};
+
+            var x, y;
+
+            console.log(x = myCar.make);
+
+            myCars(myCar);
+
+            console.log(y = myCar.make);
+            
+        </script>
+    </body>
+</html>
