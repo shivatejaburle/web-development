@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of triangle</title>
+</head>
+<body>
+    <h1>Area of triangle</h1>
+    <p id="bh"></p>
+    <p id="sidevalue"></p>
+    <p id="areaside"></p>
+    <p id="meters"></p>
+    <script>
+        /*const basevalue = prompt("Enter a basevalue number: ");
+        const heightvalue = prompt("Enter a heightvalue number: ");
+
+        const area = (basevalue * heightvalue)/2;
+  
+        document.getElementById("bh").innerHTML = `Area of triangle is ${area}`;*/
+
+        const side1 = parseInt(prompt("Enter a side1 value: "));
+        const side2 = parseInt(prompt("Enter a side2 value: "));
+        const side3 = parseInt(prompt("Enter a side3 value: "));
+
+        const side = (side1 + side2 + side3)/2;
+
+        document.getElementById("sidevalue").innerHTML = `All Sides value is ${side}`;
+        const area2 = Math.sqrt(side * (side - side1) * (side - side2) * (side - side3));
+        document.getElementById("areaside").innerHTML = `Area of triangle is ${area2}`;
+
+
+        const kilometers = prompt("Enter a kilometer:");
+        const factor = 0.623171;
+        const miles = factor * kilometers;
+        document.getElementById("meters").innerHTML = `${kilometers} kilometers is equal to ${miles} miles`;
+    </script>
+</body>
+</html>
