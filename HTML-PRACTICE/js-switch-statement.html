@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS switch statement</title>
+    </head>
+    <body>
+        <h1>switch statement</h1>
+        <script>
+            /*let expr = "Apple";
+            switch(expr){
+                case "Apple":
+                console.log("Apple are $0.59 pound");
+                break;
+                case "Banana":
+                case "Cherry":
+                console.log("Banana and Cherry are $2.50 pound");
+                break;
+                default:
+                console.log(`Sorry, we are out of ${expr}`);
+            }*/
+            let year = 2016;
+            let month = 2;
+            let daycount;
+            switch(month){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    daycount = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    daycount = 30;
+                    break;
+                case 2:
+                    if((year % 4 == 0) && !(year % 100 == 0) || year % 400 == 0){
+                       daycount = 29;  
+                    }else{
+                        daycount = 28;
+                    }
+                    break;
+                default:
+                    daycount = -1;    
+            }
+            console.log(daycount);
+        </script>
+    </body>
+</html>

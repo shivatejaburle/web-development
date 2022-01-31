@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS calculator</title>
+    </head>
+    <body>
+        <h1>JS calculator and if and else</h1>
+        <p id="Calculator"></p>
+        <script>
+            const operator = prompt("Enter a operator:");
+            
+            const num1 = parseFloat(prompt("Enter a number 1:"));
+            const num2 = parseFloat(prompt("Enter a number 2:"));
+
+            let result;
+
+            if(operator == '+'){
+                result = num1 + num2;
+            }
+            else if(operator == '-'){
+                result = num1 - num2;
+            }
+            else if(operator == '*'){
+                result = num1 * num2;
+            }
+            else{
+                result = num1 / num2;
+            }
+            console.log(`${num1} ${operator} ${num2} = ${result}`);
+            document.getElementById("Calculator").innerHTML = `${num1} ${operator} ${num2} = ${result}`;
+        </script>
+    </body>
+</html>
