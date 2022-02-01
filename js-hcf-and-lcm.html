@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Highest Common Factor and Least Common Multiple</title>
+    </head>
+    <body>
+        <h1>Highest Common Factor and Least Common Multiple</h1>
+        <script>
+            const num1 = prompt('Enter a number 1:');
+            const num2 = prompt('Enter a number 2:');
+
+            let hcf;
+
+            for(i = 1; i <= num1 && i <= num2; i++){
+                if(num1 % i == 0 && num2 % i == 0){
+                    hcf = i;
+                }
+            }
+
+            let lcm = (num1 * num2) / hcf;
+
+            console.log(`hcf of ${num1} and ${num2} is ${hcf}`);
+
+            console.log(`lcm of ${num1} and ${num2} is ${lcm}`);
+
+        </script>
+    </body>
+</html>
