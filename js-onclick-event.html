@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS onclick event</title>
+    </head>
+    <body onload="greetings2()">
+        <h1 id="welcomeMsg"></h1>
+        <input type="button" value="Please click me!!!" onclick="greetings1()"><br><br>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name"><br><br>
+            <input type="button" value="Submit" onclick="greetings3()">
+        </div>
+        <h2 id="message"></h2>
+        <script>
+            function greetings1(){
+                document.getElementById("welcomeMsg").innerHTML = "You clicked the button";
+            }
+            
+            function greetings2(){
+                alert("Please click the button");
+            }
+
+            function greetings3(){
+                let userName = document.getElementById("name").value; 
+                document.getElementById("message").innerHTML = "Welcome " + userName;
+
+            }
+        </script>
+    </body>
+</html>
