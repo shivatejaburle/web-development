@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS onmouseover and onmouseout events</title>
+    </head>
+    <body>
+        <h1>onmouseover and onmouseout events</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, illum velit? Ut inventore sapiente molestiae nisi aut architecto placeat et aperiam, dolorem eveniet saepe impedit rerum, similique dicta eligendi. Deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sapiente, fugiat officia veniam iure quibusdam perspiciatis ad. Sunt sint magnam, voluptate, quisquam eligendi sapiente numquam ex delectus odit, laudantium rem?</p>
+        <p id="paragraph1" onmouseover="changeBackground()" onmouseout="defaultBackground()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, maxime asperiores voluptates non vel commodi, cumque corporis natus, modi temporibus at repellendus! Sint perferendis dolorum quis magni asperiores. Ea, optio? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo earum deleniti repudiandae, architecto a dolore, esse eos nostrum, eius voluptatibus eveniet ut incidunt voluptatem reiciendis suscipit labore! Praesentium, excepturi dolore?</p>
+        <script>
+            function changeBackground(){
+                document.getElementById("paragraph1").style.background = "red";
+                document.getElementById("paragraph1").style.fontSize = "30px";
+            }
+            function defaultBackground(){
+                document.getElementById("paragraph1").style.background = "white";
+                document.getElementById("paragraph1").style.fontSize = "16px";
+            }
+        </script>
+    </body>
+</html>

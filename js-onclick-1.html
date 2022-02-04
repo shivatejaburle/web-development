@@ -18,7 +18,10 @@
         </div>
         <br>   
         <div>
-            <input type="button" value="addition" onclick="addition()">
+            <input type="button" value="Addition" onclick="addition()">
+            <input type="button" value="Subtraction" onclick="subtraction()">
+            <input type="button" value="Multiplication" onclick="multiplication()">
+            <input type="button" value="Division" onclick="division()">
         </div>
         <div>
             <h3 id="result"></h3>
@@ -29,7 +32,25 @@
                 let num2 = Number(document.getElementById("number2").value);
                 let sum = num1 + num2;
                 document.getElementById("result").innerHTML = `Addition is ${num1} and ${num2} is ${sum}`;
-            }      
+            }
+            function subtraction(){
+                let num1 = Number(document.getElementById("number1").value);
+                let num2 = Number(document.getElementById("number2").value);
+                let difference = num1 - num2;
+                document.getElementById("result").innerHTML = `Subtraction is ${num1} and ${num2} is ${difference}`;
+            }
+            function multiplication(){
+                let num1 = Number(document.getElementById("number1").value);
+                let num2 = Number(document.getElementById("number2").value);
+                let product = num1 * num2;
+                document.getElementById("result").innerHTML = `Multiplication is ${num1} and ${num2} is ${product}`;
+            }       
+            function division(){
+                let num1 = Number(document.getElementById("number1").value);
+                let num2 = Number(document.getElementById("number2").value);
+                let quotient = num1 / num2;
+                document.getElementById("result").innerHTML = `Division is ${num1} and ${num2} is ${quotient}`;
+            }
         </script>
     </body>
 </html>

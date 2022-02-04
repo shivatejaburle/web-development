@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS radio buttons</title>
+    </head>
+    <body>
+        <h1>Radio Buttons</h1>
+        <div>
+            <label for="Gender">Gender:</label>
+            <input type="radio" name="gender" value="Male" onchange="getGender()">Male
+            <input type="radio" name="gender" value="Female" onchange="getGender()">Female
+            <input type="radio" name="gender" value="Rather not to say" onchange="getGender()">Rather not to say
+        </div>
+        <div>
+            <h2 id="result"></h2>
+        </div>
+        <script>
+            function getGender(){
+                const radioGender = document.getElementsByName("gender");
+
+                for(let i = 0; i < radioGender.length; i++){
+                    if(radioGender[i].checked){
+                        document.getElementById("result").innerHTML = `You selected the ${radioGender[i].value}`;
+                    }
+                }
+            } 
+        </script>
+    </body>
+</html>
