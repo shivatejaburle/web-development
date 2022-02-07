@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS keys</title>
+    </head>
+    <body>
+        <h1>keys</h1>
+        <p><strong>onkeydown</strong> It will trigger when the user is pressing a key</p>
+        <p><strong>onkeypress</strong> It will trigger when the user presses a key</p>
+        <p><strong>onkeyup</strong> It will trigger when user releases a key</p>
+        <label for="userName">Enter a name:</label><br>
+        <input type="text" name="userName" id="userName" onkeydown="onKeyDown()" onkeyup="onKeyUp()"><br><br>
+        <label for="country">Country:</label><br>
+        <input type="text" name="country" id="country" onkeypress="onKeyPress()">
+        <script>
+            function onKeyDown(){
+                document.getElementById("userName").style.background = "orange";
+                document.getElementById("userName").style.color = "white";
+            }
+            function onKeyUp(){
+                document.getElementById("userName").style.background = "lime";
+                document.getElementById("userName").style.color = "black";
+            }
+            function onKeyPress(){
+                alert("You pressed a key in the input field");
+            }
+        </script>
+    </body>
+</html>

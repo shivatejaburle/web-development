@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS calculations</title>
+    </head>
+    <body>
+        <h1>calculations</h1>
+        <div>
+            <label for="number1">Enter a number 1:</label><br>
+            <input type="text" id="number1" onchange="calculate()"><br><br>
+        </div>
+        <div>
+            <label for="number2">Enter a number 2:</label><br>
+            <input type="text" id="number2" onchange="calculate()"><br><br>
+        </div>
+        <div>
+            <label for="operator">Enter a operator + - * / %</label><br>
+            <input type="text" id="operator" onchange="calculate()">
+        </div>
+        <div>
+            <h2 id="result"></h2>
+            <p id="count"></p>
+        </div>
+        <script>
+            var count = 0, add = 0, sub = 0, mul = 0, div = 0, mod = 0, iop = 0;
+            function calculate(){
+                let num1 = Number(document.getElementById("number1").value);
+                let num2 = Number(document.getElementById("number2").value);
+                let opt = document.getElementById("operator").value;
+
+                if (num1 != 0 && num2 != 0 && opt != 0){
+                switch(opt){
+                    case "+":
+                        document.getElementById("result").innerHTML = `Addition is ${num1} and ${num2} is ${num1 + num2}`;
+                        add = add + 1;
+                        break;
+                    case "-":
+                        document.getElementById("result").innerHTML = `Subtraction is ${num1} and ${num2} is ${num1 - num2}`;
+                        sub = sub + 1;
+                        break;
+                    case "*":
+                        document.getElementById("result").innerHTML = `Multiplication is ${num1} and ${num2} is ${num1 * num2}`;
+                        mul = mul + 1;
+                        break;
+                    case "/":
+                        document.getElementById("result").innerHTML = `Division is ${num1} and ${num2} is ${num1 / num2}`;
+                        div = div + 1;
+                        break;
+                    case "%":
+                        document.getElementById("result").innerHTML = `Modulus is ${num1} and ${num2} is ${num1 % num2}`;
+                        mod = mod + 1;
+                        break;
+                    default:
+                        document.getElementById("result").innerHTML = `You entered a invalid operator. You can enter the operators + or - or * or / or %`;
+                        iop = iop + 1;
+                } 
+                count = add + sub + mul + div + mod + iop;
+                document.getElementById("count").innerHTML = `Addition: ${add}<br>Subtraction: ${sub}<br>Multiplication: ${mul}<br>Division: ${div}<br>Modulus: ${mod}<br>Invalid Operations: ${iop}<br>Total No .of Operations: ${count}`;
+            }
+        }
+        </script>
+    </body>
+</html>
