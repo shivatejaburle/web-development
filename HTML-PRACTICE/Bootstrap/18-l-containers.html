@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout Containers</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Layout</h1>
+        <h2>Containers</h2>
+        <p>Containers are a fundamental building block of bootstrap that contain pad and align your content with in a given device or breakpoint</p>
+        <ol>
+            <li>.container : which sets a max-width at each responsive breakpoint</li>
+            <li>.container-fluid : which is width : 100% at all breakpoints</li>
+            <li>.container-{breakpoint} : which is width 100% until the specified the breakpoint</li>
+        </ol>
+        <div class="container-fluid">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Container</td>
+                        <td>Extra Small &lt;576px</td>
+                        <td>Small &gt;&equals;576px</td>
+                        <td>Medium &gt;&equals;768px</td>
+                        <td>Large &gt;&equals;992px</td>
+                        <td>Extra Large &gt;&equals;1200px</td>
+                        <td>Extra Extra Large &gt;&equals;1400px</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>.container</td>
+                        <td>100%</td>
+                        <td>540px</td>
+                        <td>720px</td>
+                        <td>960px</td>
+                        <td>1140px</td>
+                        <td>1320px</td>
+                    </tr>
+                    <tr>
+                        <td>.container-sm</td>
+                        <td>100%</td>
+                        <td>540px</td>
+                        <td>720px</td>
+                        <td>960px</td>
+                        <td>1140px</td>
+                        <td>1320px</td>
+                    </tr>
+                    <tr>
+                        <td>.container-md</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>720px</td>
+                        <td>960px</td>
+                        <td>1140px</td>
+                        <td>1320px</td>
+                    </tr>
+                    <tr>
+                        <td>.container-lg</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>960px</td>
+                        <td>1140px</td>
+                        <td>1320px</td>
+                    </tr>
+                    <tr>
+                        <td>.container-xl</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>1140px</td>
+                        <td>1320px</td>
+                    </tr>
+                    <tr>
+                        <td>.container-xxl</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>1320px</td>
+                    </tr>
+                    <tr>
+                        <td>.container-fluid</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <h1>Default Container</h1>
+            <p class="bg-danger text-white p-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam eaque, deleniti vel repellendus sunt nesciunt exercitationem perspiciatis et adipisci, molestias reprehenderit laborum aspernatur, provident sed ea id illo culpa eius.</p>
+        </div>
+        <div class="container-fluid">
+            <h1>Fluid Container</h1>
+            <p class="bg-warning p-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A accusantium quo mollitia corporis voluptates fuga blanditiis nisi earum recusandae aperiam inventore sequi tempore provident, perspiciatis quaerat quis rem odit quam.</p>
+        </div>
+
+        <div class="container">
+            <h1>Responsive Container</h1>
+        </div>
+        <div class="container-sm bg-success text-white p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia excepturi quasi aut nam culpa amet ipsum. Necessitatibus, placeat expedita! Ut earum sit doloribus, laboriosam eaque omnis dolores ex obcaecati.
+        </div>
+        <div class="container-md bg-danger text-white p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia excepturi quasi aut nam culpa amet ipsum. Necessitatibus, placeat expedita! Ut earum sit doloribus, laboriosam eaque omnis dolores ex obcaecati.
+        </div>
+        <div class="container-lg bg-warning p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia excepturi quasi aut nam culpa amet ipsum. Necessitatibus, placeat expedita! Ut earum sit doloribus, laboriosam eaque omnis dolores ex obcaecati.
+        </div>
+        <div class="container-xl bg-info text-white p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia excepturi quasi aut nam culpa amet ipsum. Necessitatibus, placeat expedita! Ut earum sit doloribus, laboriosam eaque omnis dolores ex obcaecati.
+        </div>
+        <div class="container-xxl bg-primary text-white p-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia excepturi quasi aut nam culpa amet ipsum. Necessitatibus, placeat expedita! Ut earum sit doloribus, laboriosam eaque omnis dolores ex obcaecati.
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
