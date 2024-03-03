@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>'this' Keyword</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>'this' Keyword</h1>
+        <p>In JavaScript, the <b>this</b> keyword refers to an object.</p>
+        <p>Which object depends on how <b>this</b> is being invoked (used or called).</p>
+        <p>The <b>this</b> keyword refers to different objects depending on how it is used:</p>
+        <ul>
+            <li>In an object method, <b>this</b> refers to the <b>object.</b></li><br>
+            <li>Alone, <b>this</b> refers to the <b>global object.</b></li><br>
+            <li>In a function, <b>this</b> refers to the <b>global object.</b></li><br>
+            <li>In a function, in strict mode, <b>this</b> is <b>undefined</b>.</li><br>
+            <li>In an event, <b>this</b> refers to the <b>element</b> that received the event.</li><br>
+        </ul>
+        <p><b>Note:</b></p>
+        <ul>
+            <li><b>this</b> is not a variable.</li><br>
+            <li><b>this</b> is a <b>keyword</b>.</li><br>
+            <li>You cannot change the value of <b>this</b>.</li>
+        </ul> 
+
+        <p><b>Example:</b></p>
+        <p>
+            &emsp;const person = {<br>
+                &emsp;&emsp;firstName: "Shivateja",<br>
+                &emsp;&emsp;lastName: "Burle",<br>
+                &emsp;&emsp;id: 1234,<br>
+                &emsp;&emsp;<b>fullName</b> : function() {<br>
+                    &emsp;&emsp;&emsp;return <b>this</b>.firstName + " " + <b>this</b>.lastName;<br>
+                    &emsp;&emsp;}<br>
+                &emsp;};<br>
+                &emsp;console.log(<b>person.fullName()</b>);
+        </p>
+        <p><img src="images/this-keyword.png" alt="this-keyword"></p>
+        <script>
+            const person = {
+                firstName: "Shivateja",
+                lastName: "Burle",
+                id: 1234,
+                fullName : function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+            console.log(person.fullName());
+        </script>
+    </body>
+</html>

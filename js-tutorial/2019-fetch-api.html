@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fetch API</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Fetch API</h1>
+        <p>The Fetch API interface allows web browser to make HTTP requests to web servers.</p>
+
+        <p><b>Syntax:</b></p>
+        <p>
+           &emsp;fetch (data)<br>
+           &emsp;&emsp;.then(...)<br>
+           &emsp;&emsp;.then(...);<br>
+        </p>
+
+        <p><b>Sample API's</b></p>
+        <ul>
+            <li><a href="https://swapi.dev/" target="_blank">SWAPI - The Star Wars API</a></li><br>
+            <li><a href="https://pokeapi.co/" target="_blank">PokeAPI</a></li>
+        </ul>
+
+        <p><b>Example:</b></p>
+        <p>
+            &emsp;fetch('https://swapi.dev/api/people/1/')<br>
+            &emsp;&emsp;.then(response => response.json())<br>
+            &emsp;&emsp;.then(data => {<br>
+                &emsp;&emsp;&emsp;console.log(data);<br>
+            &emsp;});
+        </p>
+        
+        <p><img src="images/json-objects.png" alt="json-objects"></p>
+
+        <script>
+            // Fetch API
+
+            fetch('https://swapi.dev/api/people/1/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
+
+        </script>
+    </body>
+</html>

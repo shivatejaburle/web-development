@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classes</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Classes</h1>
+        <p>JavaScript Classes are templates for JavaScript Objects.</p>
+        <p>Use the keyword <b>class</b> to create a class.</p>
+        <p>Always add a method named constructor().</p>
+
+        <p><b>Syntax:</b></p>
+        <p>
+            &emsp;class ClassName {<br>
+                &emsp;&emsp;constructor() {<br> 
+                    &emsp;&emsp;&emsp;...<br> 
+                    &emsp;&emsp;}<br>
+                &emsp;&emsp;&emsp;...<br> 
+            &emsp;}
+        </p>
+        
+        <h2>constructor()</h2>
+        <p>The constructor method is a special method:</p>
+        <ul>
+            <li>It has to have the exact name "constructor".</li>
+            <li>It is executed automatically when a new object is created.</li>
+            <li>It is used to initialize object properties.</li>
+            <li>If you do not define a constructor method, JavaScript will add an empty constructor method.</li>
+        </ul>
+
+        <p><b>Example:</b></p>
+        <p>
+            &emsp;class Person{<br>
+                &emsp;&emsp;constructor(name){<br>
+                    &emsp;&emsp;&emsp;this.name = name<br>
+                &emsp;&emsp;}<br>
+                &emsp;&emsp;greeting(){<br>
+                    &emsp;&emsp;&emsp;console.log(`'Welcome ${this.name}'`)<br>
+                &emsp;&emsp;}<br>
+            &emsp;}<br><br>
+            const P1 = new Person("Shiva");<br>
+            P1.greeting();
+        </p>
+        <p><img src="images/classes-objects.png" alt="arrow-functions"></p>
+        <script>
+            class Person{
+                constructor(name){
+                    this.name = name
+                }
+                greeting(){
+                    console.log(`'Welcome, ${this.name}'`)
+                }
+            }
+            const P1 = new Person("Shiva");
+            P1.greeting();
+        </script>
+    </body>
+</html>

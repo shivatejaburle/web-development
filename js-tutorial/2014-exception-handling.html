@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Error Handling</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Exception Handling</h1>
+        <p>Exception handling is a process or method used for handling the abnormal statements in the code and executing them.</p>
+        <p>Exception handling also enables to handle the flow control of the code/program.</p>
+        <p>For handling the code, various handlers are used that process the exception and execute the code.</p>
+        <ul>
+            <li>The <b>try</b> statement defines a code block to run (to try).</li><br>
+            <li>The <b>catch</b> statement defines a code block to handle any error.</li><br>
+            <li>The <b>finally</b> statement defines a code block to run regardless of the result.</li><br>
+            <li>The <b>throw</b> statement defines a custom error.</li>
+        </ul>
+        <p><b>Example:</b></p>
+        <p>The Division of a non-zero value with zero will result into infinity always, and it is an exception.</p>
+        <p>Thus, with the help of exception handling, it can be executed and handled.</p>
+        
+        <p><b>Syntax:</b></p>
+        <p>
+            &emsp;try {<br>
+                &emsp;&emsp;Block of code to try<br>
+                &emsp;}<br>
+                &emsp;catch(err) {<br>
+                    &emsp;&emsp;Block of code to handle errors<br>
+                    &emsp;}<br>
+                    &emsp;finally {<br>
+                        &emsp;&emsp;Block of code to be executed regardless of the try / catch result<br>
+                        &emsp;}
+        </p>
+
+        <p><b>Example:</b></p>
+        <p>Please input a number between 5 and 10:</p>
+        <input id="input_number" type="text" title="User input">
+        <button type="button" onclick="checkNumber()">Check</button>
+        <p id="result" style="color:red;font-size: large;"></p>
+
+        <p><b>Example HTML:</b></p>
+        <p>&emsp;&lt;p&gt;Please input a number between 5 and 10:&lt;/p&gt;</p>
+        <p>&emsp;&lt;input id="input_number" type="text" title="User input"&gt;</p>
+        <p>&emsp;&lt;button type="button" onclick="checkNumber()"&gt;Check&lt;/button&gt;</p>
+        <p>&emsp;&lt;p id="result"&gt;&lt;/p&gt;</p>
+        
+        <p><b>Example Script:</b></p>
+        <p>
+            &emsp;function checkNumber() {<br>
+                &emsp;&emsp;const message = document.getElementById("result");<br>
+                &emsp;&emsp;message.innerHTML = "";<br>
+                &emsp;&emsp;let x = document.getElementById("input_number").value;<br>
+                &emsp;&emsp;try {<br> 
+                    &emsp;&emsp;&emsp;if(x.trim() == "")  throw "is empty";<br>
+                    &emsp;&emsp;&emsp;if(isNaN(x)) throw "is not a number";<br>
+                    &emsp;&emsp;&emsp;x = Number(x);<br>
+                    &emsp;&emsp;&emsp;if(x > 10)   throw "is too high";<br>
+                    &emsp;&emsp;&emsp;else if(x < 5)  throw "is too low";<br>
+                    &emsp;&emsp;&emsp;else message.innerHTML = "Input lies between 5 and 10";<br>
+                    &emsp;&emsp;}<br>
+                    &emsp;&emsp;catch(err) {<br>
+                        &emsp;&emsp;&emsp;&emsp;message.innerHTML = "Input " + err;<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;&emsp;finally {<br>
+                            &emsp;&emsp;&emsp;document.getElementById("input_number").value = "";<br>
+                            &emsp;&emsp;}<br>
+                            &emsp;}
+        </p>
+
+        <script>
+            function checkNumber() {
+            const message = document.getElementById("result");
+                message.innerHTML = "";
+                let x = document.getElementById("input_number").value;
+                try { 
+                    if(x.trim() == "")  throw "is empty";
+                    if(isNaN(x)) throw "is not a number";
+                    x = Number(x);
+                    if(x > 10)   throw "is too high";
+                    else if(x < 5)  throw "is too low";
+                    else message.innerHTML = "Input lies between 5 and 10";
+                }
+                catch(err) {
+                    message.innerHTML = "Input " + err;
+                }
+                finally {
+                    document.getElementById("input_number").value = "";
+                }
+            }
+        </script>
+    </body>
+</html>
