@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrow Functions</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Arrow(=>) Functions</h1>
+        <p>Arrow functions allow us to write shorter function syntax.</p>
+        <p><b>Without Arrow Functions:</b></p>
+        <p>
+            &emsp;greeting = function() {<br>
+                &emsp;&emsp;return "Hello World!";<br>
+                &emsp;}
+        </p>
+        
+        <p><b>With Arrow Functions:</b></p>
+        <p>
+            &emsp;greeting = () => {<br>
+                &emsp;&emsp;return "Hello World!";<br>
+                &emsp;}
+        </p>
+
+        <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword:</p>
+        <p>
+            <b>&emsp;greeting = () => "Hello World!";</b>
+        </p>
+
+        <p>If you have parameters, you pass them inside the parentheses:</p>
+        <p>
+            <b>&emsp;greeting = (val) => "Hello " + val;</b>
+        </p>
+
+        <p>In fact, if you have only one parameter, you can skip the parentheses as well:</p>
+        <p>
+            <b>&emsp;greeting = val => "Hello " + val;</b>
+        </p>
+
+        <p><b>Note:</b></p>
+        <ul>
+            <li>With arrow functions the <b>this</b> keyword always represents the object that defined the arrow function.</li>
+        </ul>
+        
+        <p><b>Example:</b></p>
+        <p>
+            &emsp;const greeting = (name) => {<br>
+                &emsp;&emsp;console.log(`Welcome, ${name}`)<br>
+                &emsp;};<br>
+                &emsp;greeting('Shivateja');
+        </p>
+        <p><img src="images/arrow-functions.png" alt="arrow-functions"></p>
+        <script>
+            const greeting = (name) => {
+                console.log(`Welcome, ${name}`)
+            };
+            greeting('Shivateja');
+        </script>
+    </body>
+</html>

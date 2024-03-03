@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onload Event</title>
+    </head>
+    <body>
+        <h1>onload Event</h1>
+        <p>The onload event occurs when an object has been loaded.</p>
+        <p>onload is most often used within the <body> element to execute a script once a web page has completely loaded all content (including images, script files, CSS files, etc.).</p>
+        <h3>Examples:</h3>
+        <p>The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.</p>
+        <p>The onload event can also be used to deal with cookies.</p>
+        <h3>Example 1:</h3>
+        <p>
+            &emsp; &lt;body onload="myFunction()"&gt;<br><br>
+            &emsp; function myFunction() <br>&emsp;{ <br>
+                &emsp;&emsp; alert("Page is loaded..."); <br>
+                &emsp;}
+        </p>
+        <h3>Example 2:</h3>
+        <p>
+            &emsp; &lt;body onload="checkCookies()"&gt;<br>
+            &emsp;&emsp;&lt;p id="msg"&gt;&lt;/p&gt;<br><br>
+            &emsp;function checkCookies() <br>&emsp;{<br>
+            &emsp;&emsp;var text = "";<br>
+            &emsp;&emsp;if (navigator.cookieEnabled == true)<br>&emsp;&emsp;{<br>
+            &emsp;&emsp;&emsp;text = "Cookies are enabled.";<br>
+            &emsp;&emsp;}<br>&emsp;&emsp;else<br>&emsp;&emsp;{<br> 
+            &emsp;&emsp;&emsp;text = "Cookies are not enabled.";<br>
+            &emsp;&emsp;}<br>&emsp;&emsp;document.getElementById("msg").innerHTML = text;<br>
+            &emsp;}
+        </p>
+    </body>
+</html>

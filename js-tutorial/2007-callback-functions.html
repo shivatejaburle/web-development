@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Callback Functions</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Callback Functions</h1>
+        <h2>setTimeout()</h2>
+        <p>The setTimeout() method calls a function after a number of milliseconds.</p>
+        <p>1 second = 1000 milliseconds.</p>
+        <p>The setTimeout() is executed only once.</p>
+        <p>If you need repeated executions, use setInterval() instead.</p>
+        <p>Use the clearTimeout() method to prevent the function from starting.</p>
+        <p><b>Example:</b></p>
+        <p>
+            console.log("Waiting for 2.5 Seconds");<br>
+            myTimeout = setTimeout(function()<br>
+            {<br>
+                &emsp;console.log("Hello Shiva...");<br>
+                &emsp;clearTimeout(myTimeout);<br>
+            },2500);<br>
+            console.log("Last line of Code");
+            
+        </p>
+        <p><img src="images/setTimeout.png" alt="setTimeout"></p>        
+        
+        <h2>setTimeout()</h2>
+        <p>The setInterval() method calls a function at specified intervals.</p>
+        <p>1 second = 1000 milliseconds.</p>
+        <p>The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.</p>
+        <p>Use the clearInterval() method to prevent the function at specified intervals.</p>
+        <p><b>Example:</b></p>
+        <p>
+            let count = 0;<br>
+            const myInterval = setInterval(function()<br>
+            {<br>
+                &emsp;console.log("Hello Shiva...");<br>
+                &emsp;count++;<br>
+                &emsp;if (count === 5){<br>
+                    &emsp;&emsp;clearInterval(myInterval);<br>
+                    &emsp;&emsp;console.log("Thank you...");<br>
+                &emsp;} <br>
+            },2500);<br>
+        </p>
+        <p><img src="images/setInterval.png" alt="setInterval"></p>
+        
+        <script>
+            // Set Timeout
+            console.log("Waiting for 2.5 Seconds");
+            myTimeout = setTimeout(function()
+            {
+                console.log("Hello Shiva...");
+                clearTimeout(myTimeout);
+            }, 2500);
+            console.log("Last line of Code");
+
+            // Set Interval
+            let count = 0;
+            const myInterval = setInterval(function()
+            {
+                console.log("Hello Shiva...");  
+                count++;
+                if (count === 5){
+                    clearInterval(myInterval);
+                    console.log("Thank you...");
+                }
+            }, 2500);
+        </script>
+    </body>
+</html>

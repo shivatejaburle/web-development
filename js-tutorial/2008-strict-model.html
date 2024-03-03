@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Strict Mode</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Strict Mode</h1>
+        <p><b>"use strict";</b> - Defines that JavaScript code should be executed in "strict mode".</p>
+        <p>Strict mode helps you to write cleaner code, like preventing you from using undeclared variables.</p>
+        <p>Strict mode changes previously accepted "bad syntax" into real errors.</p>
+        <p>Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.</p>
+        <p><b>Note:</b>"use strict" is just a string, so IE 9 will not throw an error even if it does not understand it.</p>
+        <p><b>Example:</b></p>
+        <p>
+            "use strict";<br>
+            zipCode = 507003;<br>
+            <b>console.log(zipCode);</b> // ReferenceError
+        </p>
+        <p><img src="images/strict-mode.png" alt="strict-mode"></p>        
+        <p><b>Example:</b></p>
+        <p>
+            "use strict";<br>
+            let zipCode = 507003;<br>
+            console.log(zipCode);
+        </p>
+        <p><img src="images/strict-mode-example.png" alt="strict-mode"></p>
+        <h2>Strict Mode</h2>
+        <ul>
+            <li>Using a variable (or object), without declaring it, is not allowed.</li>
+            <li>Deleting a variable (or object) is not allowed</li>
+            <li>Deleting a function is not allowed.</li>
+            <li>Duplicating a parameter name is not allowed.</li>
+            <li>Octal numeric literals are not allowed.</li>
+            <li>Octal escape characters are not allowed.</li>
+            <li>and many more...</li>
+        </ul>
+        <script>
+            "use strict";
+            let zipCode = 507003;
+            console.log(zipCode);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Delete Object Properties</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Delete Object Properties</h1>
+        <p>The <b>'delete'</b> operator deletes a property from an object.</p>
+        <p>The delete operator deletes both the value of the property and the property itself.</p>
+        <p>After deletion, the property cannot be used before it is added back again.</p>
+        <p>The delete operator is designed to be used on object properties. It has no effect on variables or functions.</p>
+        <p><b>Note:</b> The delete operator should not be used on predefined JavaScript object properties. It can crash your application.</p>
+
+        <p><b>Example:</b></p>
+        <p>
+            const person ={ "name": "Shiva", "language":"JavaScript" }; <br>
+            console.log(person); <br>
+            delete(person["language"]);  <br>
+            console.log(person); <br>
+            console.log(person[language]);
+        </p>
+
+        <p><img src="images/delete-object-properties.png" alt="delete-object-properties"></p>
+
+        <script>
+            const person ={ "name": "Shiva", "language":"JavaScript" };
+            console.log(person);
+            delete(person["language"]);  // Deleting
+            console.log(person);
+            console.log(person[language]);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Date Formats</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Date Formats</h1>
+        <p>There are generally 3 types of JavaScript date input formats:</p>
+        <p>
+            <ul>
+                <li><b>ISO Date :</b> "1947-08-15" (The International Standard)</li>
+                <li><b>Short Date :</b> "08/15/1947"</li>
+                <li><b>Long Date :</b> 	"Aug 15 1947" or "15 Aug 1947"</li>
+            </ul>
+        </p>
+
+        <h2>ISO Dates</h2>
+        <p>ISO 8601 is the international standard for the representation of dates and times.</p>
+        <p>The ISO 8601 syntax is <b>YYYY-MM-DD</b>.</p>
+        <p><b>Example: </b> let d1 = new Date("1947-08-15");</p>
+
+        <h2>Short Dates</h2>
+        <p>Short dates are written with a syntax <b>"MM/DD/YYYY"</b>.</p>
+        <p><b>Example: </b>let d2 = new Date("08/15/1947");</p>
+
+        <h2>Long Dates</h2>
+        <p>Long dates are most often written with a syntax <b>"MMM DD YYYY"</b>.</p>
+        <p><b>Example: </b>let d3 = new Date("Aug 15 1947");</p>
+
+        <p><img src="images/date-formats.png" alt="date-formats"></p>
+
+        <h2>getFullYear()</h2>
+        <p>The getFullYear() method returns the year of a date as a four digit number.</p>
+        <p><b>Example:</b></p>
+        <p>
+            let d4 = new Date("1947-08-15");<br>
+            console.log("Year is " + d4.getFullYear());
+        </p>
+
+        <h2>getMonth()</h2>
+        <p>The getMonth() method returns the month of a date as a number (0-11).</p>
+        <p><b>Example:</b></p>
+        <p>
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];<br>
+            let d5 = new Date("08/15/1947");<br>
+            console.log("Month is " + d5.getMonth() + " or " + months[d5.getMonth()]);
+        </p>
+
+        <h2>getDate()</h2>
+        <p>The getDate() method returns the day of a date as a number (1-31):</p>
+        <p><b>Example:</b></p>
+        <p>
+            let d6 = new Date("Aug 15 1947");<br>
+            console.log("Date is " + d6.getDate());
+        </p>
+
+        <h2>getDay()</h2>
+        <p>The getDay() method returns the weekday of a date as a number (0-6).</p>
+        <p><b>Example:</b></p>
+        <p>
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];<br>
+            let d7 = new Date("1947-08-15");<br>
+            console.log("Day is " + d7.getDay() + " or " + days[d7.getDay()]);
+        </p>
+
+        <p><img src="images/date-methods.png" alt="strict-mode"></p>
+
+        <script>
+            let d1 = new Date("1947-08-15");
+            console.log(d1);
+
+            let d2 = new Date("08/15/1947");
+            console.log(d2);
+
+            let d3 = new Date("Aug 15 1947");
+            console.log(d3);
+
+            let d4 = new Date("1947-08-15");
+            console.log("Year is " + d4.getFullYear());
+
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let d5 = new Date("08/15/1947");
+            console.log("Month is " + d5.getMonth() + " or " + months[d5.getMonth()]);
+
+            let d6 = new Date("Aug 15 1947");
+            console.log("Date is " + d6.getDate());
+
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let d7 = new Date("Aug 15 1947");
+            console.log("Day is " + d7.getDay() + " or " + days[d7.getDay()]);
+        </script>
+    </body>
+</html>

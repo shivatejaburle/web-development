@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onbeforeunload Event</title>
+    </head>
+    <body>
+        <h1>onbeforeunload Event</h1>
+        <p>The onbeforeunload event occurs when the document is about to be unloaded.</p>
+        <p>This event allows you to display a message in a confirmation dialog box to inform the user whether he/she wants to stay or leave the current page.</p>
+        <p>The default message that appears in the confirmation box, is different in different browsers. However, the standard message is something like "Are you sure you want to leave this page?". This message cannot be removed.</p>
+        <p>However, you can write a custom message together with the default message. See the first example on this page. <b>Note:</b> This only works in Internet Explorer.</p>
+        <p><strong>Note:</strong><br>If the onbeforeunload event is not assigned to the <body> element, you must assign/attach the event on the window object, and use the returnValue property to create a custom message.</p>
+        <h3>Example 1:</h3>
+        <p>
+            &emsp; &lt;body onbeforeunload="return myFunction()"&gt;<br><br>
+            &emsp; function myFunction() <br>&emsp;{ <br>
+                &emsp;&emsp; return = "Your Message Here..."; <br>
+                &emsp;}
+        </p>
+        <h3>Example 2:</h3>
+        <p>
+            &emsp; window.onbeforeunload = function() <br>&emsp;{ <br>
+            &emsp;&emsp; console.log("Before Unload..."); <br>
+            &emsp;&emsp; returnValue = "Are your sure want to leave...?";<br>
+            &emsp;};
+        </p>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destructuring Assignment</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Destructuring Assignment</h1>
+        <p>The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</p>
+
+        <h2>Destructuring Array</h2>
+        <p><b>Example:</b></p>
+        <p>
+            const months = ["January", "February", "March"]; <br>
+            const [jan, feb] = months; <br>
+            console.log(jan); <br>
+            console.log(feb);
+        </p>
+        <p><img src="images/destructuring-array.png" alt="destructuring-array"></p>
+
+        <h2>Destructuring Object</h2>
+        <p><b>Example:</b></p>
+        <p>
+            const person ={ "name": "Shiva", "language":"JavaScript" }; <br>
+            const {name, language} = person ; <br>
+            console.log(name); <br>
+            console.log(language);
+        </p>
+        <p><b>Note:</b> The key names of the object must match with your new constants.</p>
+        <p><img src="images/destructuring-object.png" alt="destructuring-object"></p>
+
+        <script>
+            // Destructuring Array
+            const months = ["January", "February", "March"];
+            const [jan, feb] = months;
+            console.log(jan);
+            console.log(feb);
+
+            // Destructuring Object
+            const person ={ "name": "Shiva", "language":"JavaScript" };
+            const {name, language} = person ;
+            console.log(name);
+            console.log(language);
+        </script>
+    </body>
+</html>
