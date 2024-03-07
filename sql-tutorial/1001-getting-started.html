@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Introduction</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Getting Started with SQL and Databases</h1>
+
+        <h2>What is Data?</h2>
+        <ul>
+            <li>Facts in words and numbers</li>
+            <li>Pictures</li>
+            <li>One of the most critical assets of any business</li>
+            <li>Need to be secure</li>
+        </ul>
+
+        <h2>What is Database?</h2>
+        <ul>
+            <li>A database is a collection of data for information designed for input, storage search, retrieval and modification of data.</li>
+        </ul>
+
+        <h2>What is DBMS?</h2>
+        <ul>
+            <li>DBMS stands for Database Management System.</li>
+            <li>DBMS is the set of programs that creates and maintains the database.</li>
+            <li>DBMS allows you to store, modify and extract information from a database by querying.</li>
+        </ul>
+
+        <h2>Types of Databases</h2>
+        <ol>
+            <li><b>Relational Databases</b></li>
+                <ul>
+                    <li>Relational Databases also referred as RDBMS.</li>
+                    <li>Data is organized into a tabular format with rows and columns.</li>
+                    <li>Well-defined structure and schema.</li>
+                    <li>Optimized for data operations and querying.</li>
+                    <li>Use SQL as the standard querying language.</li>
+                    <li>Examples: MySQL, PostgreSQL, Oracle Database, Microsoft SQL Server, IBM DB2.</li>
+                </ul><br>
+            <li><b>Non-Relational Databases</b></li>
+                <ul>
+                    <li>Non-Relational Databases also referred as NoSQL.</li>
+                    <li>Data is stored in a schema-less or free-form fashion.</li>
+                    <li>There are four common types of NoSQL Databases:</li>
+                    <ol>
+                        <li>Key-Value Store - Examples: Redis, memcached and DynamoDB.</li>
+                        <li>Document Based - Examples: MongoDB, DocumentDB, CouchDB and Cloudant.</li>
+                        <li>Colum Based - Examples: Cassandra and Apache Hbase</li>
+                        <li>Graph Based - Examples: Neo4J and CosmosDB.</li>
+                    </ol>
+                </ul>
+        </ol>
+        
+        <h2>Database Schema</h2>
+        <p>A database schema defines how data is organized within a relational database; this is inclusive of logical constraints such as, table names, fields, data types, and the relationships between these entities. Schemas commonly use visual representations to communicate the architecture of the database.</p>
+        <p><img src="images/Database-Schema.png" alt="Database-Schema" style="width: 50%;"></p>
+
+        <h2>SQL</h2>
+        <p>SQL stands for <b>S</b>tructured <b>Q</b>uery <b>L</b>anguage</p>
+        <p>SQL is a standard language for storing, manipulating and retrieving data in databases.</p>
+        <p>Using SQL you can perform :</p>
+        <ul>
+            <li>Retrieve data from a database</li>
+            <li>Insert records in a database</li>
+            <li>Update records in a database</li>
+            <li>Delete records in a database</li>
+            <li>Create new databases</li>
+            <li>Create new tables in a database</li>
+        </ul>
+        
+        <h2>Syntax</h2>
+        <p>Most of the actions you need to perform on a database are done with SQL statements.</p>
+        <p>SQL statements consists of keywords that are easy to understand.</p>
+        <p>&emsp;&emsp; <b>SELECT</b> * <b>FROM</b> Students;</p>
+        <p>SQL keywords are NOT case sensitive: <b>select</b> is the same as <b>SELECT</b></p>
+        <p>Some database systems require a semicolon at the end of each SQL statement.</p>
+        <p>Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.</p>
+
+        <h2>Important SQL Commands</h2>
+        <ul>
+            <li><b>SELECT</b>: extracts data from a database</li><br>
+            <li><b>UPDATE</b>: updates data in a database</li><br>
+            <li><b>DELETE</b>: deletes data from a database</li><br>
+            <li><b>INSERT INTO</b>: inserts new data into a database</li><br>
+            <li><b>CREATE DATABASE</b>: creates a new database</li><br>
+            <li><b>ALTER DATABASE</b>: modifies a database</li><br>
+            <li><b>CREATE TABLE</b>: creates a new table</li><br>
+            <li><b>ALTER TABLE</b>: modifies a table</li><br>
+            <li><b>DROP TABLE</b>: deletes a table</li><br>
+        </ul>
+
+    </body>
+</html>

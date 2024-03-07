@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foreign Key</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Foreign Key</h1>
+        <p>The <b>FOREIGN KEY</b> constraint is used to prevent actions that would destroy links between tables.</p>
+        <p>A <b>FOREIGN KEY</b> is a field (or collection of fields) in one table, that refers to the <b>PRIMARY KEY</b> in another table.</p>
+        <p>The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.</p>
+        <p>The <b>FOREIGN KEY</b> constraint prevents invalid data from being inserted into the foreign key column, because it has to be one of the values contained in the parent table.</p>
+
+        <h2>Syntax:</h2>
+        <p>
+            &emsp;CONSTRAINT [constraint_name] FOREIGN KEY(fk_columns)<br>
+            &emsp;REFERENCES &lt;parent_table>(parent_table_columns)<br>
+            &emsp;[ON DELETE &lt;delete_action&gt]<br>
+            &emsp;[ON UPDATE &lt;update_action&gt;]<br>
+        </p>
+
+        <h2>Example:</h2>
+        <p>
+            &emsp;CREATE TABLE department(<br>
+                &emsp;&emsp;dept_id	INT PRIMARY KEY,<br>
+                &emsp;&emsp;dept_name	VARCHAR(50)<br>
+            &emsp;);<br><br>
+
+            &emsp;CREATE TABLE employee(<br>
+                &emsp;&emsp;first_name VARCHAR(50),<br>
+                &emsp;&emsp;last_name VARCHAR(50),<br>
+                &emsp;&emsp;email VARCHAR(100),<br>
+                &emsp;&emsp;dept_id INT,<br><br>
+                &emsp;&emsp;CONSTRAINT FK_Employee_Department FOREIGN KEY(dept_id)<br>
+                &emsp;&emsp;REFERENCES department(dept_id)<br>
+            &emsp;);
+        </p>
+        <p><img src="images/create-tables.png" alt="create-tables"></p>
+
+        <p><b>Insert data to the table:</b></p>
+        <p>
+            &emsp;INSERT INTO department VALUES<br> 
+            &emsp;(1,'HR'),<br>
+            &emsp;(2,'IT'),<br>
+            &emsp;(3,'FINANCE');<br><br>
+
+            &emsp;INSERT INTO employee(first_name, last_name, dept_id) VALUES<br> 
+            &emsp;('Annie','Smith',1),<br>
+            &emsp;('Susan','Klassen',3),<br>
+            &emsp;('May','Kaasman',2);
+        </p>
+        <p><img src="images/insert-data-to-tables.png" alt="insert-data-to-tables"></p>
+
+        <p><b>Department Table:</b></p>
+        <p><img src="images/department-table.png" alt="department-table"></p>
+
+        <p><b>Employee Table:</b></p>
+        <p><img src="images/employee-table.png" alt="employee-table"></p>
+    </body>
+</html>

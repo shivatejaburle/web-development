@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Limiting Data</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Limiting Data</h1>
+        <p>The <b>LIMIT</b> clause to select a limited number of records.</p>
+        <h2>Syntax</h2>
+        <h4>&emsp; SELECT column1, column2, ... <br>
+            &emsp; FROM table_name <br>
+            &emsp; WHERE condition <br>
+            &emsp; LIMIT number;</h4>
+
+        <h2>Example 1:</h2>
+        <p>SELECT * FROM demo LIMIT 2;</p>
+        <p><img src="images/limit-data.png" alt="limit-data"></p>
+
+
+        <h2>Example 2:</h2>
+        <p>SELECT * FROM demo WHERE id >2 and id <=5 ORDER BY id LIMIT 2;</p>
+        <p><img src="images/limit-data-with-conditions.png" alt="limit-data-with-conditions"></p>
+
+    </body>
+</html>

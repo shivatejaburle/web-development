@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primary Key</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Primary Key</h1>
+        <p>The <b>PRIMARY KEY</b> constraint uniquely identifies each record in a table.</p>
+        <p>Primary keys must contain UNIQUE values, and cannot contain NULL values.</p>
+
+        <h2>SQL - AUTO INCREMENT Field</h2>
+        <p>Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.</p>
+        <h2>Syntax</h2>
+        <h4>&emsp;field_name data_type NOT NULL AUTO_INCREMENT</h4>
+
+        <h2>PostgreSQL - SERIAL</h2>
+        <p></p>
+        <h2>Syntax</h2>
+        <h4>&emsp;field_name SERIAL</h4>        
+        
+        <p>So, you can use SERIAL (for PostgreSQL) or AUTO INCREMENT (for MySQL) as the primary key field that we would like to be created automatically every time a new record is inserted.</p>
+
+        <h2>Example:</h2>
+        <p>
+            &emsp;CREATE TABLE mystore(<br>
+                &emsp;&emsp;id SERIAL PRIMARY KEY,<br>
+                &emsp;&emsp;item_name VARCHAR(50),<br>
+                &emsp;&emsp;price decimal(5,2),<br>
+                &emsp;&emsp;notes VARCHAR(255),<br>
+                &emsp;&emsp;items_sold INTEGER DEFAULT 0<br>
+            &emsp;);
+        </p>
+        <p><img src="images/primary-key.png" alt="primary-key"></p>
+
+        <p><b>Insert data to the table:</b></p>
+        <p>INSERT INTO mystore (item_name, price, notes) values ('Fidget Spinner', 1.99, 'It is so colorful!');</p>
+        <p><img src="images/insert-data-mystore.png" alt="insert-data-mystore"></p>
+
+    </body>
+</html>

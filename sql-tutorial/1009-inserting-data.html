@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inserting New Data</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Inserting New Data</h1>
+        <p>The <b>INSERT INTO</b> statement is used to insert new records in a table.</p>
+        <h2>Syntax</h2>
+        <p>It is possible to write the <b>INSERT INTO</b> statement in two ways:</p>
+        <ol>
+            <li>
+                <p>Specify both the column names and the values to be inserted:</p>
+                <h4>&emsp; INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);</h4>
+            </li>
+            <li>
+                <p>If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query.<br>
+                    However, make sure the order of the values is in the same order as the columns in the table.<br>
+                    Here, the INSERT INTO syntax would be as follows:</p>
+                <h4>&emsp; INSERT INTO table_name VALUES (value1, value2, value3, ...);
+                </h4>
+            </li>
+        </ol>
+        
+        <h2>Example:</h2>
+        <p>INSERT INTO demo(name, hint) VALUES('Shiva', 'Trainer');</p>
+        <p><img src="images/insert-data.png" alt="insert-data"></p>
+
+    </body>
+</html>

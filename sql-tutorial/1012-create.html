@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creating a New Table</title>
+        <link rel="stylesheet" href="css/img-style.css">
+    </head>
+    <body>
+        <h1>Creating a New Table</h1>
+        <p>The <b>CREATE TABLE</b> statement is used to create a new table in a database.</p>
+        <h2>Syntax</h2>
+        <h4>
+            &emsp;CREATE TABLE table_name (<br>
+                &emsp;&emsp;column1 datatype,<br>
+                &emsp;&emsp;column2 datatype,<br>
+                &emsp;&emsp;column3 datatype,<br>
+                &emsp;&emsp;&emsp;....<br>
+                &emsp;);
+        </h4>
+        
+        <h2>Example:</h2>
+        <p>
+            &emsp;create table mystore(<br>
+                &emsp;&emsp;id integer,<br>
+                &emsp;&emsp;item_name VARCHAR(50),<br>
+                &emsp;&emsp;price decimal(5,2),<br>
+                &emsp;&emsp;notes VARCHAR(255),<br>
+                &emsp;&emsp;items_sold INTEGER DEFAULT 0<br>
+            &emsp;);
+        </p>
+        <p><img src="images/create-table.png" alt="create-table"></p>
+
+        <p><b>Check the table:</b></p>
+        <p>SELECT * FROM mystore;</p>
+        <p><img src="images/mystore-select.png" alt="mystore-select"></p>
+
+        <p><b>Insert data to the table:</b></p>
+        <p>INSERT INTO mystore (id, item_name, price, notes) values (1, 'Fidget Spinner', 1.99, 'It is so colorful!');</p>
+        <p><img src="images/mystore-insert.png" alt="mystore-insert"></p>
+
+    </body>
+</html>
